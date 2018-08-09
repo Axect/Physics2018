@@ -65,4 +65,33 @@ RQFT | 8. Green's Functions | 2018.09.07
 RQFT | 9. Perturbative $\phi^4$ Theory | 2018.09.14
 RQFT | 10. Green's Functions for Fermions | 2018.09.21
 RQFT | 11. Interacting Fields | 2018.09.21
+**GFT** | 12. Path Integrals for QED | 2018.10.05
+GFT | 13. Path Integrals for Gauge Fields | 2018.10.05
+GFT | 14. Examples for Gauge Field Theories | Undetermined
 
+\pagebreak
+
+### 2) Felice & Clarke
+
+Section | Subsection | Date
+:-----: | :--------: | :--:
+**1. The Background Manifold Structure** | **All Review** | 2018.08.12
+**2. Differentiation** | Tensor fields and congruences | 2018.08.19
+2. Differentiation | The Lie Derivative | 2018.08.19
+2. Differentiation | The connector | 2018.08.19
+2. Differentiation | Parallel propagation and geodesics | 2018.08.19
+2. Differentiation | Transformation properties of the connector | 2018.08.26
+2. Differentiation | The covariant derivative | 2018.08.26
+2. Differentiation | Torsion and normal coordinates | 2018.08.26
+2. Differentiation | Compatibility of the metric with the connection | 2018.08.26
+2. Differentiation | Parallelism | 2018.08.26
+2. Differentiation | Applications of the covariant derivative | 2018.08.26
+2. Differentiation | The exterior derivative | 2018.09.02
+2. Differentiation | Frobenius Theorems | 2018.09.02
+2. Differentiation | Isometries on $M$ | 2018.09.02
+2. Differentiation | **Summary and Review** | 2018.09.09
+**3. The Curvature** | The Riemann Tensor | 2018.09.16
+3. The Curvature | Symmetry properties of the Riemann tensor and the Gaussian curvature | 2018.09.16
+3. The Curvature | Significance of a curvature tensor vanishing everywhere | 2018.09.16
+3. The Curvature | **Review one more time** | 2018.09.30
+3. The Curvature | The Ricci tensor, the curvature scalar, the Wely tensor | 2018.10.07
