@@ -15,9 +15,9 @@ titlepage: true
 
 ## Manifolds
 
-### 1) Topological Manifolds
+### 1. Topological Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1: } Topological Manifolds]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1 } Topological Manifolds]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
   \begin{enumerate}
     \item $M$ is Hausdorff
@@ -25,6 +25,56 @@ titlepage: true
     \item $M$ has a countable basis of open sets
   \end{enumerate}
 \end{tcolorbox}
+  
+**Why?**
+
+* Hausdorff : In Hausdorff space, convergent sequences converge to only one point.
+If you want to do calculus, you should need Hausdorff space.
+
+* Locally Euclidean : This is the main reason that why we require manifolds.
+
+* Countable Basis : We need **partition of unity** to bring many properties of Euclidean space.
+For Hausdorff space, existence of partition of unity require **paracompactness**.
+And paracompactness follows from **second countability**. It is same as have countable basis.
+
+#### 1.1 Supplement
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Thm 1.1.1 } Paracompact $\simeq$ Partition of unity]
+  Let $(X, \tau)$ be a topological space that is $T_1$ (all points are closed). Then the following are equivalent:
+  \begin{enumerate}[I.]
+    \item $(X,\tau)$ is paracompact and Hausdorff
+    \item Every open cover of $(X, \tau)$ admits a subordinate partition of unity
+  \end{enumerate}
+\end{tcolorbox}
+
+To prove this, we need a wide background knowledge.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.2 } Hausdorff]
+  Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
+  that are disjoint: such that $U \cap V = \emptyset$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.3 } Locally finite cover]
+  Let $(X, \tau)$ be a topological space.
+
+  An open cover $\Mbk{U_i \subset X}_{i\in I}$ of $X$ is called \textit{locally finite} if $\forall x \in X$,
+  there exists a neighbourhood $U_x \supset \Mbk{x}$ such that it intersects only finitely many elements of the cover,
+  hence such that $U_x \cap U_i \neq \emptyset$ for only a finite number of $i\in I$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.4 } Refinement of open covers]
+  Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open covoer.
+  Then a \textit{refinement} of this open cover is a set of open subsets $\Mbk{V_j \subset X}_{j\in J}$
+  which is still an open cover in itself and such that for each $j\in J$ there exists an $i \in I$ with $V_j \subset U_i$.
+\end{tcolorbox}
+
+
+
+\pagebreak
 
 ### 2) Differentiable Manifolds
 
