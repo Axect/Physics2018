@@ -78,7 +78,7 @@ To prove this, we need a wide background knowledge.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.6 } Partition of unity]
-  Let $(X, \tau)$ be a topological space, and let ${U_i \subset X}_{i\in I}$ be an open cover.
+  Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i\in I}$ be an open cover.
   Then a \textit{partition of unity} subordinate to the cover is
 
   \begin{itemize}
@@ -86,7 +86,21 @@ To prove this, we need a wide background knowledge.
     \begin{equation*}
       f_i : X \rightarrow [0, 1]
     \end{equation*}
+    (where $[0,1] \subset \mathbb{R}$ is equipped with the subspace topology of the real numbers
+    $\mathbb{R}$ regarded as the 1D Euclidean space equipped with its metric topology)
   \end{itemize}
+  such that with
+  \begin{equation*}
+    Supp(f_i) := Cl\Sbk{f_i^{-1}((0,1]))}
+  \end{equation*}
+  denoting the support of $f_i$ (the topological closure of the
+  subset of points on which it does not vanish) then
+  
+  \begin{enumerate}[I.]
+    \item $\forall (Supp(f_i) \subset U_i)$
+    \item $\Mbk{Supp(f_i) \subset X}_{i\in I}$
+    \item $\forall \Sbk{\sum_{i \in I}f_i(x) = 1}$
+  \end{enumerate}
 \end{tcolorbox}
 
 \pagebreak
