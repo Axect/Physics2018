@@ -25,7 +25,7 @@ titlepage: true
     \item $M$ has a countable basis of open sets
   \end{enumerate}
 \end{tcolorbox}
-  
+
 **Why?**
 
 * Hausdorff : In Hausdorff space, convergent sequences converge to only one point.
@@ -67,12 +67,27 @@ To prove this, we need a wide background knowledge.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.4 } Refinement of open covers]
-  Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open covoer.
+  Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open cover.
   Then a \textit{refinement} of this open cover is a set of open subsets $\Mbk{V_j \subset X}_{j\in J}$
   which is still an open cover in itself and such that for each $j\in J$ there exists an $i \in I$ with $V_j \subset U_i$.
 \end{tcolorbox}
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.5 } Paracompact topological space]
+  A topological space $(X, \tau)$ is called \textit{paracompact} if every open cover of $X$
+  has a refinement by a locally finite open cover.
+\end{tcolorbox}
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!75!black, title=\textbf{Def 1.1.6 } Partition of unity]
+  Let $(X, \tau)$ be a topological space, and let ${U_i \subset X}_{i\in I}$ be an open cover.
+  Then a \textit{partition of unity} subordinate to the cover is
+
+  \begin{itemize}
+    \item a set $\Mbk{f_i}_{i \in I}$ of continuous functions
+    \begin{equation*}
+      f_i : X \rightarrow [0, 1]
+    \end{equation*}
+  \end{itemize}
+\end{tcolorbox}
 
 \pagebreak
 
@@ -163,7 +178,7 @@ Then we can generalize these facts.
   Then there are two homomorphisms such that
   \begin{align*}
     F^*&: \HS \text{ defined by } F^*(f) =  \\
-    F_*&: \HS \text{ defined by } F_*(X_p)f = 
+    F_*&: \HS \text{ defined by } F_*(X_p)f =
   \end{align*}
   When $F: M \rightarrow M$ is identity then $F^*, F_*$ are isomorphism.
 \end{tcolorbox}
@@ -181,7 +196,7 @@ Then we can generalize these facts.
   \begin{align*}
     X_pf &= \frac{d}{dt}\Bbk{f \circ \gamma (t)} \\
          &= \\
-         &= 
+         &=
   \end{align*}
 
   Since we know $F_*(u)f = u(f\circ F)$,
