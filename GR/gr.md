@@ -116,7 +116,7 @@ To prove this, we need a wide background knowledge.
 
 Proof will be given later.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Lem 1.1.8 }]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Lem 1.1.8 } Natural Refinement]
   Let $(X, \tau)$ be a topological space, $\Mbk{U_i \subset X}_{i \in I}$ be an open cover
   and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover. 
   Then, for $\Mbk{W_i \subset X}_{i \in I}$ with
@@ -170,8 +170,60 @@ Proof will be given later.
   \end{equation*}
 \end{tcolorbox}
 
-Now, we can prove Prop 1.1.7.
+\pagebreak
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of 1.1.7 }]
+Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.10 } Normal Spaces ($T_4$)]
+  A topological space $X$ is \textit{normal} if for every two closed disjoint subsets $A,B \subset X$, there are neighborhoods $U \supset A$, $~ V \supset B$ such that $U \cap V = \emptyset$.
 \end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Prop 1.1.11 } $T_4$ in terms of topological closure]
+  $X$ is normal iff for all closed subsets $C \subset X$ with open neighborhood $U \supset C$ there exists a smaller open neighborhood $V\supset C$ whose topological closure $Cl(V)$ is still contained in $U$:
+  $$ C \subset V \subset Cl(V) \subset U$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Prop 1.1.11 }]
+  Suppose that $(X, \tau)$ is $T_4$.
+  Consider closed subset $C \subset U$ where $U$ is open neighborhood of $C$. It implies
+  $$ C \cap X\backslash U = \emptyset $$
+  Since $U$ is open, $X \backslash U$ is closed. Because of normal space, there are open neighborhoods $V,W$ such that $C \subset V$, $~ X\backslash U \subset W$ and $V \cap W = \emptyset$. Because of last term, we can find $V \subset X \backslash W \subset U$. 
+  Since $X \backslash W$ is closed, we can find next relation :
+  $$ C \subset V \subset Cl(V) \subset X \backslash W \subset U$$
+
+  In the other direction, suppose that $\forall$ open neighborhood $U$ of closed subset $C$,
+  there are smaller open neighborhood with $C \subset V \subset Cl(V) \subset U$. 
+  Now, consider disjoint closed subset $C_1, C_2 \subset X$.
+  $C_1 \cap C_2 = \emptyset$ implies $C_1 \subset X\backslash C_2$.
+  Since $X \backslash C_2$ is open neighborhood of $C_1$, there exists smaller open neighborhood $V$ such that
+  $$ C_1 \subset V \subset Cl(V) \subset X \backslash C_2$$
+  And it also implies $X\backslash Cl(V)$ is open neighborhood of $C_2$ where $V \cap X\backslash Cl(V) = \emptyset$.
+
+  Therefore $X$ is $T_4$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.12 } Urysohn function]
+  Let $X$ be a topological space, and let $A,B \subset$ X be disjoint closed subsets. Then an \textit{Urysohn function} for this situation is a continuous function $$f: X\rightarrow [0,1]$$ to the closed interval equipped with its Euclidean metric topology, such that
+  $$ f(A) = \Mbk{0} ~ \text{and} ~ f(B) = \Mbk{1} $$
+\end{tcolorbox}
+
+
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Prop 1.1.13 } Urysohn's Lemma]
+  Let $X$ be a normal topological space, and let $A, B \subset X$ be two disjoint closed subsets of $X$. Then there exists an \textit{Urysohn function}.
+\end{tcolorbox}
+
+This lemma has several **big** applications:
+
+* **Urysohn Metrization Thm**: *If $X$ is a normal space with a countable basis, then we can use the abundance of continuous functions from $X$ to $[0,1]$ to assign numerical coordinates to the points of $X$ and obtain an embedding of $X$ into $\R^{\omega}$. From this we see that every second countable normal space is a metric space.*
+
+* **Tietze Extension Thm**: *Suppose $A$ is a subset of a space $X$ and $f: A \rightarrow [0,1]$ is a continuous function. If $X$ is normal and $A$ is closed in $X$, then we can find a continuous function from $X$ to $[0,1]$ that is an extension of $f$.*
+
+* **Embedding manifolds in $\mathbb{R}^n$**: Using Urysohn's lemma to develop the tool called *partitions of unity*, we can obtain the following theoerem:
+  *Each compact $n$-manifold is homeomorphic to a subspace of some $\R^n$.*
