@@ -105,7 +105,7 @@ To prove this, we need a wide background knowledge.
   \end{enumerate}
 \end{tcolorbox}
 
-\pagebreak
+\newpage
 
 ![Gaussian Partition of Unity](gaussian_pou.png)
 
@@ -170,7 +170,7 @@ Proof will be given later.
   \end{equation*}
 \end{tcolorbox}
 
-\pagebreak
+\newpage
 
 Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
@@ -204,14 +204,12 @@ Now, suggest some fundamental topological concepts to prove prop 1.1.7.
   Therefore $X$ is $T_4$.
 \end{tcolorbox}
 
-\vs
+\newpage
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.12 } Urysohn function]
   Let $X$ be a topological space, and let $A,B \subset$ X be disjoint closed subsets. Then an \textit{Urysohn function} for this situation is a continuous function $$f: X\rightarrow [0,1]$$ to the closed interval equipped with its Euclidean metric topology, such that
   $$ f(A) = \Mbk{0} ~ \text{and} ~ f(B) = \Mbk{1} $$
 \end{tcolorbox}
-
-
 
 \vs
 
@@ -227,3 +225,15 @@ This lemma has several **big** applications:
 
 * **Embedding manifolds in $\mathbb{R}^n$**: Using Urysohn's lemma to develop the tool called *partitions of unity*, we can obtain the following theoerem:
   *Each compact $n$-manifold is homeomorphic to a subspace of some $\R^n$.*
+
+Then let's start to prove *Urysohn's lemma*.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Urysohn's lemma}]
+
+$(\Leftarrow)$ Suppose $f(A) = \Mbk{0}, ~ f(B) = \Mbk{1}$ for all closed subset $A,B \subset X$.
+Then $A \subset f^{-1}\Sbk{[0,\frac{1}{2})}$ and $D \subset f^{-1}\Sbk{(\frac{1}{2}, 1]}$.
+We can find these two sets are open and disjoint. 
+
+\end{tcolorbox}
