@@ -1,4 +1,6 @@
 ---
+fontfamily: "libertine"
+mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
 date: 2018-08-24
@@ -28,14 +30,14 @@ titlepage: true
 
 **Why?**
 
-* Hausdorff : In Hausdorff space, convergent sequences converge to only one point.
+* **Hausdorff** : In Hausdorff space, convergent sequences converge to only one point.
 If you want to do calculus, you should need Hausdorff space.
 
-* Locally Euclidean : This is the main reason that why we require manifolds.
+* **Locally Euclidean** : This is the main reason that why we require manifolds.
 
-* Countable Basis : We need **partition of unity** to bring many properties of Euclidean space.
-For Hausdorff space, existence of partition of unity require **paracompactness**.
-And paracompactness follows from **second countability**. It is same as have countable basis.
+* **Countable Basis** : We need *partition of unity* to bring many properties of Euclidean space.
+For Hausdorff space, existence of partition of unity require *paracompactness*.
+And paracompactness follows from *second countability*. It is same as have countable basis.
 
 #### 1.1 Supplement
 
@@ -151,4 +153,25 @@ Proof will be given later.
   \newline
 
   Therefore $\Mbk{W_i \in X}_{i \in I}$ is locally finite.
+\end{tcolorbox}
+
+\vs 
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Lem 1.1.9 } Shrinking Lemma]
+  Let $X$ be a topological space which is normal and let $\Mbk{U_i \subset X}_{i\in I}$ be a locally finite open cover.
+  Assuming the axiom of choice then:
+  \newline
+
+  There exists another open cover $\Mbk{V_i \subset X}_{i \in I}$ such that the topological closure
+  $Cl(V_i)$ of its elements is contained in the original patches:
+
+  \begin{equation*}
+    \underset{i \in I}{\forall}\Sbk{V_i \subset Cl(V_i) \subset U_i}
+  \end{equation*}
+\end{tcolorbox}
+
+Now, we can prove Prop 1.1.7.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of 1.1.7 }]
+
 \end{tcolorbox}
