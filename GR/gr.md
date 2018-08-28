@@ -19,7 +19,7 @@ titlepage: true
 
 ### 1. Topological Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1 } Topological Manifolds]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 } Topological Manifolds]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
   \begin{enumerate}
     \item $M$ is Hausdorff
@@ -41,7 +41,7 @@ And paracompactness follows from *second countability*. It is same as have count
 
 #### 1.1 Supplement
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Thm 1.1.1 } Paracompact $\simeq$ Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.1.1 } Paracompact $\simeq$ Partition of unity]
   Let $(X, \tau)$ be a topological space that is $T_1$ (all points are closed). Then the following are equivalent:
   \begin{enumerate}[I.]
     \item $(X,\tau)$ is paracompact and Hausdorff
@@ -53,14 +53,14 @@ To prove this, we need a wide background knowledge.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.2 } Hausdorff]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.2 } Hausdorff]
   Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
   that are disjoint: such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.3 } Locally finite cover]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.3 } Locally finite cover]
   Let $(X, \tau)$ be a topological space.
 
   An open cover $\Mbk{U_i \subset X}_{i\in I}$ of $X$ is called \textit{locally finite} if $\forall x \in X$,
@@ -68,18 +68,18 @@ To prove this, we need a wide background knowledge.
   hence such that $U_x \cap U_i \neq \emptyset$ for only a finite number of $i\in I$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.4 } Refinement of open covers]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.4 } Refinement of open covers]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open cover.
   Then a \textit{refinement} of this open cover is a set of open subsets $\Mbk{V_j \subset X}_{j\in J}$
   which is still an open cover in itself and such that for each $j\in J$ there exists an $i \in I$ with $V_j \subset U_i$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.5 } Paracompact topological space]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.5 } Paracompact topological space]
   A topological space $(X, \tau)$ is called \textit{paracompact} if every open cover of $X$
   has a refinement by a locally finite open cover.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.6 } Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.6 } Partition of unity]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i\in I}$ be an open cover.
   Then a \textit{partition of unity} subordinate to the cover is
 
@@ -109,14 +109,14 @@ To prove this, we need a wide background knowledge.
 
 ![Gaussian Partition of Unity](gaussian_pou.png)
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Prop 1.1.7 } Paracompact - Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.7 } Paracompact - Partition of unity]
   If $(X, \tau)$ is a paracompact topological space, then for every open cover $\Mbk{U_i \subset X}_{i\in I}$
   there is a subordinate partition of unity.
 \end{tcolorbox}
 
 Proof will be given later.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Lem 1.1.8 } Natural Refinement]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.8 } Natural Refinement]
   Let $(X, \tau)$ be a topological space, $\Mbk{U_i \subset X}_{i \in I}$ be an open cover
   and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover. 
   Then, for $\Mbk{W_i \subset X}_{i \in I}$ with
@@ -157,7 +157,7 @@ Proof will be given later.
 
 \vs 
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Lem 1.1.9 } Shrinking Lemma]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.9 } Shrinking Lemma]
   Let $X$ be a topological space which is normal and let $\Mbk{U_i \subset X}_{i\in I}$ be a locally finite open cover.
   Assuming the axiom of choice then:
   \newline
@@ -174,13 +174,13 @@ Proof will be given later.
 
 Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.10 } Normal Spaces ($T_4$)]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.10 } Normal Spaces ($T_4$)]
   A topological space $X$ is \textit{normal} if for every two closed disjoint subsets $A,B \subset X$, there are neighborhoods $U \supset A$, $~ V \supset B$ such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Prop 1.1.11 } $T_4$ in terms of topological closure]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.11 } $T_4$ in terms of topological closure]
   $X$ is normal iff for all closed subsets $C \subset X$ with open neighborhood $U \supset C$ there exists a smaller open neighborhood $V\supset C$ whose topological closure $Cl(V)$ is still contained in $U$:
   $$ C \subset V \subset Cl(V) \subset U$$
 \end{tcolorbox}
@@ -206,14 +206,14 @@ Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Def 1.1.12 } Urysohn function]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.12 } Urysohn function]
   Let $X$ be a topological space, and let $A,B \subset$ X be disjoint closed subsets. Then an \textit{Urysohn function} for this situation is a continuous function $$f: X\rightarrow [0,1]$$ to the closed interval equipped with its Euclidean metric topology, such that
   $$ f(A) = \Mbk{0} ~ \text{and} ~ f(B) = \Mbk{1} $$
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!50!black, title=\textbf{Prop 1.1.13 } Urysohn's Lemma]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.13 } Urysohn's Lemma]
   Let $X$ be a normal topological space, and let $A, B \subset X$ be two disjoint closed subsets of $X$. Then there exists an \textit{Urysohn function}.
 \end{tcolorbox}
 
@@ -234,6 +234,9 @@ Then let's start to prove *Urysohn's lemma*.
 
 $(\Leftarrow)$ Suppose $f(A) = \Mbk{0}, ~ f(B) = \Mbk{1}$ for all closed subset $A,B \subset X$.
 Then $A \subset f^{-1}\Sbk{[0,\frac{1}{2})}$ and $D \subset f^{-1}\Sbk{(\frac{1}{2}, 1]}$.
-We can find these two sets are open and disjoint. 
+We can find these two sets are open and disjoint.\footnote[1]{these will be exercise.} Thus, $X$ is $T_4$.
+\newline
+
+$(\Rightarrow)$ Suppose that $X$ is $T_4$ and consider two disjoint closed sets $A,B \subset X$. Claim there is \textit{Urysohn function}. To prove this, we should construct continuous function such that $f(A) = \Mbk{0},~ f(B) = \Mbk{1}$. (Maybe it's a little bit tricky.)
 
 \end{tcolorbox}
