@@ -309,3 +309,50 @@ Therefore, $f$ is continuous.
 
 Proof is complete.
 \end{tcolorbox}
+
+\newpage
+
+Now, we can prove *prop 1.1.7*.
+
+\newpage
+
+# Appendix
+
+## A. Topology
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1 } Topological Space]
+
+A pair $(X, \tau)$ is said to be a \textit{topological space} if $X$ is a set,
+$\tau$ is a collection of subsets of $X$, which we call the \textit{open subsets} of $X$, such that
+
+\begin{enumerate}[i)]
+  \item the empty set $\emptyset$ and $X$ are in $\tau$
+  \item the intersection of any two open subsets is also open
+  \item the union of an arbitrary family of open subsets is open
+\end{enumerate}
+
+The family $\tau$ of open subsets is called the \textit{topology} on $X$.
+
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2 } Neighborhood]
+  We say that a subset $U$ of $X$ is a \textit{neighborhood} of a point $x\in X$, if there is an open subset $V$ such that $x \in V \subset U$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 } Closed]
+
+A subset $Y$ of a topological space $(X, \tau)$ is said to be \textit{closed} if $X\backslash Y$ is open.
+
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4 } Continuous]
+
+Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces. A mapping $f: X\rightarrow Y$ is said to be \textit{continuous} at the point $x$ if $\forall$ neighborhood $U$ of $f(x)$
+
+\end{tcolorbox}
