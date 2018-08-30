@@ -234,9 +234,78 @@ Then let's start to prove *Urysohn's lemma*.
 
 $(\Leftarrow)$ Suppose $f(A) = \Mbk{0}, ~ f(B) = \Mbk{1}$ for all closed subset $A,B \subset X$.
 Then $A \subset f^{-1}\Sbk{[0,\frac{1}{2})}$ and $D \subset f^{-1}\Sbk{(\frac{1}{2}, 1]}$.
-We can find these two sets are open and disjoint.\footnote[1]{these will be exercise.} Thus, $X$ is $T_4$.
+We can find these two sets are open and disjoint.\footnote[1]{this will be exercise.} Thus, $X$ is $T_4$.
 \newline
 
 $(\Rightarrow)$ Suppose that $X$ is $T_4$ and consider two disjoint closed sets $A,B \subset X$. Claim there is \textit{Urysohn function}. To prove this, we should construct continuous function such that $f(A) = \Mbk{0},~ f(B) = \Mbk{1}$. (Maybe it's a little bit tricky.)
 
+Since $X$ is $T_4$, we can find open neighborhood for any closed subsets of $X$ such that satisfies \textit{prop 1.1.11}. Then we can think next idea :
+\newline
+
+Let $\Mbk{U_p}_{p\in [0,1] \cap \mathbb{Q}}$ be a collection of open sets such that
+
+$$ U_1 = X\backslash B, ~ A \subset U_0 \subset Cl(U_0) \subset U_1$$
+
+For convenience, denote $Q = [0,1] \cap \mathbb{Q}$. Since $Q$ is countable, we can enumerate it as 
+
+$$ Q = \Mbk{p_n | n\in \mathbb{N}}$$
+
+To be more clear, we are going to define by induction a collection $\Mbk{U_p | p \in Q}$ of open subsets with the property:
+
+$$ p < q ~ \Rightarrow ~ Cl(U_p) \subset U_q$$
+
+By definition of $U_p$, we know above property is satisfied when $p=0,~q=1$. Since $Cl(U_0)$ is also subset of $X$, by \textit{prop 1.1.11}, we can construct $\Mbk{U_p}_{p\in Q}$ completely. Also add some conditions ( $p \in (-\infty,0)\cap \mathbb{Q} ~\Rightarrow~ U_p = \emptyset$, $~ p \in (1, \infty) \cap \mathbb{Q} ~\Rightarrow~ U_p = X$ ), then we can extend our collection to whole $\mathbb{Q}$. Now, we can define new set:
+
+$$ \mathbb{Q}(x) \equiv \Mbk{p\in \mathbb{Q} | x \in U_p}$$
+
+Then we can find $\mathbb{Q}(x)$ has lower bound $0$.\footnote[2]{this will be exercise}
+Since $\mathbb{Q}(x)$ has a greatest lower bound, we can define $f: X \rightarrow [0,1]$ by
+
+$$ f(x) = \inf \mathbb{Q}(x) = \inf \Mbk{p \in \mathbb{Q} | x \in U_p}$$
+
+If we show $f$ satisfies ( \textit{\textcircled{1} $0\leq f(x) \leq 1$, \textcircled{2} $f$ is Urysohn function for $A,B$, \newline
+\textcircled{3} $x \in Cl(U_p) \Rightarrow f(x) \leq p$, \textcircled{4} $x \notin U_p \Rightarrow f(x) \geq p$, \textcircled{5} $f$ is continuous} ) then proof is complete.
+
+\end{tcolorbox}
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Urysohn's lemma} (Continued)]
+
+\textcircled{1} $0 \leq f(x) \leq 1$
+
+: It's trivial because of next property :
+$$ f(x) =
+\begin{cases}
+1 & \forall p > 1 \\
+\text{can't define} & \forall p < 0
+\end{cases}
+$$
+
+\textcircled{2} $f$ \textit{is Urysohn function for $A, B$.}
+
+: Since $A \subset U_0$, $~ \forall x \in A,~f(x) = 0$ and $B = X \backslash U_1$, $~\forall x \in B, ~ f(x) = \inf \Mbk{(1,\infty) \cap \mathbb{Q}}= 1$.
+\newline
+
+\textcircled{3} \textit{If $x \in Cl(U_p)$, then $f(x) \leq p$}
+
+: Suppose $x \in Cl(U_p)$, then $x \in Cl(U_p) \subset U_q, ~ \forall q \in \mathbb{Q}, \; q > p$.
+Thus, 
+$$(p, \infty) \cap \mathbb{Q} \subset \mathbb{Q}(x) ~\Rightarrow~ \inf \mathbb{Q}(x) \leq p$$
+
+\textcircled{4} \textit{If $x \notin U_p$, then $f(x) \geq p$}
+
+: Suppose $x \notin U_p$, then $x \notin U_q,~ \forall q \leq p$. Thus,
+$$ (-\infty, p] \cap \mathbb{Q}(x) = \emptyset ~ \Rightarrow ~ p \leq \inf \mathbb{Q}(x)$$
+
+\textcircled{5} \textit{$f$ is continuous.}
+
+: Suppose $U = (a,b) \in \mathbb{R}$ such that $(a,b) \cap [0,1] \neq \emptyset$.
+Claim $f^{-1}(U)$ is open. Suppose $x \in f^{-1}(U)$. It means $f(x) \in U = (a,b)$. Since $U$ is open, there are $p, q \in \mathbb{Q}$ such that $a < p < f(x) < q < b$. By \textcircled{3}, \textcircled{4}, we know $x \in U_q \backslash Cl(U_p)$ and $f(U_q\backslash Cl(U_p)) \subset (a,b)$.\footnote[3]{this will be exercise.}
+
+Thus, we can find $\forall x \in f^{-1}(U)$, there are $p, q \in \mathbb{Q}$ such that $x \in U_q \backslash Cl(U_p) \subset f^{-1}(U)$. Since $U_q \backslash Cl(U_p)$ is open, $f^{-1}(U)$ is open.
+Therefore, $f$ is continuous.
+\newline
+
+Proof is complete.
 \end{tcolorbox}
