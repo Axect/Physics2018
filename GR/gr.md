@@ -19,7 +19,7 @@ titlepage: true
 
 ### 1. Topological Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 } Topological Manifolds]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 \hs Topological Manifolds}]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
   \begin{enumerate}
     \item $M$ is Hausdorff
@@ -41,7 +41,7 @@ And paracompactness follows from *second countability*. It is same as have count
 
 #### 1.1 Supplement
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.1.1 } Paracompact $\simeq$ Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.1.1 \hs Paracompact $\simeq$ Partition of unity}]
   Let $(X, \tau)$ be a topological space that is $T_1$ (all points are closed). Then the following are equivalent:
   \begin{enumerate}[I.]
     \item $(X,\tau)$ is paracompact and Hausdorff
@@ -53,14 +53,14 @@ To prove this, we need a wide background knowledge.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.2 } Hausdorff]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.2 \hs Hausdorff}]
   Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
   that are disjoint: such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.3 } Locally finite cover]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.3 \hs Locally finite cover}]
   Let $(X, \tau)$ be a topological space.
 
   An open cover $\Mbk{U_i \subset X}_{i\in I}$ of $X$ is called \textit{locally finite} if $\forall x \in X$,
@@ -68,18 +68,18 @@ To prove this, we need a wide background knowledge.
   hence such that $U_x \cap U_i \neq \emptyset$ for only a finite number of $i\in I$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.4 } Refinement of open covers]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.4 \hs Refinement of open covers}]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open cover.
   Then a \textit{refinement} of this open cover is a set of open subsets $\Mbk{V_j \subset X}_{j\in J}$
   which is still an open cover in itself and such that for each $j\in J$ there exists an $i \in I$ with $V_j \subset U_i$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.5 } Paracompact topological space]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.5 \hs Paracompact topological space}]
   A topological space $(X, \tau)$ is called \textit{paracompact} if every open cover of $X$
   has a refinement by a locally finite open cover.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.6 } Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.6 \hs Partition of unity}]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i\in I}$ be an open cover.
   Then a \textit{partition of unity} subordinate to the cover is
 
@@ -97,7 +97,7 @@ To prove this, we need a wide background knowledge.
   \end{equation*}
   denoting the support of $f_i$ (the topological closure of the
   subset of points on which it does not vanish) then
-  
+
   \begin{enumerate}[1)]
     \item $\underset{i \in I}{\forall} (Supp(f_i) \subset U_i)$
     \item $\Mbk{Supp(f_i) \subset X}_{i\in I}$ is a locally finite cover
@@ -109,16 +109,16 @@ To prove this, we need a wide background knowledge.
 
 ![Gaussian Partition of Unity](gaussian_pou.png)
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.7 } Paracompact - Partition of unity]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.7 \hs Paracompact - Partition of unity}]
   If $(X, \tau)$ is a paracompact topological space, then for every open cover $\Mbk{U_i \subset X}_{i\in I}$
   there is a subordinate partition of unity.
 \end{tcolorbox}
 
 Proof will be given later.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.8 } Natural Refinement]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.8 \hs Natural Refinement}]
   Let $(X, \tau)$ be a topological space, $\Mbk{U_i \subset X}_{i \in I}$ be an open cover
-  and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover. 
+  and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover.
   Then, for $\Mbk{W_i \subset X}_{i \in I}$ with
   \begin{equation*}
     W_i \equiv \Mbk{\bigcup_{j \in \phi^{-1}(\Mbk{i})} V_j}
@@ -155,9 +155,9 @@ Proof will be given later.
   Therefore $\Mbk{W_i \in X}_{i \in I}$ is locally finite.
 \end{tcolorbox}
 
-\vs 
+\vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.9 } Shrinking Lemma]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.9 \hs Shrinking Lemma}]
   Let $X$ be a topological space which is normal and let $\Mbk{U_i \subset X}_{i\in I}$ be a locally finite open cover.
   Assuming the axiom of choice then:
   \newline
@@ -174,13 +174,13 @@ Proof will be given later.
 
 Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.10 } Normal Spaces ($T_4$)]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.10 \hs Normal Spaces ($\mathbf{T_4}$)}]
   A topological space $X$ is \textit{normal} if for every two closed disjoint subsets $A,B \subset X$, there are neighborhoods $U \supset A$, $~ V \supset B$ such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.11 } $T_4$ in terms of topological closure]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.11 \hs $\mathbf{T_4}$ in terms of topological closure}]
   $X$ is normal iff for all closed subsets $C \subset X$ with open neighborhood $U \supset C$ there exists a smaller open neighborhood $V\supset C$ whose topological closure $Cl(V)$ is still contained in $U$:
   $$ C \subset V \subset Cl(V) \subset U$$
 \end{tcolorbox}
@@ -189,12 +189,12 @@ Now, suggest some fundamental topological concepts to prove prop 1.1.7.
   Suppose that $(X, \tau)$ is $T_4$.
   Consider closed subset $C \subset U$ where $U$ is open neighborhood of $C$. It implies
   $$ C \cap X\backslash U = \emptyset $$
-  Since $U$ is open, $X \backslash U$ is closed. Because of normal space, there are open neighborhoods $V,W$ such that $C \subset V$, $~ X\backslash U \subset W$ and $V \cap W = \emptyset$. Because of last term, we can find $V \subset X \backslash W \subset U$. 
+  Since $U$ is open, $X \backslash U$ is closed. Because of normal space, there are open neighborhoods $V,W$ such that $C \subset V$, $~ X\backslash U \subset W$ and $V \cap W = \emptyset$. Because of last term, we can find $V \subset X \backslash W \subset U$.
   Since $X \backslash W$ is closed, we can find next relation :
   $$ C \subset V \subset Cl(V) \subset X \backslash W \subset U$$
 
   In the other direction, suppose that $\forall$ open neighborhood $U$ of closed subset $C$,
-  there are smaller open neighborhood with $C \subset V \subset Cl(V) \subset U$. 
+  there are smaller open neighborhood with $C \subset V \subset Cl(V) \subset U$.
   Now, consider disjoint closed subset $C_1, C_2 \subset X$.
   $C_1 \cap C_2 = \emptyset$ implies $C_1 \subset X\backslash C_2$.
   Since $X \backslash C_2$ is open neighborhood of $C_1$, there exists smaller open neighborhood $V$ such that
@@ -206,14 +206,14 @@ Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.12 } Urysohn function]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.12 \hs Urysohn function}]
   Let $X$ be a topological space, and let $A,B \subset$ X be disjoint closed subsets. Then an \textit{Urysohn function} for this situation is a continuous function $$f: X\rightarrow [0,1]$$ to the closed interval equipped with its Euclidean metric topology, such that
   $$ f(A) = \Mbk{0} ~ \text{and} ~ f(B) = \Mbk{1} $$
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.13 } Urysohn's Lemma]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.13 \hs Urysohn's Lemma}]
   Let $X$ be a normal topological space, and let $A, B \subset X$ be two disjoint closed subsets of $X$. Then there exists an \textit{Urysohn function}.
 \end{tcolorbox}
 
@@ -246,7 +246,7 @@ Let $\Mbk{U_p}_{p\in [0,1] \cap \mathbb{Q}}$ be a collection of open sets such t
 
 $$ U_1 = X\backslash B, ~ A \subset U_0 \subset Cl(U_0) \subset U_1$$
 
-For convenience, denote $Q = [0,1] \cap \mathbb{Q}$. Since $Q$ is countable, we can enumerate it as 
+For convenience, denote $Q = [0,1] \cap \mathbb{Q}$. Since $Q$ is countable, we can enumerate it as
 
 $$ Q = \Mbk{p_n | n\in \mathbb{N}}$$
 
@@ -290,7 +290,7 @@ $$
 \textcircled{3} \textit{If $x \in Cl(U_p)$, then $f(x) \leq p$}
 
 : Suppose $x \in Cl(U_p)$, then $x \in Cl(U_p) \subset U_q, ~ \forall q \in \mathbb{Q}, \; q > p$.
-Thus, 
+Thus,
 $$(p, \infty) \cap \mathbb{Q} \subset \mathbb{Q}(x) ~\Rightarrow~ \inf \mathbb{Q}(x) \leq p$$
 
 \textcircled{4} \textit{If $x \notin U_p$, then $f(x) \geq p$}
@@ -314,13 +314,11 @@ Proof is complete.
 
 Now, we can prove *prop 1.1.7*.
 
-\newpage
-
 # Appendix
 
 ## A. Topology
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1 } Topological Space]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1 \hs Topological Space}]
 
 A pair $(X, \tau)$ is said to be a \textit{topological space} if $X$ is a set,
 $\tau$ is a collection of subsets of $X$, which we call the \textit{open subsets} of $X$, such that
@@ -337,13 +335,13 @@ The family $\tau$ of open subsets is called the \textit{topology} on $X$.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2 } Neighborhood]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2 \hs Neighborhood}]
   We say that a subset $U$ of $X$ is a \textit{neighborhood} of a point $x\in X$, if there is an open subset $V$ such that $x \in V \subset U$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 } Closed]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 \hs Closed}]
 
 A subset $Y$ of a topological space $(X, \tau)$ is said to be \textit{closed} if $X\backslash Y$ is open.
 
@@ -351,7 +349,7 @@ A subset $Y$ of a topological space $(X, \tau)$ is said to be \textit{closed} if
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4 } Continuous]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4 \hs Continuous}]
 
 Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces. A mapping $f: X\rightarrow Y$ is said to be \textit{continuous} at the point $x$ if $\forall$ neighborhood $U$ of $f(x)$
 
