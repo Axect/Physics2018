@@ -320,37 +320,77 @@ Now, we can prove *prop 1.1.7*.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1 \hs Topological Space}]
 
-A pair $(X, \tau)$ is said to be a \textit{topological space} if $X$ is a set,
-$\tau$ is a collection of subsets of $X$, which we call the \textit{open subsets} of $X$, such that
+A \textit{topology} on a set $X$ is a subset $\mathcal{T}$ of the power set $\mathcal{P}(X)$ with the following properties:
 
-\begin{enumerate}[i)]
-  \item the empty set $\emptyset$ and $X$ are in $\tau$
-  \item the intersection of any two open subsets is also open
-  \item the union of an arbitrary family of open subsets is open
+\begin{enumerate}[1.]
+  \item $\emptyset \in \mathcal{T}$ and $X \in \mathcal{T}$
+  \item Unions of elements of $\mathcal{T}$ belong to $\mathcal{T}$
+  $$ U_i \in \mathcal{T} ~ \text{for all} ~ i \in I~\Longrightarrow ~ \bigcup_{i\in I} U_i \in \mathcal{T}$$
+  \item Intersections of finitely many elements of $\mathcal{T}$ belong to $\mathcal{T}$. For finite set $I$,
+  $$ U_i \in \mathcal{T} ~ \text{for all} ~ i \in I~\Longrightarrow ~ \bigcap_{i\in I} U_i \in \mathcal{T}$$
 \end{enumerate}
 
-The family $\tau$ of open subsets is called the \textit{topology} on $X$.
+A \textit{topological space} is a set $X$ together with a topology $\mathcal{T}$ on $X$. For a topological space $(X, \mathcal{T})$ \textit{open subsets} and their complements \textit{closed subsets} of $X$.
 
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2 \hs Neighborhood}]
-  We say that a subset $U$ of $X$ is a \textit{neighborhood} of a point $x\in X$, if there is an open subset $V$ such that $x \in V \subset U$.
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example A.2}]
+  \begin{enumerate}[1)]
+    \item Let $X$ be a set. Then $\mathcal{T} = \Mbk{\emptyset, X}$, is a topology on $X$,
+    called the \textit{trivial topology}. This is a smallest topology.
+    \item The power set $\mathcal{P}(X)$ of a set $X$, is a topology on $X$,
+    called the \textit{discrete topology}. This is a largest topology.
+  \end{enumerate}
+\end{tcolorbox}
+
+\vs 
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 \hs Basis}]
+  Let $\mathcal{T}$ be a topology on a set $X$. A subset $\mathcal{B} \subseteq \mathcal{T}$
+  is called a \textit{basis} for $\mathcal{T}$ if every element of $\mathcal{T}$ is a union of elements of $\mathcal{B}$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 \hs Closed}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4 \hs Basis (Comfortable Definition)}]
+  A subset $\mathcal{B}$ of a topology $\mathcal{T}$ on a set $X$ is a basis of $\mathcal{T}$
+  iff, for every $U \in \mathcal{T}$ and $x \in U$, there is a $V \in \mathcal{B}$ with $x \in V \subseteq U$.
+\end{tcolorbox}
 
-A subset $Y$ of a topological space $(X, \tau)$ is said to be \textit{closed} if $X\backslash Y$ is open.
+Proof is trivial.
 
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.5 \hs Neighborhood}]
+  Let $X$ be a topological space, $x \in X$. Then $U \subseteq X$ is called a
+  \textit{neighborhood} of $x$ when there is an open set $x \in V \subseteq U$.
+  We denote by $\mathcal{U}(x)$ the set of all neighborhoods of $x$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4 \hs Continuous}]
-
-Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces. A mapping $f: X\rightarrow Y$ is said to be \textit{continuous} at the point $x$ if $\forall$ neighborhood $U$ of $f(x)$
-
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.6 \hs Neighborhood Basis}]
+  Let $X$ be a topological space and $x \in X$. Then we call a subset $\mathcal{B}(x) \subseteq \mathcal{U}(x)$
+  a \textit{neighborhood basis} or \textit{local basis} of $x$
+  if for every neighborhood $U$ of $x$, there is a $V \in \mathcal{B}(x)$ with $V \subseteq U$.
 \end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.7 \hs Countability}]
+  Let $X$ be a topological space.
+  \begin{itemize}
+    \item $X$ satisfies the \textit{first countability axiom} and is called \textit{countable} if every point
+    in $X$ admits a countable neighborhood basis.
+    \item $X$ satisfies the \textit{second countability axiom} and is called \textit{second countable} if
+    the topology of $X$ admits a countable basis.
+  \end{itemize}
+\end{tcolorbox}
+
+# Reference
+
+\begin{itemize}
+\item Ballmann, Werner, and Walker Stern. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
+\end{itemize}
