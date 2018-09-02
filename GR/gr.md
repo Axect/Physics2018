@@ -310,8 +310,6 @@ Therefore, $f$ is continuous.
 Proof is complete.
 \end{tcolorbox}
 
-\newpage
-
 Now, we can prove *prop 1.1.7*.
 
 # Appendix
