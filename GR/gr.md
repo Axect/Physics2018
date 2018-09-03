@@ -43,10 +43,10 @@ And paracompactness follows from *second countability*. It is same as have count
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.1.1 \hs Paracompact $\simeq$ Partition of unity}]
   Let $(X, \tau)$ be a topological space that is $T_1$ (all points are closed). Then the following are equivalent:
-  \begin{enumerate}[I.]
+  \begin{itemize}
     \item $(X,\tau)$ is paracompact and Hausdorff
     \item Every open cover of $(X, \tau)$ admits a subordinate partition of unity
-  \end{enumerate}
+  \end{itemize}
 \end{tcolorbox}
 
 To prove this, we need a wide background knowledge.
