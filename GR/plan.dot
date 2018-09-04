@@ -1,8 +1,8 @@
 graph G {
-    Manifold -- Hausdorff;
-    Manifold -- "Locally Euclidean";
-    Manifold -- "Second Countable";
-    Topology -- Manifold;
+    "Topological Manifold" -- Hausdorff;
+    "Topological Manifold" -- "Locally Euclidean";
+    "Topological Manifold" -- "Second Countable";
+    Topology -- "Topological Manifold";
     Topology -- Hausdorff;
     Topology -- Basis;
     Topology -- "Locally Finite";

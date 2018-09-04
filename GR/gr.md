@@ -148,11 +148,11 @@ Proof will be given later.
     \underset{i \in I\backslash \phi(K)}{\forall}\Sbk{\mathcal{U}_x \cap W_i = \emptyset}
   \end{equation*}
 
-  Since $\phi(K)$ is still finite, we can find the number of $i$ such that $\mathcal{U}_x \cap W_i = \emptyset$ is also finite.
-  (If for $i \in K',~$ $\mathcal{U}_x \cap W_i = \emptyset$ then $K'$ should be subset of $\phi(K)$.)
+  Since $\phi(K)$ is still finite, we can find the number of $i$ such that $\mathcal{U}_x \cap W_i \neq \emptyset$ is also finite.
+  (If for $i \in K',~$ $\mathcal{U}_x \cap W_i \neq \emptyset$ then $K'$ should be subset of $\phi(K)$.)
   \newline
 
-  Therefore $\Mbk{W_i \in X}_{i \in I}$ is locally finite.
+  Therefore $\Mbk{W_i \subset X}_{i \in I}$ is locally finite.
 \end{tcolorbox}
 
 \vs
