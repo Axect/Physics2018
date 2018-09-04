@@ -11,6 +11,9 @@ graph G {
     Hausdorff -- Convergence;
     Paracompact -- "Urysohn Lemma";
     "Urysohn Lemma" -- "Partition of Unity";
-    Hausdorff -- "Partition of Unity";
     "Second Countable" -- "Partition of Unity";
+    Topology -- Normal;
+    Hausdorff -- Normal;
+    Paracompact -- Normal;
+    Normal -- "Partition of Unity";
 }

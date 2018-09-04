@@ -310,7 +310,13 @@ Therefore, $f$ is continuous.
 Proof is complete.
 \end{tcolorbox}
 
-Now, we can prove *prop 1.1.7*.
+To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.14 \hs Dieudonn\'e's theorem}]
+  Every paracompact Hausdorff space is normal.
+\end{tcolorbox}
 
 # Appendix
 
