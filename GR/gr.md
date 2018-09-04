@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-08-30
+date: 2018-09-04
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -314,15 +314,62 @@ To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.14 \hs Dieudonn\'e's theorem}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.1.14 \hs Dieudonn\'e's Theorem}]
   Every paracompact Hausdorff space is normal.
 \end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Dieudonn\'e's Theorem}]
+  Consider $(X, \tau)$ be a paracompact Hausdorff space. 
+
+  \vs
+
+  \textcircled{1} First, claim it is regular. To show this, $\forall x \in X,$ closed subset $C \subset X$ such that $x \neq C$, there are open neighborhoods
+  $~\mathcal{U}(x) \ni x, ~ \mathcal{U}(C) \supset C$ such that $\mathcal{U}(x) \cap \mathcal{U}(C) = \emptyset$. Then let's start.
+
+  Since $X$ is Hausdorff, 
+  $$\forall c \in C, ~\exists \mathcal{U}_c(x) \ni x, ~ \mathcal{U}(c) \ni c ~ \text{such that} ~ \mcu_c(x) \cap \mcu(c) = \emptyset$$
+  We can find $\Mbk{\mcu(c) \subset X}_{c \in C}$ is an open cover of $C$,
+  thus $~\Mbk{\mcu(c) \subset X}_{c \in C} \cup X \backslash C~$ is an open cover of $X$.
+  Because of paracompactness of $X$, every open cover has locally finite refinement. By \textit{lem 1.1.8 (Natural refinement)},
+  if there exists locally finite refinement, then there exists one with the same index set as the original cover.
+  Thus, we can take locally finite refinement $\mathcal{W}(c)$ such that
+
+  $$ \Mbk{\mathcal{W}(c) \subset \mcu(c) \subset X}_{c \in C}$$
+
+  Since $\mcu(c)$ is open cover of $C$ and $\mathcal{W}(c)$ is refinement of $\mcu(c)$,
+  $\bigcup_{c \in C}\mathcal{W}(c)$ is open neighborhood of $C$. Let it be denoted by $\mathcal{V}(C)$:
+
+  $$ \mathcal{V}(C) = \bigcup_{c \in C}\mathcal{W}(c)$$
+
+  \vs
+
+  Now, because of locally finiteness of $\mathcal{W}(c)$, $~\forall x \in X$, there exists
+  neighborhood $\mathcal{W}(x)$ and finite subset $K \subset C$ such that
+
+  $$\underset{c \in C\backslash K}{\forall} \Sbk{\mathcal{W}(x) \cap \mathcal{W}(c)} = \emptyset $$
+
+  Let's take new neighborhood of $x$ as follows :
+
+  $$\mcu(x) \equiv \mathcal{W}(x) \cap \Sbk{\bigcap_{k \in K}\mcu_k(x)}$$
+
+  Then we can find 
+  
+  $$\mcu(x) \cap \mathcal{V}(C) = \emptyset\footnote{this will be exercise}$$
+
+\end{tcolorbox}
+
+
+
 
 # Appendix
 
 ## A. Topology
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1 \hs Topological Space}]
+### 1. Topological Spaces
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.1 \hs Topological Space}]
 
 A \textit{topology} on a set $X$ is a subset $\mathcal{T}$ of the power set $\mathcal{P}(X)$ with the following properties:
 
@@ -334,13 +381,14 @@ A \textit{topology} on a set $X$ is a subset $\mathcal{T}$ of the power set $\ma
   $$ U_i \in \mathcal{T} ~ \text{for all} ~ i \in I~\Longrightarrow ~ \bigcap_{i\in I} U_i \in \mathcal{T}$$
 \end{enumerate}
 
-A \textit{topological space} is a set $X$ together with a topology $\mathcal{T}$ on $X$. For a topological space $(X, \mathcal{T})$ \textit{open subsets} and their complements \textit{closed subsets} of $X$.
+A \textit{topological space} is a set $X$ together with a topology $\mathcal{T}$ on $X$. For a topological space $(X, \mathcal{T})$,
+we call the elements of $\mathcal{T}$ \textit{open subsets} and their complements \textit{closed subsets} of $X$.
 
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example A.2}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example A.1.2}]
   \begin{enumerate}[1)]
     \item Let $X$ be a set. Then $\mathcal{T} = \Mbk{\emptyset, X}$, is a topology on $X$,
     called the \textit{trivial topology}. This is a smallest topology.
@@ -349,16 +397,18 @@ A \textit{topological space} is a set $X$ together with a topology $\mathcal{T}$
   \end{enumerate}
 \end{tcolorbox}
 
-\vs 
+**Exercise A.1**: Prove *Example A.2*.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3 \hs Basis}]
+\newpage 
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.3 \hs Basis}]
   Let $\mathcal{T}$ be a topology on a set $X$. A subset $\mathcal{B} \subseteq \mathcal{T}$
   is called a \textit{basis} for $\mathcal{T}$ if every element of $\mathcal{T}$ is a union of elements of $\mathcal{B}$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4 \hs Basis (Comfortable Definition)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.1.4 \hs Basis (Comfortable Definition)}]
   A subset $\mathcal{B}$ of a topology $\mathcal{T}$ on a set $X$ is a basis of $\mathcal{T}$
   iff, for every $U \in \mathcal{T}$ and $x \in U$, there is a $V \in \mathcal{B}$ with $x \in V \subseteq U$.
 \end{tcolorbox}
@@ -367,7 +417,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.5 \hs Neighborhood}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.5 \hs Neighborhood}]
   Let $X$ be a topological space, $x \in X$. Then $U \subseteq X$ is called a
   \textit{neighborhood} of $x$ when there is an open set $x \in V \subseteq U$.
   We denote by $\mathcal{U}(x)$ the set of all neighborhoods of $x$.
@@ -375,15 +425,15 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.6 \hs Neighborhood Basis}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.6 \hs Neighborhood Basis}]
   Let $X$ be a topological space and $x \in X$. Then we call a subset $\mathcal{B}(x) \subseteq \mathcal{U}(x)$
-  a \textit{neighborhood basis} or \textit{local basis} of $x$
+  a \textit{neighborhood basis} of $x$
   if for every neighborhood $U$ of $x$, there is a $V \in \mathcal{B}(x)$ with $V \subseteq U$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.7 \hs Countability}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.7 \hs Countability}]
   Let $X$ be a topological space.
   \begin{itemize}
     \item $X$ satisfies the \textit{first countability axiom} and is called \textit{countable} if every point
@@ -393,8 +443,84 @@ Proof is trivial.
   \end{itemize}
 \end{tcolorbox}
 
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.8 \hs Adherent, Interior and Boundary}]
+  Let X be a topological space and $Y \subseteq X$. Then $x \in X$ is called
+  \begin{enumerate}[1.]
+    \item \textit{an adherent point} (also sometimes called a \textit{point of closure}) of $Y$, 
+    if every neighborhood of $x$ in $X$ contains a point of $Y$. The set $Y$ of adherent points of $Y$
+    is called the \textit{closure} of $Y$
+
+    \item \textit{an interior point} of $Y$ if there is a neighborhood of $x$ in $X$ that is contained in $Y$.
+    The set $\mathring{Y}$ of interior points of $Y$ is called the \textit{interior} of $Y$
+
+    \item \textit{a boundary point} of $Y$ if every neighborhood of $x$ in $X$ contains points of $Y$ and
+    $X \backslash Y$. The set of boundary points of $Y$ is called the \textit{boundary} of $Y$, here denoted
+    by $\partial Y$.
+  \end{enumerate}
+\end{tcolorbox}
+
+\newpage
+
+### 2. Continous Maps
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.1 \hs Continuous}]
+  Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces and $f: X \rightarrow Y$ be a function. We call $f$
+  \textit{continuous} if $f^{-1}(V) \in \tau$ for all $V \in \tau'$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.2 \hs Continuous at a point}]
+  Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces and $f: X \rightarrow Y$ be a function. We call $f$
+  \textit{continuous at a point} $x \in X$ if, for every neighborhood $V$ of $f(x) \in Y$, there is a neighborhood
+  $U$ of $x$ with $f(U) \subseteq V$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.3 \hs Homeomorphism}]
+  A map $f: X \rightarrow Y$ between topological spaces $X$ and $Y$ is called a \textit{homeomorphism}
+  if $f$ is bijective and $f$ and $f^{-1}$ are continuous.
+\end{tcolorbox}
+
+### 3. Convergence And Hausdorff Spaces
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.1 \hs Convergence}]
+  Let $X$ be a topological space and $(x_n)$ a sequence in $X$. Then a point $x\in X$ is called
+  a \textit{limit} of the sequence $(x_n)$ if, for every neighborhood $\mathcal{U}(x)$ of $x$, 
+  $~\exists n \in \mathbb{N}$ such that $x_m \in \mathcal{U}(x), ~ \forall m \geq n$.
+  We then say that the sequence \textit{converges to} $x$, and we call the sequence \textit{convergent}.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.2 \hs Hausdorff}]
+  Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
+  that are disjoint: such that $U \cap V = \emptyset$.
+\end{tcolorbox}
+
+**Exercise A.2**: Prove that Metric spaces are Hausdorff spaces.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.3.3 \hs Hausdorff and Convergence}]
+  Let $X$ be a Hausdorff space. Then limit of sequences in $X$ are unique if they exist.
+\end{tcolorbox}
+
+\vs
+
+**Exercise A.3**: Prove *prop A.3.3*.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.4 \hs Regular Hausdorff ($\mathbf{T_3}$)}]
+  Let $X$ be a topological space. $X$ is called \textit{regular} if given any point $x$ and closed set
+  $C$, if $x \neq C$, then there exist a neighborhood $\mathcal{U}(x)$ of $x$ and a neighborhood $V$ of $C$
+  such that $\mathcal{U}(x) \cap V = \emptyset$. 
+\end{tcolorbox}
+
 # Reference
 
 \begin{itemize}
-\item Ballmann, Werner, and Walker Stern. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
+\item Ballmann, Werner. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
 \end{itemize}
