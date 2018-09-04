@@ -1,0 +1,16 @@
+graph G {
+    Manifold -- Hausdorff;
+    Manifold -- "Locally Euclidean";
+    Manifold -- "Second Countable";
+    Topology -- Manifold;
+    Topology -- Hausdorff;
+    Topology -- Basis;
+    Topology -- "Locally Finite";
+    "Locally Finite" -- Paracompact;
+    Basis -- "Second Countable";
+    Hausdorff -- Convergence;
+    Paracompact -- "Urysohn Lemma";
+    "Urysohn Lemma" -- "Partition of Unity";
+    Hausdorff -- "Partition of Unity";
+    "Second Countable" -- "Partition of Unity";
+}
