@@ -523,4 +523,5 @@ Proof is trivial.
 
 \begin{itemize}
 \item Ballmann, Werner. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
+\item Boothby, William Munger. \textit{An Introduction to Differentiable Manifolds and Riemannian Geometry}. Revised Second ed., vol. 120, Academic Press, 2010.
 \end{itemize}
