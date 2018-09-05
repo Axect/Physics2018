@@ -515,8 +515,8 @@ Proof is trivial.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.4 \hs Regular Hausdorff ($\mathbf{T_3}$)}]
   Let $X$ be a topological space. $X$ is called \textit{regular} if given any point $x$ and closed set
-  $C$, if $x \neq C$, then there exist a neighborhood $\mathcal{U}(x)$ of $x$ and a neighborhood $V$ of $C$
-  such that $\mathcal{U}(x) \cap V = \emptyset$. 
+  $C$, if $x \notin C$, then there exist a neighborhood $\mathcal{U}(x)$ of $x$ and a neighborhood $\mcu(C)$ of $C$
+  such that $\mathcal{U}(x) \cap \mcu(C) = \emptyset$. 
 \end{tcolorbox}
 
 # Reference
