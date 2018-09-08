@@ -3,17 +3,19 @@ graph G {
     "Topological Manifold" -- "Locally Euclidean";
     "Topological Manifold" -- "Second Countable";
     Topology -- "Topological Manifold";
-    Topology -- Hausdorff;
     Topology -- Basis;
     Topology -- "Locally Finite";
     "Locally Finite" -- Paracompact;
     Basis -- "Second Countable";
-    Hausdorff -- Convergence;
+    Hausdorff -- "Unique Convergence";
     Paracompact -- "Urysohn Lemma";
     "Urysohn Lemma" -- "Partition of Unity";
     "Second Countable" -- "Partition of Unity";
-    Topology -- Normal;
-    Hausdorff -- Normal;
-    Paracompact -- Normal;
     Normal -- "Partition of Unity";
+    Hausdorff -- "Dieudonne's Theorem";
+    Paracompact -- "Dieudonne's Theorem";
+    "Dieudonne's Theorem" -- Normal;
+    Topology -- "Separate Axiom";
+    "Separate Axiom" -- Hausdorff;
+    "Separate Axiom" -- Normal;
 }

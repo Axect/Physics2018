@@ -360,7 +360,9 @@ To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
 
 \end{tcolorbox}
 
-
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Dieudonn\'e's Theorem} (Continued)]
+  \textcircled{2} 
+\end{tcolorbox}
 
 
 # Appendix
