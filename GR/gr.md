@@ -11,7 +11,9 @@ titlepage: true
 ...
 
 
-\newpage\null\thispagestyle{empty}\newpage
+\newpage\thispagestyle{empty}
+![chap1](./chap1_to_print.svg)
+\newpage
 
 # Preliminaries
 
