@@ -12,6 +12,7 @@ titlepage: true
 
 
 \newpage\thispagestyle{empty}
+\centering
 ![chap1](./chap1_to_print.svg)
 \newpage
 
