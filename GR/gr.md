@@ -123,7 +123,7 @@ Proof will be given later.
   \begin{equation*}
     W_i \equiv \Mbk{\bigcup_{j \in \phi^{-1}(\Mbk{i})} V_j}
   \end{equation*}
-  is still a refinement of $\Mbk{U_i \in X}_{i \in I}$ to a locally finite cover.
+  is still a refinement of $\Mbk{U_i \subset X}_{i \in I}$ to a locally finite cover.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=red!50!white, title=\textbf{Proof for 1.1.8 }]
