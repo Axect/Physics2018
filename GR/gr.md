@@ -325,7 +325,7 @@ To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
 
   \vs
 
-  \textcircled{1} First, claim it is regular. To show this, $\forall x \in X,$ closed subset $C \subset X$ such that $x \neq C$, there are open neighborhoods
+  \textcircled{1} First, claim it is regular. To show this, $\forall x \in X,$ closed subset $C \subset X$ such that $x \notin C$, there are open neighborhoods
   $~\mathcal{U}(x) \ni x, ~ \mathcal{U}(C) \supset C$ such that $\mathcal{U}(x) \cap \mathcal{U}(C) = \emptyset$. Then let's start.
 
   Since $X$ is Hausdorff, 
@@ -352,16 +352,35 @@ To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
 
   Let's take new neighborhood of $x$ as follows :
 
-  $$\mcu(x) \equiv \mathcal{W}(x) \cap \Sbk{\bigcap_{k \in K}\mcu_k(x)}$$
+  $$\mathcal{V}(x) \equiv \mathcal{W}(x) \cap \Sbk{\bigcap_{k \in K}\mcu_k(x)}$$
 
   Then we can find 
   
-  $$\mcu(x) \cap \mathcal{V}(C) = \emptyset\footnote{this will be exercise}$$
+  $$\mathcal{V}(x) \cap \mathcal{V}(C) = \emptyset\footnote{this will be exercise (refer to \textcircled{2})}$$
 
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Dieudonn\'e's Theorem} (Continued)]
-  \textcircled{2} 
+  \textcircled{2} Claim $(X, \mathcal{T})$ is normal. Then we should prove below proposition:
+  $$ \forall \text{disjoint closed subsets} ~ C,D \subset X, ~ \exists \text{disjoint neighborhoods} ~ \mcu(C),~\mcu(D) \in \mathcal{T}$$
+  By regularity of $(X, \mathcal{T})$, we have next proposition:
+  $$ \forall c \in C, ~ \exists \text{disjoint neighborhoods} ~ \mcu(c) \ni c, ~ \mcu_c(D) \supset D $$
+  Since $\Mbk{\mcu(c) \subset X}_{c \in C} \cup X \backslash C~$ is an open cover of $X$ and paracompactness of $X$,
+  we can find locally finite refinement in same index:
+  $$ \Mbk{\mathcal{W}(c) \subset \mcu(c) \subset X}_{c \in C} $$
+  Then we can find new open neighborhood of $C$:
+  $$ \mathcal{V}(C) = \bigcup_{c \in C} \mathcal{W}(c)$$
+  By locally finiteness of $\mathcal{W}(c)$, $\forall d \in D$, $\exists$ an open neighborhood $\mathcal{W}(d)$
+  and finite subset $K_d \subset C$ such that
+  $$\underset{c\in C \backslash {K}_d}{\forall}\Sbk{\mathcal{W}(c) \cap \mathcal{W}(d) = \emptyset}$$
+  So, let take new open neighborhood of $d \in D$,
+  $$ \mathcal{V}(d) = \mathcal{W}(d) \cap \Sbk{\bigcap_{c \in K_d} \mcu_c(D)} \footnote{Finite intersection of opensets are open}$$
+  then
+  $$ \mathcal{V}(C) \cap \mathcal{V}(d) = \emptyset,~ ~\forall d \in D \footnote{For $c\in K_d,~ \mcu(c) \cap \mcu_c(D) = \emptyset$ and for $c \in X\backslash K_d, ~ \mathcal{V}(C) \cap \mathcal{V}(d) = \emptyset$}$$
+  Therefore take new open neighborhood of $D$ as
+  $$ \mathcal{V}(D) \equiv \bigcup_{d \in D}\mathcal{V}(d)$$
+  then
+  $$ \mathcal{V}(C) \cap \mathcal{V}(D) = \emptyset$$
 \end{tcolorbox}
 
 
