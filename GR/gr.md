@@ -119,6 +119,8 @@ To prove this, we need a wide background knowledge.
 
 Proof will be given later.
 
+\newpage
+
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.1.8 \hs Natural Refinement}]
   Let $(X, \tau)$ be a topological space, $\Mbk{U_i \subset X}_{i \in I}$ be an open cover
   and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover.
@@ -177,6 +179,8 @@ Proof will be given later.
 
 Now, suggest some fundamental topological concepts to prove prop 1.1.7.
 
+\VS
+
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.10 \hs Normal Spaces ($\mathbf{T_4}$)}]
   A topological space $X$ is \textit{normal} if for every two closed disjoint subsets $A,B \subset X$, there are neighborhoods $U \supset A$, $~ V \supset B$ such that $U \cap V = \emptyset$.
 \end{tcolorbox}
@@ -228,6 +232,9 @@ This lemma has several **big** applications:
 
 * **Embedding manifolds in $\mathbb{R}^n$**: Using Urysohn's lemma to develop the tool called *partitions of unity*, we can obtain the following theoerem:
   *Each compact $n$-manifold is homeomorphic to a subspace of some $\R^n$.*
+
+
+\VS
 
 Then let's start to prove *Urysohn's lemma*.
 
@@ -386,6 +393,13 @@ To prove *prop 1.1.7*, we should know relation between *Hausdorff* and *Normal*.
   $$ \mathcal{V}(C) \cap \mathcal{V}(D) = \emptyset$$
 \end{tcolorbox}
 
+Finally we can prove *prop 1.1.7*.
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Prop 1.1.7}]
+    
+\end{tcolorbox}
 
 # Appendix
 
@@ -420,6 +434,8 @@ we call the elements of $\mathcal{T}$ \textit{open subsets} and their complement
     called the \textit{discrete topology}. This is a largest topology.
   \end{enumerate}
 \end{tcolorbox}
+
+\VS
 
 **Exercise A.1**: Prove *Example A.2*.
 
