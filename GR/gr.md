@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-09-10
+date: 2018-09-18
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -13,11 +13,11 @@ titlepage: true
 
 \newpage\thispagestyle{empty}\null\newpage
 
-# Preliminaries
+# Background 
 
-## Manifolds
+## 1. Topological Manifolds
 
-### 1. Topological Manifolds
+### 1. Definition
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 \hs Topological Manifolds}]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
@@ -39,6 +39,18 @@ If you want to do calculus, you should need Hausdorff space.
 For Hausdorff space, existence of partition of unity require *paracompactness*.
 And paracompactness follows from *second countability*. It is same as have countable basis.
 
+\VS
+
+Now, we need some topological concepts to start *General Relativity*.
+If you are not familiar with topology, first read *Appendix A*.
+
+\newpage
+
+### 2. Topological concepts
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1 \hs }]
+  
+\end{tcolorbox}
 
 # Appendix
 
@@ -556,8 +568,9 @@ To prove *prop A.4.7*, we should know relation between *Hausdorff* and *Normal*.
 # Reference
 
 \begin{itemize}
-\item Boothby, William Munger. \textit{An Introduction to Differentiable Manifolds and Riemannian Geometry}. Revised Second ed., vol. 120, Academic Press, 2010.
-\item Ballmann, Werner. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
-\item nLab authors. \textit{Paracompact Hausdorff spaces equivalently admit subordinate partitions of unity}. \href{https://ncatlab.org/nlab/show/paracompact+Hausdorff+spaces+equivalently+admit+subordinate+partitions+of+unity}{nLab}, 2018.
-\item nLab authors. \textit{Paracompact Hausdorff spaces are normal}. \href{https://ncatlab.org/nlab/show/paracompact+Hausdorff+spaces+are+normal}{nLab}, 2018.
+  \item Felice, F. De, and C. J. S. Clarke. \textit{Relativity on Curved Manifolds}. Cambridge University Press, 1990.
+  \item Boothby, William Munger. \textit{An Introduction to Differentiable Manifolds and Riemannian Geometry}. Revised Second ed., vol. 120, Academic Press, 2010.
+  \item Ballmann, Werner. \textit{Introduction to Geometry and Topology}. Birkh\"auser, 2018.
+  \item nLab authors. \textit{Paracompact Hausdorff spaces equivalently admit subordinate partitions of unity}. \href{https://ncatlab.org/nlab/show/paracompact+Hausdorff+spaces+equivalently+admit+subordinate+partitions+of+unity}{nLab}, 2018.
+  \item nLab authors. \textit{Paracompact Hausdorff spaces are normal}. \href{https://ncatlab.org/nlab/show/paracompact+Hausdorff+spaces+are+normal}{nLab}, 2018.
 \end{itemize}
