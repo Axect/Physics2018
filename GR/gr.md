@@ -13,11 +13,9 @@ titlepage: true
 
 \newpage\thispagestyle{empty}\null\newpage
 
-# Background 
+# The Background Manifold Structure
 
 ## 1. Topological Manifolds
-
-### 1. Definition
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 \hs Topological Manifolds}]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
@@ -46,10 +44,56 @@ If you are not familiar with topology, first read *Appendix A*.
 
 \newpage
 
-### 2. Topological concepts
+## 2. Topological concepts
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1 \hs }]
-  
+### 1) Basic Concepts
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.1 \hs Connected}]
+  If it is not possible to write $M = A \cup B$ with, $A,B \in \mathcal{T}$ and $A \cup B = \emptyset$
+  then $M$ is \textit{connected}.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.2 \hs Hausdorff}]
+  If $M$ is connected \& $\forall \, p, q \in M$, there are open neighborhoods $\mcu(p) \ni p$, $\mcu(q) \ni q$
+  such that $\mcu(p) \cap \mcu(q) = \emptyset$ then $M$ is \textit{Hausdorff}.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.3 \hs Cover}]
+  A family $\Mbk{\mcu_\alpha}_{\alpha \in A}$ of open sets of $M$ is called \textit{open cover of $M$} if 
+  $$\bigcup_{\alpha \in A}\mcu_\alpha = M$$
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.4 \hs Compact}]
+  $M$ is \textit{compact} if $M$ is Hausdorff and all open cover of $M$ has finite refinement of $M$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.5 \hs Paracompact}]
+  $M$ is \textit{paracompact} if all open cover of $M$ has locally finite refinement.
+\end{tcolorbox}
+
+### 2) Maps
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.1 \hs Important Maps}]
+  Given two sets $U, U'$ a map $\Phi: U \rightarrow U'$ is called
+  \begin{itemize}
+    \item \textit{Injective} : $\forall p' \in \Phi(U)$, $~ \exists! p \in U$ such that $\Phi(p) = p'$.
+    \item \textit{Surjective} : $\Phi(U) = U'$.
+    \item \textit{Bijective} : $\Phi$ is both injective and surjective.
+  \end{itemize}
+\end{tcolorbox}
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.2 \hs Continuous}]
+  Consider $(U, \mathcal{T}),~(U', \mathcal{T}')$ are topological spaces. 
 \end{tcolorbox}
 
 # Appendix
