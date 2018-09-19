@@ -119,6 +119,8 @@ We usually use next notation:
   \item \textit{Local coordinate of point} : $\varphi(p) = (x^1, \cdots, x^n) = x$
 \end{itemize}
 
+\VS
+
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.2 \hs Atlas}]
   A familiy of charts $\mathcal{A} = \Mbk{(\mcu_\alpha, \varphi_\alpha)}_{\alpha \in A}$ on $M$
   is said to form an \textit{atlas} on $M$ if $\displaystyle\bigcup_{\alpha \in A}\mcu_\alpha = M$.
@@ -130,7 +132,7 @@ We usually use next notation:
   Let $(\mcu_\alpha, \varphi_\alpha),~(\mcu_\beta, \varphi_\beta)$ be two charts on $M$
   with $\mcu_\alpha \cap \mcu_\beta = \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
   a map (trivial homeomorphism) 
-  $$\varphi_\beta \cdot \varphi_\alpha^{-1}:~\varphi_\alpha(\mcu_\alpha \cap \mcu_\beta) \rightarrow \varphi_\beta (\mcu_\alpha \cap \mcu_\beta)$$
+  $$\varphi_\beta \circ \varphi_\alpha^{-1}:~\varphi_\alpha(\mcu_\alpha \cap \mcu_\beta) \rightarrow \varphi_\beta (\mcu_\alpha \cap \mcu_\beta)$$
   is called \textit{Coordinate Transform}.
 \end{tcolorbox}
 
@@ -152,11 +154,66 @@ We usually use next notation:
 
 We denote differentiable manifold as $(M, \mathcal{A})$ where $\mathcal{A}$ is $C^r$-atlas.
 
+\VS
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.2 \hs Function of Manifold}]
+  A map $f: M \rightarrow \R$ is said to be $C^k$-function at $p\in M$,
+  if for any chart $(\mcu_\alpha, \varphi_\alpha)$ containing $p$, there exists open neighborhood $\mcu(p) \subset \mcu_\alpha$ of $p$
+  such that the composite map
+  $$ \tilde{f}_{\alpha}: \R^n \supset \varphi_\alpha(\mcu(p)) \rightarrow \R$$
+  defined by
+  $$ \tilde{f}_{\alpha}(x) \equiv f \circ \varphi_\alpha^{-1}(x),~ x \in \R^n $$
+  is a $C^k$-differentiable function.
+\end{tcolorbox}
 
-[comment]: <> (==============================================================)
-[comment]: <> (= Appendix )
-[comment]: <> (==============================================================)
+We can't define differentiability of $f$ directly. But with chart, we can find $\R^n$ valued function
+that we already know how to determine differentiability in multi-variable real analysis.
+So, by using it, we can consider differentiability of $f$.
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.3 \hs Function Space}]
+  Denote by $\mathcal{F}$ the set of all differentiable functions on $M$ with the internal operations.
+  \begin{enumerate}
+    \item \textit{Multiplication} : $fg(p) = f(p)g(p)$
+    \item \textit{Addition} : $(f + g)(p) = f(p) + g(p)$
+  \end{enumerate}
+\end{tcolorbox}
+
+It's easy to find $\mathcal{F}$ is an \textit{Abelian Ring}.
+
+\newpage
+
+### 5) Maps of Manifolds
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Remark \hs Manifold with $\R^n$}]
+  A manifold $M$ is locally homeomorphic to an open set of $\R^n$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.1 \hs Maps between Manifolds}]
+  Let $M,N$ be two differentiable manifolds with same dimension $n$ and $\psi: M \rightarrow N$
+  a map of $M$ into $N$. Suppose two points $p \in M$, $~p' \in N$ such that $\psi(p) = p'$.
+  Let $(\mcu_\alpha, \varphi_\alpha)_p$, $~(\mcu'_\beta, \varphi'_\beta)_{p'}$ be two charts such that
+  $\varphi_\alpha(p) = x \in \R^n,~ \varphi'_\beta(p') = x' \in \R^n$.
+  By definition, $x' = \varphi'_\beta \circ \psi \circ \varphi_\alpha^{-1}(x)$.
+  We call it by \textit{coordinate representation} of $\psi$ and denote by
+  $$ \tilde{\psi}_{\alpha\beta}(x) = \varphi'_\beta \circ \psi \circ \varphi_\alpha^{-1}(x)$$
+\end{tcolorbox}
+
+Similar to $f$, we also determine differentiability of $\psi$ using by $\tilde{\psi}_{\alpha\beta}$.
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.2 \hs Diffeomorphism}]
+  If the map $\psi: M \rightarrow N$ is homeomorphism with both $\psi,~\psi^{-1}$ are differentiable,
+  then $\psi$ is called \textit{Diffeomorphism}.
+\end{tcolorbox}
+
+[comment]: <> (
+  ==============================================================
+    Appendix
+  ==============================================================
+)
 
 # Appendix
 
