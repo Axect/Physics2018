@@ -90,11 +90,73 @@ If you are not familiar with topology, first read *Appendix A*.
   \end{itemize}
 \end{tcolorbox}
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.2 \hs Continuous}]
+  Consider $(U, \mathcal{T}),~(U', \mathcal{T}')$ are topological spaces.
+  $\Phi: U \rightarrow U'$ is said to be \textit{continuous} at a point $p \in U$
+  if $\Phi^{-1}(W')$ is a neighborhood of $p$ for any neighborhood $W'$ of
+  $\Phi(p) \in U'$.
+\end{tcolorbox}
+
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.2 \hs Continuous}]
-  Consider $(U, \mathcal{T}),~(U', \mathcal{T}')$ are topological spaces. 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.3 \hs Homeomorphism}]
+  If $\Phi : U \rightarrow U'$ is bijective and $\Phi, \Phi^{-1}$ are continuous
+  then $\Phi$ is called homeomorphism and $U,U'$ are homeomorphic.
 \end{tcolorbox}
+
+### 3) Coordinate Neighborhoods (Chart)
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.1 \hs Coordinate Neighborhood (Chart)}]
+  Given a topological space $(M, \mathcal{T})$, define \textit{chart} of $M$ to be a pair $(\mcu_\alpha, \varphi_\alpha)$,
+  with $\mcu_\alpha$ an element of $\mathcal{T}$ and $\varphi_\alpha$ a homeomorphism of $\mcu_\alpha$
+  onto an open set of $\R^n$.
+\end{tcolorbox}
+
+We usually use next notation:
+
+\begin{itemize}
+  \item \textit{Point on a manifold} : $p \in M$
+  \item \textit{Local coordinate of point} : $\varphi(p) = (x^1, \cdots, x^n) = x$
+\end{itemize}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.2 \hs Atlas}]
+  A familiy of charts $\mathcal{A} = \Mbk{(\mcu_\alpha, \varphi_\alpha)}_{\alpha \in A}$ on $M$
+  is said to form an \textit{atlas} on $M$ if $\displaystyle\bigcup_{\alpha \in A}\mcu_\alpha = M$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.3 \hs Coordinate Transform}]
+  Let $(\mcu_\alpha, \varphi_\alpha),~(\mcu_\beta, \varphi_\beta)$ be two charts on $M$
+  with $\mcu_\alpha \cap \mcu_\beta = \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
+  a map (trivial homeomorphism) 
+  $$\varphi_\beta \cdot \varphi_\alpha^{-1}:~\varphi_\alpha(\mcu_\alpha \cap \mcu_\beta) \rightarrow \varphi_\beta (\mcu_\alpha \cap \mcu_\beta)$$
+  is called \textit{Coordinate Transform}.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.4 \hs $\mathbf{C^r}$-atlas}]
+  An atlas on $M$ is $C^r\textit{-atlas}$ if $\varphi_\beta \circ \varphi_\alpha^{-1}$ and its inverse for any pair $(\alpha, \beta)$
+  are $\R^n$ valued $C^r$-functions.
+\end{tcolorbox}
+
+\newpage
+
+### 4) Differentiable Manifolds
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.1 \hs Differentiable Manifold}]
+  \textit{Differentiable Manifold} of class $C^r$ and dimension $n$ is a Hausdorff topological space
+  with a $C^r$-atlas.
+\end{tcolorbox}
+
+We denote differentiable manifold as $(M, \mathcal{A})$ where $\mathcal{A}$ is $C^r$-atlas.
+
+
+
+[comment]: <> (==============================================================)
+[comment]: <> (= Appendix )
+[comment]: <> (==============================================================)
 
 # Appendix
 
