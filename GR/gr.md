@@ -209,6 +209,22 @@ Similar to $f$, we also determine differentiability of $\psi$ using by $\tilde{\
   then $\psi$ is called \textit{Diffeomorphism}.
 \end{tcolorbox}
 
+There are some kinds of Maps.
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.4 \hs Immersion}]
+  If $\text{dim}(M) > \text{dim}(N)$, a $C^r$-map $\Phi: N \rightarrow M$ is said to be an \textit{immersion}
+  if it is locally injective and the image of $\Phi(N)$ is said to be a $m$-dimensional \textit{immersed submanifold} of $M$
+  
+  The set $\Phi(N)$ is said to be \textit{imbedded} in $M$ if $\Phi$ is a homeomorphism of $N$
+  into its image in $M$, with the induced topology of $M$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.5 \hs Hypersurface}]
+  An imbedded submanifold of $M$ with $m = \text{dim}(M) - 1$ is termed a \textit{hypersurface}.
+\end{tcolorbox}
+
 [comment]: <> (
   ==============================================================
     Appendix
