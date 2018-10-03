@@ -336,8 +336,25 @@ Then let's get back to original definition.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.8 \hs Coordinate representation of Tangent vector}]
-  
+Now, let's obtain coordinate representation of tangent vector.
+\begin{align*}
+  \dot{\gamma}_p(f) &= \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}\\
+  &= \frac{d}{dt}\Bbk{f \circ \varphi^{-1}\circ \varphi \circ \gamma(t)}_{\gamma^{-1}(p)} \\
+  &= \Sbk{\frac{dx^i}{dt}}\Sbk{\PD{\tilde{f}}{x^i}}_{\varphi(p)}
+\end{align*}
+
+We want to decompose tangent vector to component and basis. But we can't find directly.
+So, we need some awesome tool - \textit{push forward}.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.8 \hs Tangent Map (Push forward)}]
+  Let $M,N$ be two manifolds and $\Phi: M \rightarrow N$ be a map of $M$ into $N$.
+  The induced vectors in $N$ are given by maps:
+  $$\Phi_*(u): \mathcal{F}(N) \rightarrow \R, ~~~ u \in T_p(M)$$
+  defined by
+  $$\Phi_*(u)(f) = u(f \circ \Phi), ~~~ f \in \mathcal{F}(N)$$
+  This map is called \textit{Tangent map} and also called \textit{Push forward}.
 \end{tcolorbox}
 
 [comment]: <> (
