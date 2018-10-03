@@ -239,9 +239,9 @@ To define tangent vector, we should define curve first.
 Now we can define tangent vector.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.2 \hs Tangent Vector}]
-  The \textit{tangent vector} to a curve $\gamma$ at a point $p=\gamma(t)$ is a map $\dot{\gamma}_p : \mathcal{F} \rightarrow \R$
+  The \textit{tangent vector} to a curve $\gamma$ at a point $p=\gamma(t)$ is a map $\dot{\gamma}_p : \mathcal{F}(M) \rightarrow \R$
   is given as
-  $$\dot{\gamma}_p(f) = \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}, \HS f \in \mathcal{F}$$
+  $$\dot{\gamma}_p(f) = \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}, \HS f \in \mathcal{F}(M)$$
 \end{tcolorbox}
 
 We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^n$.
@@ -274,11 +274,70 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
   Let $f(x^1, \cdots x^n)$ be defined and $C^\infty$ on some open set $U$.
   If $p \in U$, then $\exists$ spherical neighborhood $\mathcal{B}(p)$ of $p$ such that
   $\mathcal{B}(p) \subset U$ and $C^\infty$ function $g^1, \cdots , g^n$ on $\mathcal{B}(p)$ such that
+
+  \VS
   
   \begin{enumerate}
     \item $g^i(p) = \Sbk{\PD{f}{x^i}}$
-    \item $f(x^1, \cdots, x^n) = f(p) + \sum_{i=1}^n(x^i - p^i)g^i(x)$
+    \item $\displaystyle f(x) = f(p) + \sum_{i=1}^n(x^i - p^i)g^i(x)$
   \end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 2.6.5}]
+  Consider next integration.
+  $$\int_0^1 \PD{}{t} f(p + t(x-p)) dt = f(x) - f(p)$$
+  Thus,
+  $$f(x) = f(p) + \sum_{i=1}^n (x^i - p^i)\int_0^1\Bbk{\PD{f}{x^i}}_{p+t(x-p)}dt$$
+  So, choose 
+  $$g^i(x) = \int_0^1\Bbk{\PD{f}{x^i}}_{p+t(x-p)}dt$$
+  Then it satisfies \textit{Lem 2.6.5}.
+\end{tcolorbox}
+
+And review directional derivative.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.6 \hs Directional Derivative}]
+  Let $X_p \in T_p(\R^n)$ such that
+  $$X_p = \sum_{i=1}^n \alpha^i E_{ip}$$
+  Then we can define a linear map $X_p^*: \, C^\infty(p) \rightarrow \R$ as
+  $$X_p^*(f) = \sum_{i=1}^n \alpha^i \Sbk{\PD{f}{x^i}}_p $$
+  This map is called \textit{Directional Derivative}.
+\end{tcolorbox}
+
+Trivially, we know there is 1-1 correspondence between $X_p,~X_p^*$.
+If we define space of directional derivatives, then this space has same dimension as $T_p(\R^n)$.
+Thus, they are isomorphic.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 2.6.7 \hs Tangent Vector \& Derivative}]
+  $T_p(\R^n)$ is isomorphic to $\mathcal{D}_p(\R^n)$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of Thm 2.6.7}]
+  We already know relation between $X_p,~X_p^*$. Thus, our claim is as follow:
+  $$\forall D \in \mathcal{D}_p(\R^n),~\exists X_p \in T_p(\R^n)~\text{such that}~X_p^*f = Df$$
+  By \textit{Lem 2.6.5}, $\exists g$ such that
+  $$f(x) = f(p) + \sum_{i=1}^n (x^i - p^i)g^i(x), ~~~ g^i(p) = \Sbk{\PD{f}{x^i}}_p$$
+  Then let's use $D$ both side,
+  \begin{align*}
+    Df &= D(f(p)) + \sum_{i=1}^n D(x^i - p^i)g^i(p) + \sum_{i=1}^n (p^i - p^i)D(g^i(x))\\
+    &= \sum_{i=1}^n D(x^i)\Sbk{\PD{f}{x^i}}_p
+  \end{align*}
+  Since $D(x^i) \in \R$, let $\alpha^i \equiv D(x^i)$ then proof is complete.
+\end{tcolorbox}
+
+By \textit{Thm 2.6.7}, we can identify $T_p(\R^n)~ \& ~\mathcal{D}_p(\R^n)$.
+It means we can identify canonical basis and directional derivative.
+Thus, from now, we use directional derivative ways rather than canonical basis.
+
+\VS
+
+Then let's get back to original definition.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.8 \hs Coordinate representation of Tangent vector}]
+  
 \end{tcolorbox}
 
 [comment]: <> (
