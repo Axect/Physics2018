@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-09-18
+date: 2018-10-02
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -223,6 +223,62 @@ There are some kinds of Maps.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.5 \hs Hypersurface}]
   An imbedded submanifold of $M$ with $m = \text{dim}(M) - 1$ is termed a \textit{hypersurface}.
+\end{tcolorbox}
+
+\newpage
+
+### 6) The Tangent Space
+
+To define tangent vector, we should define curve first.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.1 \hs Curve}]
+  Given manifold $M$, a \textit{curve} $\gamma$ in $M$ is a map with single parameter:
+  $$ \gamma : \R \rightarrow M $$
+\end{tcolorbox}
+
+Now we can define tangent vector.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.2 \hs Tangent Vector}]
+  The \textit{tangent vector} to a curve $\gamma$ at a point $p=\gamma(t)$ is a map $\dot{\gamma}_p : \mathcal{F} \rightarrow \R$
+  is given as
+  $$\dot{\gamma}_p(f) = \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}, \HS f \in \mathcal{F}$$
+\end{tcolorbox}
+
+We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^n$.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.3 \hs Derivation Operator}]
+  Let $M$ be a differentiable manifold, $p \in M$. We say that a linear function $D \in \mathcal{F}^*(M)$
+  defined on $\mathcal{F}(M)$ is a \textit{derivation} of $\mathcal{F}(M)$ at $p$
+  if the equality
+  $$D(fg) = D(f)g(p) + f(p)D(g)$$
+  holds for $\forall f,g \in \mathcal{F}(M)$.
+\end{tcolorbox}
+
+We denote space of derivation operators as $\mathcal{D}_p(M)$. For $\R^n$, denote $D_p(\R^n)$
+as set of all derivations of $C^{\infty}(p)$ to $\R$.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 2.6.4 \hs Constant Derivation}]
+  Let $D \in \mathcal{D}_p(M)$. Then $D=0$ for all $f \in \mathcal{F}(M)$ such that
+  $f$ is constant in a neighborhood of $p$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 2.6.4}]
+  $$D 1 = D (1 \cdot 1) = D 1 \cdot 1 + 1 \cdot D 1 = 2 D 1 \Rightarrow D 1 = 0 \Rightarrow D c = c\cdot D 1 = 0$$
+\end{tcolorbox}
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 2.6.5 \hs First Order Approximation}]
+  Let $f(x^1, \cdots x^n)$ be defined and $C^\infty$ on some open set $U$.
+  If $p \in U$, then $\exists$ spherical neighborhood $\mathcal{B}(p)$ of $p$ such that
+  $\mathcal{B}(p) \subset U$ and $C^\infty$ function $g^1, \cdots , g^n$ on $\mathcal{B}(p)$ such that
+  
+  \begin{enumerate}
+    \item $g^i(p) = \Sbk{\PD{f}{x^i}}$
+    \item $f(x^1, \cdots, x^n) = f(p) + \sum_{i=1}^n(x^i - p^i)g^i(x)$
+  \end{enumerate}
 \end{tcolorbox}
 
 [comment]: <> (
