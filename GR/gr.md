@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-02
+date: 2018-10-04
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -355,6 +355,49 @@ So, we need some awesome tool - \textit{push forward}.
   defined by
   $$\Phi_*(u)(f) = u(f \circ \Phi), ~~~ f \in \mathcal{F}(N)$$
   This map is called \textit{Tangent map} and also called \textit{Push forward}.
+\end{tcolorbox}
+
+By *Def 2.6.8*, we can decompose tangent vector to components & bases.
+\begin{align*}
+  \dot{\gamma}_p(f) &= \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)}\Sbk{\PD{\tilde{f}}{x^i}}_{\varphi(p)} \\
+  &= \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)} \Sbk{\PD{}{x^i}}_{\varphi(p)}\Sbk{f \circ \varphi^{-1}} \\
+  &= \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)} \Sbk{\varphi^{-1}_* \Sbk{\PD{}{x^i}}}_p f
+\end{align*}
+
+Since $\Sbk{\varphi^{-1}_* \Sbk{\PD{}{x^i}}}_p$ is basis for $T_p(M)$, finally we can get next expression.
+$$ \dot{\gamma}_p = \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)} \Sbk{\varphi^{-1}_* \Sbk{\PD{}{x^i}}}_p \equiv \dot{\gamma}_p^i \partial_i$$
+
+$\dot{\gamma}_p^i$ is called *component* of tangent vector, $\partial_i$ is called *basis* of tangent vector.
+
+Now, let's see transformation properties of vector components.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.9 \hs Change Basis}]
+  Let $\Mbk{e_i}, \{e_j'\}$ are two bases of $T_p(M)$. From the properties of a basis, we can describe change basis as follows:
+  $$ e_i' = \tensor{A}{_i^j}e_j$$
+  where $\tensor{A}{_i^j}$ form an $n\times n$ matrix of real numbers such that
+  $$ \tensor{A}{_i^j} \tensor{{A^{\text{-}1}}}{_j^k} = \delta^k_i$$
+\end{tcolorbox}
+
+Let's use change of basis for our tangent vector. Let choose two bases $\Mbk{e_i}, \{e_j'\}$. Then for tangent vector $u \in T_p(M)$,
+$$u = u^ie_i = {u'}^i e'_i$$
+
+It's easy to find next relation.
+$$({u'}^i\tensor{A}{_i^j} - u^j)e_j = 0$$
+
+By linearly indendence of bases, we can get
+$${u'}^i = u^j \tensor{{A^{\text{-}1}}}{_j^i}$$
+
+Transpose both side, we finally see
+$${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.10 \hs Contravariant Vector}]
+  Suppose change of basis is given as
+  $$e'_i = \tensor{A}{_i^j}e_j$$
+  If change of basis of vector $u$ is given as
+  $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
+  then vector $u$ is called \textit{contravaiant vector}.
 \end{tcolorbox}
 
 [comment]: <> (
