@@ -400,6 +400,10 @@ $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
   then vector $u$ is called \textit{contravaiant vector}.
 \end{tcolorbox}
 
+\VS
+
+**Exercise 2.6.1**: Prove that $\Phi_*(\dot{\gamma}_p) = \dot{\Sbk{\Phi \circ \gamma}}_{\Phi(p)}$
+
 [comment]: <> (
   ==============================================================
     Appendix
