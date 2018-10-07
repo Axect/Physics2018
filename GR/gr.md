@@ -8,16 +8,17 @@ subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
 titlepage: true
+toc-own-page: true
 ...
 
 
 \newpage\thispagestyle{empty}\null\newpage
 
+\tableofcontents
+
 # The Background Manifold Structure
 
-## 1. Topological Manifolds
-
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1 \hs Topological Manifolds}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.0 \hs Topological Manifolds}]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
   \begin{enumerate}
     \item $M$ is Hausdorff
@@ -44,44 +45,42 @@ If you are not familiar with topology, first read *Appendix A*.
 
 \newpage
 
-## 2. Topological concepts
+## 1. Basic Concepts
 
-### 1) Basic Concepts
-
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.1 \hs Connected}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.1 \hs Connected}]
   If it is not possible to write $M = A \cup B$ with, $A,B \in \mathcal{T}$ and $A \cup B = \emptyset$
   then $M$ is \textit{connected}.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.2 \hs Hausdorff}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.2 \hs Hausdorff}]
   If $M$ is connected \& $\forall \, p, q \in M$, there are open neighborhoods $\mcu(p) \ni p$, $\mcu(q) \ni q$
   such that $\mcu(p) \cap \mcu(q) = \emptyset$ then $M$ is \textit{Hausdorff}.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.3 \hs Cover}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.3 \hs Cover}]
   A family $\Mbk{\mcu_\alpha}_{\alpha \in A}$ of open sets of $M$ is called \textit{open cover of $M$} if 
   $$\bigcup_{\alpha \in A}\mcu_\alpha = M$$
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.4 \hs Compact}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.4 \hs Compact}]
   $M$ is \textit{compact} if $M$ is Hausdorff and all open cover of $M$ has finite refinement of $M$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.1.5 \hs Paracompact}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.5 \hs Paracompact}]
   $M$ is \textit{paracompact} if all open cover of $M$ has locally finite refinement.
 \end{tcolorbox}
 
-### 2) Maps
+## 2. Maps
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.1 \hs Important Maps}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.1 \hs Important Maps}]
   Given two sets $U, U'$ a map $\Phi: U \rightarrow U'$ is called
   \begin{itemize}
     \item \textit{Injective} : $\forall p' \in \Phi(U)$, $~ \exists! p \in U$ such that $\Phi(p) = p'$.
@@ -90,7 +89,7 @@ If you are not familiar with topology, first read *Appendix A*.
   \end{itemize}
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.2 \hs Continuous}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.2 \hs Continuous}]
   Consider $(U, \mathcal{T}),~(U', \mathcal{T}')$ are topological spaces.
   $\Phi: U \rightarrow U'$ is said to be \textit{continuous} at a point $p \in U$
   if $\Phi^{-1}(W')$ is a neighborhood of $p$ for any neighborhood $W'$ of
@@ -99,14 +98,14 @@ If you are not familiar with topology, first read *Appendix A*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.2.3 \hs Homeomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.3 \hs Homeomorphism}]
   If $\Phi : U \rightarrow U'$ is bijective and $\Phi, \Phi^{-1}$ are continuous
   then $\Phi$ is called homeomorphism and $U,U'$ are homeomorphic.
 \end{tcolorbox}
 
-### 3) Coordinate Neighborhoods (Chart)
+## 3. Coordinate Neighborhoods (Chart)
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.1 \hs Coordinate Neighborhood (Chart)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.1 \hs Coordinate Neighborhood (Chart)}]
   Given a topological space $(M, \mathcal{T})$, define \textit{chart} of $M$ to be a pair $(\mcu_\alpha, \varphi_\alpha)$,
   with $\mcu_\alpha$ an element of $\mathcal{T}$ and $\varphi_\alpha$ a homeomorphism of $\mcu_\alpha$
   onto an open set of $\R^n$.
@@ -121,14 +120,14 @@ We usually use next notation:
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.2 \hs Atlas}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.2 \hs Atlas}]
   A familiy of charts $\mathcal{A} = \Mbk{(\mcu_\alpha, \varphi_\alpha)}_{\alpha \in A}$ on $M$
   is said to form an \textit{atlas} on $M$ if $\displaystyle\bigcup_{\alpha \in A}\mcu_\alpha = M$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.3 \hs Coordinate Transform}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.3 \hs Coordinate Transform}]
   Let $(\mcu_\alpha, \varphi_\alpha),~(\mcu_\beta, \varphi_\beta)$ be two charts on $M$
   with $\mcu_\alpha \cap \mcu_\beta = \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
   a map (trivial homeomorphism) 
@@ -138,16 +137,16 @@ We usually use next notation:
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.3.4 \hs $\mathbf{C^r}$-atlas}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.4 \hs $\mathbf{C^r}$-atlas}]
   An atlas on $M$ is $C^r\textit{-atlas}$ if $\varphi_\beta \circ \varphi_\alpha^{-1}$ and its inverse for any pair $(\alpha, \beta)$
   are $\R^n$ valued $C^r$-functions.
 \end{tcolorbox}
 
 \newpage
 
-### 4) Differentiable Manifolds
+## 4. Differentiable Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.1 \hs Differentiable Manifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.1 \hs Differentiable Manifold}]
   \textit{Differentiable Manifold} of class $C^r$ and dimension $n$ is a Hausdorff topological space
   with a $C^r$-atlas.
 \end{tcolorbox}
@@ -156,7 +155,7 @@ We denote differentiable manifold as $(M, \mathcal{A})$ where $\mathcal{A}$ is $
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.2 \hs Function of Manifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.2 \hs Function of Manifold}]
   A map $f: M \rightarrow \R$ is said to be $C^k$-function at $p\in M$,
   if for any chart $(\mcu_\alpha, \varphi_\alpha)$ containing $p$, there exists open neighborhood $\mcu(p) \subset \mcu_\alpha$ of $p$
   such that the composite map
@@ -172,7 +171,7 @@ So, by using it, we can consider differentiability of $f$.
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.4.3 \hs Function Space}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.3 \hs Function Space}]
   Denote by $\mathcal{F}$ the set of all differentiable functions on $M$ with the internal operations.
   \begin{enumerate}
     \item \textit{Multiplication} : $fg(p) = f(p)g(p)$
@@ -184,13 +183,13 @@ It's easy to find $\mathcal{F}$ is an \textit{Abelian Ring}.
 
 \newpage
 
-### 5) Maps of Manifolds
+## 5. Maps of Manifolds
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Remark \hs Manifold with $\R^n$}]
   A manifold $M$ is locally homeomorphic to an open set of $\R^n$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.1 \hs Maps between Manifolds}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.1 \hs Maps between Manifolds}]
   Let $M,N$ be two differentiable manifolds with same dimension $n$ and $\psi: M \rightarrow N$
   a map of $M$ into $N$. Suppose two points $p \in M$, $~p' \in N$ such that $\psi(p) = p'$.
   Let $(\mcu_\alpha, \varphi_\alpha)_p$, $~(\mcu'_\beta, \varphi'_\beta)_{p'}$ be two charts such that
@@ -204,7 +203,7 @@ Similar to $f$, we also determine differentiability of $\psi$ using by $\tilde{\
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.2 \hs Diffeomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.2 \hs Diffeomorphism}]
   If the map $\psi: M \rightarrow N$ is homeomorphism with both $\psi,~\psi^{-1}$ are differentiable,
   then $\psi$ is called \textit{Diffeomorphism}.
 \end{tcolorbox}
@@ -213,7 +212,7 @@ There are some kinds of Maps.
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.4 \hs Immersion}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.4 \hs Immersion}]
   If $\text{dim}(M) > \text{dim}(N)$, a $C^r$-map $\Phi: N \rightarrow M$ is said to be an \textit{immersion}
   if it is locally injective and the image of $\Phi(N)$ is said to be a $m$-dimensional \textit{immersed submanifold} of $M$
   
@@ -221,24 +220,24 @@ There are some kinds of Maps.
   into its image in $M$, with the induced topology of $M$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.5.5 \hs Hypersurface}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.5 \hs Hypersurface}]
   An imbedded submanifold of $M$ with $m = \text{dim}(M) - 1$ is termed a \textit{hypersurface}.
 \end{tcolorbox}
 
 \newpage
 
-### 6) The Tangent Space
+## 6. The Tangent Space
 
 To define tangent vector, we should define curve first.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.1 \hs Curve}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.1 \hs Curve}]
   Given manifold $M$, a \textit{curve} $\gamma$ in $M$ is a map with single parameter:
   $$ \gamma : \R \rightarrow M $$
 \end{tcolorbox}
 
 Now we can define tangent vector.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.2 \hs Tangent Vector}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.2 \hs Tangent Vector}]
   The \textit{tangent vector} to a curve $\gamma$ at a point $p=\gamma(t)$ is a map $\dot{\gamma}_p : \mathcal{F}(M) \rightarrow \R$
   is given as
   $$\dot{\gamma}_p(f) = \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}, \HS f \in \mathcal{F}(M)$$
@@ -248,7 +247,7 @@ We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.3 \hs Derivation Operator}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.3 \hs Derivation Operator}]
   Let $M$ be a differentiable manifold, $p \in M$. We say that a linear function $D \in \mathcal{F}^*(M)$
   defined on $\mathcal{F}(M)$ is a \textit{derivation} of $\mathcal{F}(M)$ at $p$
   if the equality
@@ -259,18 +258,18 @@ We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^
 We denote space of derivation operators as $\mathcal{D}_p(M)$. For $\R^n$, denote $D_p(\R^n)$
 as set of all derivations of $C^{\infty}(p)$ to $\R$.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 2.6.4 \hs Constant Derivation}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.6.4 \hs Constant Derivation}]
   Let $D \in \mathcal{D}_p(M)$. Then $D=0$ for all $f \in \mathcal{F}(M)$ such that
   $f$ is constant in a neighborhood of $p$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 2.6.4}]
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.6.4}]
   $$D 1 = D (1 \cdot 1) = D 1 \cdot 1 + 1 \cdot D 1 = 2 D 1 \Rightarrow D 1 = 0 \Rightarrow D c = c\cdot D 1 = 0$$
 \end{tcolorbox}
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 2.6.5 \hs First Order Approximation}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.6.5 \hs First Order Approximation}]
   Let $f(x^1, \cdots x^n)$ be defined and $C^\infty$ on some open set $U$.
   If $p \in U$, then $\exists$ spherical neighborhood $\mathcal{B}(p)$ of $p$ such that
   $\mathcal{B}(p) \subset U$ and $C^\infty$ function $g^1, \cdots , g^n$ on $\mathcal{B}(p)$ such that
@@ -283,19 +282,19 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
   \end{enumerate}
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 2.6.5}]
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.6.5}]
   Consider next integration.
   $$\int_0^1 \PD{}{t} f(p + t(x-p)) dt = f(x) - f(p)$$
-  Thus,
+  Thus,toc-own-page: true
   $$f(x) = f(p) + \sum_{i=1}^n (x^i - p^i)\int_0^1\Bbk{\PD{f}{x^i}}_{p+t(x-p)}dt$$
   So, choose 
   $$g^i(x) = \int_0^1\Bbk{\PD{f}{x^i}}_{p+t(x-p)}dt$$
-  Then it satisfies \textit{Lem 2.6.5}.
+  Then it satisfies \textit{Lem 1.6.5}.
 \end{tcolorbox}
 
 And review directional derivative.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.6 \hs Directional Derivative}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.6 \hs Directional Derivative}]
   Let $X_p \in T_p(\R^n)$ such that
   $$X_p = \sum_{i=1}^n \alpha^i E_{ip}$$
   Then we can define a linear map $X_p^*: \, C^\infty(p) \rightarrow \R$ as
@@ -309,14 +308,14 @@ Thus, they are isomorphic.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 2.6.7 \hs Tangent Vector \& Derivative}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.6.7 \hs Tangent Vector \& Derivative}]
   $T_p(\R^n)$ is isomorphic to $\mathcal{D}_p(\R^n)$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of Thm 2.6.7}]
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of Thm 1.6.7}]
   We already know relation between $X_p,~X_p^*$. Thus, our claim is as follow:
   $$\forall D \in \mathcal{D}_p(\R^n),~\exists X_p \in T_p(\R^n)~\text{such that}~X_p^*f = Df$$
-  By \textit{Lem 2.6.5}, $\exists g$ such that
+  By \textit{Lem 1.6.5}, $\exists g$ such that
   $$f(x) = f(p) + \sum_{i=1}^n (x^i - p^i)g^i(x), ~~~ g^i(p) = \Sbk{\PD{f}{x^i}}_p$$
   Then let's use $D$ both side,
   \begin{align*}
@@ -326,7 +325,7 @@ Thus, they are isomorphic.
   Since $D(x^i) \in \R$, let $\alpha^i \equiv D(x^i)$ then proof is complete.
 \end{tcolorbox}
 
-By \textit{Thm 2.6.7}, we can identify $T_p(\R^n)~ \& ~\mathcal{D}_p(\R^n)$.
+By \textit{Thm 1.6.7}, we can identify $T_p(\R^n)~ \& ~\mathcal{D}_p(\R^n)$.
 It means we can identify canonical basis and directional derivative.
 Thus, from now, we use directional derivative ways rather than canonical basis.
 
@@ -348,7 +347,7 @@ So, we need some awesome tool - \textit{push forward}.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.8 \hs Tangent Map (Push forward)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.8 \hs Tangent Map (Push forward)}]
   Let $M,N$ be two manifolds and $\Phi: M \rightarrow N$ be a map of $M$ into $N$.
   The induced vectors in $N$ are given by maps:
   $$\Phi_*(u): \mathcal{F}(N) \rightarrow \R, ~~~ u \in T_p(M)$$
@@ -357,7 +356,7 @@ So, we need some awesome tool - \textit{push forward}.
   This map is called \textit{Tangent map} and also called \textit{Push forward}.
 \end{tcolorbox}
 
-By *Def 2.6.8*, we can decompose tangent vector to components & bases.
+By *Def 1.6.8*, we can decompose tangent vector to components & bases.
 \begin{align*}
   \dot{\gamma}_p(f) &= \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)}\Sbk{\PD{\tilde{f}}{x^i}}_{\varphi(p)} \\
   &= \Sbk{\frac{dx^i}{dt}}_{\gamma^{\text{-}1}(p)} \Sbk{\PD{}{x^i}}_{\varphi(p)}\Sbk{f \circ \varphi^{-1}} \\
@@ -373,7 +372,7 @@ Now, let's see transformation properties of vector components.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.9 \hs Change Basis}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.9 \hs Change Basis}]
   Let $\Mbk{e_i}, \{e_j'\}$ are two bases of $T_p(M)$. From the properties of a basis, we can describe change basis as follows:
   $$ e_i' = \tensor{A}{_i^j}e_j$$
   where $\tensor{A}{_i^j}$ form an $n\times n$ matrix of real numbers such that
@@ -392,7 +391,7 @@ $${u'}^i = u^j \tensor{{A^{\text{-}1}}}{_j^i}$$
 Transpose both side, we finally see
 $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.6.10 \hs Contravariant Vector}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.10 \hs Contravariant Vector}]
   Suppose change of basis is given as
   $$e'_i = \tensor{A}{_i^j}e_j$$
   If change of basis of vector $u$ is given as
@@ -402,7 +401,86 @@ $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
 
 \VS
 
-**Exercise 2.6.1**: Prove that $\Phi_*(\dot{\gamma}_p) = \dot{\Sbk{\Phi \circ \gamma}}_{\Phi(p)}$
+**Exercise 1.6.1**: Prove that $\Phi_*(\dot{\gamma}_p) = \dot{\Sbk{\Phi \circ \gamma}}_{\Phi(p)}$
+
+\newpage
+
+## 7. The Cotangent Space
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.1 \hs Differential}]
+  Let $f \in \mathcal{F}(M)$. The \textit{differential} of $f$ at $p$ is the map
+  $$ df_p : T_p(M) ~ \rightarrow ~ \R$$
+  such that
+  $$df_p(u) = u(f)~~~ \forall u \in T_p(M)$$
+\end{tcolorbox}
+
+\vs
+
+**Exercise 1.7.1**: Prove that differential is linear.
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.2 \hs Cotangent Space}]
+  The set of all linear maps from $T_p(M)$ into $\R$ is called the \textit{cotangent space} at $p$.
+  It is denoted by $T_p^*(M)$ and its general elements are \textit{covectors}.
+  In fact, this space is the dual of $T_p(M)$.
+\end{tcolorbox}
+
+We denote covector as follows:
+$$\omega = \omega_i e^i ~~~ \text{where} ~ \omega_i \in \R, ~ e^i \in T_p^*(M)$$
+
+Although one can choose an arbitrary basis in $T_p^*(M)$, it's convenient to link its choice uniquely
+to that of a basis in the tangent space. - \textit{Dual basis}
+$$ e^i(e_j) = \delta^i_j$$
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.7.3 \hs Properties of Covector}]
+  \begin{itemize}
+    \item Component: $e^i(u) = u^k e^i(e_k) = u^i ~~~ \forall u \in T_p(M)$
+    \item Re-Analyze: $\omega(u) = u^k \omega(e_k) = \omega(e_k)e^k(u)~\Rightarrow~\omega = \omega(e_k)e^k = \omega_k e^k$
+    \item Natural Basis: $dx^i (\partial_j) = \partial_j(x^i) = \PD{x^i}{x^j} = \delta^i_j ~\rightarrow~dx^i$ is a natural basis for $T_p^*(M)$.
+    \item Component of differential: $(df)_i = (df)(\partial_i) = \partial_i(f) = \PD{\tilde{f}_\alpha}{x^i}~~~\forall f \in \mathcal{F}(M)$
+  \end{itemize}
+\end{tcolorbox}
+
+\vs
+
+By above properties, we can find any covector can be written as the differential of some function.
+
+\newpage
+
+We already know $e_i' = \tensor{A}{_i^j}e_j$. Now, let's see transformation of bases in $T_p^*(M)$. \newline
+Let $\Mbk{e'^j},~\Mbk{e^k}$ be two bases of $T_p^*(M)$.
+$$e'^j(e'_k) = \delta^j_k ~\Rightarrow~\tensor{A}{_k^i}e'^j(e_i) = \delta^j_k~\Rightarrow~e'^j(e_l) =
+\tensor{\Sbk{A^{\text{-}1}}}{_l^j} = \delta^k_l\tensor{\Sbk{A^{\text{-}1}}}{_k^j}e^k(e_l)$$
+Therefore, we can get next two results.
+\begin{gather*}
+  e'^j = \tensor{\Sbk{A^{\text{-}1}}}{_k^j}e^k \\
+  \omega_i' = \tensor{A}{_i^j}\omega_j
+\end{gather*}
+
+This change of component is same as change of coordinate basis. We call this kinds of vector by \textit{Covariant vector}.
+
+Finally, let's see the dual tangent map.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.4 \hs Dual Tangent Map (Pull Back)}]
+  Let $\Phi: M \rightarrow N$. Now we define \textit{the dual tangent map} $\Phi^*: \, T_{\Phi(p)}^*(N) \rightarrow T_p^*(M)$ as
+  $$\Sbk{\Phi^*(\omega)}(u) = \omega\Sbk{\Phi_*(u)} ~~~ \forall u \in T_p(M)$$
+\end{tcolorbox}
+
+\vs
+
+**Exercise 1.7.2**: Prove that $\Phi^*(df) = d(f \circ \Phi)$.
+
+\newpage
+
+## 8. Supplements
+
+### 1) Lie Group
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.8.1 \hs Lie Group}]
+  $G$ is a \textit{Lie group} provided that the mapping of $G\times G \rightarrow G$ defined by $(x,y) \rightarrow xy$
+  and the mapping of $G \rightarrow G$ defined by $x \rightarrow x^{-1}$ are both $C^\infty$ mappings.
+\end{tcolorbox}
 
 [comment]: <> (
   ==============================================================
