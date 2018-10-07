@@ -477,10 +477,56 @@ Finally, let's see the dual tangent map.
 
 ### 1) Lie Group
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 2.8.1 \hs Lie Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.1 \hs Lie Group}]
   $G$ is a \textit{Lie group} provided that the mapping of $G\times G \rightarrow G$ defined by $(x,y) \rightarrow xy$
   and the mapping of $G \rightarrow G$ defined by $x \rightarrow x^{-1}$ are both $C^\infty$ mappings.
 \end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.2 \hs Global Linear Group}]
+  $Gl(n,\R)$, the set of nonsingular $n\times n$ matrices, is a group with respect to matrix multiplication.
+  Since $AB$ is polynomial in the entries of $A,B$, the map $(A,B)\rightarrow AB$ is $C^\infty$. 
+
+  And for $A^{-1} = \frac{1}{det{A}}\tilde{a}_{ij}$, since cofactor of $A$ is polynomial in the entries of $A$ and $det(A)\neq 0$,
+  entries of $A^{-1}$ are rational functions on $Gl(n,\R)$ with non-vanishing denominator. Thus, the map $A\rightarrow A^{-1}$ is also $C^\infty$.
+  \newline
+  Therefore, $Gl(n,\R)$ is a Lie group.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.3 \hs Nonzero Complex Number}]
+  Let $C^*$ be the nonzero complex numbers. Then $C^*$ is a group with respect to multiplication of complex numbers, the inverse being
+  $z^{-1}=\frac{1}{z}$. 
+
+  Moreover $C^*$ is a two-dimensional $C^\infty$ manifold covered by a single coordinate neighborhood $U=C^*$ with coordinate map
+  $z \rightarrow \varphi(z)$ given by $\varphi(x + iy) = (x,y)$ for $z = x+iy$.
+
+  Using these coordinates, the map $(z, z') \rightarrow zz'$ is given by
+  $$((x,y),(x',y')) \rightarrow (xx' - yy', xy' + yx')$$
+  and the mapping $z \rightarrow z^{-1}$ by
+  $$(x,y)\rightarrow \Sbk{\frac{x}{x^2 + y^2},\frac{-y}{x^2 + y^2}}$$
+
+  We can find these two maps are $C^\infty$. Thus, $C^*$ is Lie group.
+\end{tcolorbox}
+
+\VS
+
+**Exercise 1.8.1**: Show that if $G_1,G_2$ are Lie groups then the direct product $G_1 \times G_2$ of 
+this groups with the $C^\infty$ structure of the Cartesian product of manifolds is a Lie group.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.4 \hs Toral Groups}]
+  The circle $S^1$ may be identified with the complex numbers of absolute value $+1$.
+  Since $|z_1\, z_2| = |z_1|\,|z_2|$, it is a group with respect to multiplication of complex numbers $-$ a subgroup of $C^*$.
+
+  Thus, $S_1$ is also Lie group and by previous \textit{Exercise 1.8.1}, we can see that $T^n = S^1 \times \cdots \times S^1$ is also Lie group.
+  It is called the \textit{toral group}.
+\end{tcolorbox}
+
+As might be expected, the subgroups of a Lie group which are also submanifolds play a special role.
 
 [comment]: <> (
   ==============================================================
