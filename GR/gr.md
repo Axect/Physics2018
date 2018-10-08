@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-04
+date: 2018-10-08
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -542,6 +542,53 @@ As might be expected, the subgroups of a Lie group which are also submanifolds p
 \end{tcolorbox}
 
 ![](submanifold.jpg)
+
+Our interest is not general submanifold - *Regular submanifold*.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.6 \hs Regular Submanifold}]
+  A \textit{regular submanifold} of a $C^\infty$ manifold $M$ is any subspace $N$ with the $C^\infty$ structure
+  that the corresponding preferred coordinate neighborhoods determine on it.
+\end{tcolorbox}
+
+In Lie group, there is an important theorem for regular submanifold.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.7 \hs Lie group \& Regular submanifold}]
+  Let $G$ be a Lie group and $H$ a subgroup which is also a regular submanifold. 
+  Then with its differentiable structure as a submanifold $H$ is a Lie group.
+\end{tcolorbox}
+
+To prove above theorem, we require following lemma.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.8.8 \hs Regular submanifold \& Differentiable Map}]
+  Let $F:A\rightarrow M$ be a $C^\infty$ mapping of $C^\infty$ manifolds and suppose $F(A)\subset N$,
+  $N$ being a regular submanifold of $M$. Then $F$ is $C^\infty$ as a mapping into $N$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.8.8}]
+  Since $N$ is regular submanifold of $M$, each point of $N$ in preferred coordinate neighborhood.
+  Let $p \in A$, $~q = F(p) \in N$ and $(U,\varphi)$ be a coordinate neighborhood of $p$,
+  $~(V, \psi)$ be a coordinate of $q$. Then we can find next properties from definition of submanifold.
+  \begin{enumerate}
+    \item $\psi(q) = (0,\cdots,0)$
+    \item $\psi(V) = C_\epsilon^m(0)$
+    \item $\psi(V\cap N) = \Mbk{x \in C_\epsilon^m(0) \,|\, x^{n+1}=\cdots =x^m=0}$
+  \end{enumerate}
+
+  Let consider coordinate representation of $F$:
+
+  \begin{gather*}
+    \tilde{F} = \psi \circ F \circ \varphi^{-1}\\
+    \tilde{F}(x^1, \cdots, x^l) = (f^1(x),f^2(x), \cdots ,f^n(x), 0, \cdots, 0)
+  \end{gather*}
+  
+  since $F(A) \subset N$, $~\psi \circ F(U) \subset V \cap N$.
+\end{tcolorbox}
 
 [comment]: <> (
   ==============================================================
