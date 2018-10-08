@@ -618,16 +618,60 @@ So, they are, in fact, \textit{diffeomorphisms}.
 \VS
 
 The meaning of \textit{Thm 1.8.7} is for any regular submanifold of Lie group is also Lie group.
-But there is one missing link $-$ how to see a subset is regular submanifold?
-To find this, we need fundamental concept - \textit{rank}.
+But there is one missing link $-$ how to see a subset is regular submanifold?\newline
+To answer this, we need fundamental concept - \textit{rank}.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Rank in linear algebra}]
-  In linear algebra the \textit{rank} of an $m\times n$ matrix $A$ is defined in three equivalent ways:
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Image, Kernel and Rank}]
+  Let $L$ be a linear transformation from $V$ to $W$, then
   \begin{enumerate}
-    \item the dimension of the subspace of $V^n$ spanned by the rows
-    \item the dimension of the subspace of $V^m$ spanned by the columns
-    \item the maximum order of any nonvanishing minor determinent
+    \item Image: $\text{im}(L) = \Mbk{L(v)\,|\,v \in V}$
+    \item Kernel: $\text{ker}(L) = \Mbk{v \in V\,|\, L(v) = 0}$
+    \item Rank: $\text{rk}(L) = \text{dim}(\text{im}(L))$
   \end{enumerate}
+\end{tcolorbox}
+
+\vs
+
+**Exercise 1.8.1**: Prove that $\text{rk}(AB) \leq \text{rk}(A)$.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.8.10 \hs Rank with invertible matrix}]
+  Let $A$ be a $m \times n$ matrix and $B$ be a $n \times n$ non-singular matrix. Then
+  $$\text{rk}(AB) = \text{rk}(A)$$
+\end{tcolorbox}
+
+\vs
+
+**Exercise 1.8.2**: Prove \textit{prop 1.8.10}.
+
+\newpage
+
+And believe next theorem.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.11 \hs Constant Rank Theorem}]
+  Let $F: N \rightarrow M$ be a differentiable mapping of $C^\infty$ manifolds
+  and suppose $\dim{N} = n$, $\dim{M} = m$ and $\rank{F}=k$ at every point of $N$.
+  If $p \in N$, then there exist coordinate neighborhoods $(U,\varphi)$ and $(V,\psi)$
+  of $p$ and $F(p)$ such that $\varphi(p) = (0,\ldots,0)$, $~\psi(F(p))=(0,\ldots,0)$
+  and $\tilde{F} = \psi \circ F \circ \varphi^{-1}$ is given by
+  $$\tilde{F}(x^1,~\ldots,~x^n) = (x^1,~\ldots,~x^k,~0,\ldots,~0)$$
+\end{tcolorbox}
+
+Then we can get magical theorem.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.11 \hs Constant Rank \& Regular Submanifold}]
+  Let $N$ be a $C^\infty$ manifold of dimension $n$, $~M$ be a $C^\infty$ manifold of dimension $M$, and
+  $F:N \rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constant rank $k$ on $N$
+  and that $q \in F(N)$. Then $F^{-1}(q)$ is a closed, regular submanifold of $N$ of dimension $n-k$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.11}]
+  
 \end{tcolorbox}
 
 [comment]: <> (
