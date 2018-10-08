@@ -615,6 +615,20 @@ Now, using \textit{Thm 1.8.7}, we can find natural defined maps of a Lie group $
 These maps are $C^\infty$ by definition of Lie group and their inverses are also $C^\infty$.
 So, they are, in fact, \textit{diffeomorphisms}.
 
+\VS
+
+The meaning of \textit{Thm 1.8.7} is for any regular submanifold of Lie group is also Lie group.
+But there is one missing link $-$ how to see a subset is regular submanifold?
+To find this, we need fundamental concept - \textit{rank}.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Rank in linear algebra}]
+  In linear algebra the \textit{rank} of an $m\times n$ matrix $A$ is defined in three equivalent ways:
+  \begin{enumerate}
+    \item the dimension of the subspace of $V^n$ spanned by the rows
+    \item the dimension of the subspace of $V^m$ spanned by the columns
+    \item the maximum order of any nonvanishing minor determinent
+  \end{enumerate}
+\end{tcolorbox}
 
 [comment]: <> (
   ==============================================================
