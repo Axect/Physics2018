@@ -537,9 +537,11 @@ As might be expected, the subgroups of a Lie group which are also submanifolds p
     \item $\varphi(U) = C_\epsilon^m(0)\footnote[1]{$m$-dimensional cube with center zero and breadth $\epsilon$}$
     \item $\varphi(U\cap N) = \Mbk{x \in C_\epsilon^m(0) \,|\, x^{n+1}=\cdots =x^m=0}$
   \end{enumerate}
-  
+
   If $N$ has this property, coordinate neighborhoods of this type are called \textit{preferred} coordinates.
 \end{tcolorbox}
+
+![](submanifold.jpg)
 
 [comment]: <> (
   ==============================================================
