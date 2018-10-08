@@ -528,6 +528,19 @@ this groups with the $C^\infty$ structure of the Cartesian product of manifolds 
 
 As might be expected, the subgroups of a Lie group which are also submanifolds play a special role.
 
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.5 \hs Submanifold}]
+  A subset $N$ of a $C^\infty$ manifold $M$ is said to have the $n$-\textit{submanifold property}
+  if each $p \in N$ has a coordinate neighborhood $U,\varphi$ on $M$ with local coordinates $x^1,\cdots,x^m$ such that
+
+  \begin{enumerate}
+    \item $\varphi(0) = (0,\cdots,0)$
+    \item $\varphi(U) = C_\epsilon^m(0)\footnote[1]{$m$-dimensional cube with center zero and breadth $\epsilon$}$
+    \item $\varphi(U\cap N) = \Mbk{x \in C_\epsilon^m(0) \,|\, x^{n+1}=\cdots =x^m=0}$
+  \end{enumerate}
+  
+  If $N$ has this property, coordinate neighborhoods of this type are called \textit{preferred} coordinates.
+\end{tcolorbox}
+
 [comment]: <> (
   ==============================================================
     Appendix
