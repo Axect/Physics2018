@@ -581,7 +581,6 @@ To prove above theorem, we require following lemma.
   \end{enumerate}
 
   Let consider coordinate representation of $F$:
-
   \begin{gather*}
     \tilde{F} = \psi \circ F \circ \varphi^{-1}\\
     \tilde{F}(x^1, \cdots, x^l) = (f^1(x),f^2(x), \cdots ,f^n(x), 0, \cdots, 0)
@@ -593,6 +592,29 @@ To prove above theorem, we require following lemma.
   $$(x^1,\cdots,x^l) ~\rightarrow ~(f^1(x), \cdots,f^n(x))$$
   Since $\pi$ is also differentiable, $F$ is $C^\infty$ map into $N$.
 \end{tcolorbox}
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.7}]
+  Since $H$ is regular submanifold of $G$,
+  it's easy to see $H\times H$ is a regular submanifold of $G\times G$.
+  Thus, inclusion map\footnote[1]{$\iota(x) = x$} $F_1: H\times H \rightarrow G \times G$
+  is a $C^\infty$ imbedding. If $F_2: G\times G \rightarrow G$ is the $C^\infty$ mapping
+  $(g,g')~\rightarrow ~gg'$ and $F=F_2 \circ F_1$, then $F$ is a $C^\infty$ mapping from 
+  $H\times H \rightarrow G$ with image in $H$ since $H$ is subgroup. By \textit{Lem 1.8.8}, $F$ can be considered
+  as $C^\infty$ mapping from $H\times H$ into $H$. Similarly, let take a map from $H$ to $G$ such that
+  $F'(h) = h^{-1}$ then its image is onto $H$. Thus, by \textit{Lem 1.8.8}, it is also $C^\infty$ mapping.
+  Therefore the regular submanifold $H$ of $G$ is also Lie group.
+\end{tcolorbox}
+
+Now, using \textit{Thm 1.8.7}, we can find natural defined maps of a Lie group $G$ onto itself.
+\begin{enumerate}
+  \item $x \rightarrow x^{-1}$
+  \item Left and right translations: $L_a(x)=ax,~R_a(x)=xa$
+\end{enumerate}
+These maps are $C^\infty$ by definition of Lie group and their inverses are also $C^\infty$.
+So, they are, in fact, \textit{diffeomorphisms}.
+
 
 [comment]: <> (
   ==============================================================
