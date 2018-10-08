@@ -586,8 +586,12 @@ To prove above theorem, we require following lemma.
     \tilde{F} = \psi \circ F \circ \varphi^{-1}\\
     \tilde{F}(x^1, \cdots, x^l) = (f^1(x),f^2(x), \cdots ,f^n(x), 0, \cdots, 0)
   \end{gather*}
-  
-  since $F(A) \subset N$, $~\psi \circ F(U) \subset V \cap N$.
+
+  since $F(A) \subset N$, $~\psi \circ F(U) \subset V \cap N$. 
+  We can find $(V\cap N,\,\pi\circ\psi|_{V\cap N}\footnote[1]{$\pi$ is projection operator from $\R^m$ to $\R^n$.})$ is a coordinate neighborhood of $q$ on $N$.
+  Thus, we can consider $F$ as a mapping into $N$, is given in local coordinates by
+  $$(x^1,\cdots,x^l) ~\rightarrow ~(f^1(x), \cdots,f^n(x))$$
+  Since $\pi$ is also differentiable, $F$ is $C^\infty$ map into $N$.
 \end{tcolorbox}
 
 [comment]: <> (
