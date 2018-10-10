@@ -618,40 +618,99 @@ So, they are, in fact, \textit{diffeomorphisms}.
 \VS
 
 The meaning of \textit{Thm 1.8.7} is for any regular submanifold of Lie group is also Lie group.
-But there is one missing link $-$ how to see a subset is regular submanifold?\newline
-To answer this, we need fundamental concept - \textit{rank}.
+But there is one missing link $-$ how to see a subset is regular submanifold?
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Image, Kernel and Rank}]
-  Let $L$ be a linear transformation from $V$ to $W$, then
+To answer this, we need fundamental concept - \textit{rank}.
+
+\newpage
+
+### 2) The Rank of a Mapping
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Rank in Linear Algebra}]
+  Let $A$ be an $m \times n$ matrix, then the \textit{rank} is defined in four equivalent ways
   \begin{enumerate}
-    \item Image: $\text{im}(L) = \Mbk{L(v)\,|\,v \in V}$
-    \item Kernel: $\text{ker}(L) = \Mbk{v \in V\,|\, L(v) = 0}$
-    \item Rank: $\text{rk}(L) = \text{dim}(\text{im}(L))$
+    \item the dimension of the subspace of $V^n$ spanned by the rows
+    \item the dimension of the subspace of $V^m$ spanned by the columns
+    \item the maximum order of any nonvanishing minor determinant
+    \item the dimension of the image
   \end{enumerate}
 \end{tcolorbox}
 
 \vs
 
-**Exercise 1.8.1**: Prove that $\text{rk}(AB) \leq \text{rk}(A)$.
+**Exercise 1.8.1**: Prove that $\rank{AB} \leq \rank{A}$.
 
 \vs
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.8.10 \hs Rank with invertible matrix}]
   Let $A$ be a $m \times n$ matrix and $B$ be a $n \times n$ non-singular matrix. Then
-  $$\text{rk}(AB) = \text{rk}(A)$$
+  $$\rank{AB} = \rank{A}$$
 \end{tcolorbox}
 
 \vs
 
 **Exercise 1.8.2**: Prove \textit{prop 1.8.10}.
 
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.11 \hs Rank of $\mathbf{C^r}$ map}]
+  Let $F: U \rightarrow \R^m$ be a $C^r$ mapping of an open set $U \in \R^n$, then \textit{rank of $F$ at $x$} is defined as
+  the rank of $DF(x)$\footnote[1]{$DF(x)$ is \textit{Jacobian} matrix of $F$ at $x$}.
+\end{tcolorbox}
+
+\vs
+
+**Exercise 1.8.3**: Find rank of $F(x^1, x^2)=((x^1)^2 + (x^2)^2, 2x^1x^2)$.
+
+\vs
+
+And denote one of the famous theorem in Analysis - \textit{Inverse Function Theorem}.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.12 \hs Inverse Function Theorem}]
+  Let $W$ be an open subset of $\R^n$ and $F: W \rightarrow \R^n$ a $C^r$ mapping, $r=1,2,\ldots,$ or $\infty$.
+  If $a \in W$ and $DF(a)$ is nonsingular, then there exists an open neighborhood $U$ of $a$ in $W$ such that
+  $V = F(U)$ is open and $F:~U \,\rightarrow\,V$ is a $C^r$ diffeomorphism. If $x \in U$ and $y=F(x)$,
+  then we have the following formula for the derivatives of $F^{-1}$ at $y$:
+  $$DF^{-1}(y) = \Sbk{DF(x)}^{-1}$$
+\end{tcolorbox}
+
+Its proof require Analytical skills, so we skip this proof. Instead of proof, we will just use its corollary.
+
 \newpage
 
-And believe next theorem.
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Cor 1.8.13 \hs Diffeomorphism (Revisited)}]
+  A necessary and sufficient condition for the $C^\infty$ map $F$ to be a diffeomorphism from $W$ to $F(W)$
+  is that it be one-to-one and $DF$ be nonsingular at every point of $W$.
+\end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.11 \hs Constant Rank Theorem}]
+Now, denote very important theorem - \textit{Rank Theorem}.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.14 \hs Rank Theorem}]
+  Let $A_0 \subset \R^n,~B_0 \subset \R^m$ be open sets. $F:~A_0\,\rightarrow\,B_0$ be a $C^r$ mapping,
+  and suppose the rank of $F$ on $A_0$ to be equal to $k$. If $a\in A_0$ and $b = F(a)$,
+  then there exist open sets $A\subset A_0$ and $B \subset B_0$ with $a \in A$ and $b \in B$,
+  and there exist $C^r$ diffeomorphisms $G: A \rightarrow U\text{(open)}\,\subset \R^n$,
+  $~H: B \rightarrow V\text{(open)}\,\subset \R^m$ such that $H \circ F \circ G^{-1}(U) \subset V$
+  and such that this map has the simple form
+  $$H\circ F\circ G^{-1}(x^1,\ldots,x^n) = (x^1,\ldots,x^k,0,\ldots,0)$$
+\end{tcolorbox}
+
+\vs
+
+This is clearly an important theorem for it tells us that a mapping of constant rank $k$ behaves \textit{locally}
+like projection of $\R^n = \R^k \times \R^{n-k}$ to $\R^k$ followed by injection of
+$\R^k$ onto $\R^k \times \Mbk{0} \subset \R^k \times \R^{m-k} = \R^m$.
+This is an important tool and we shall use it frequently; we rephrase this to local coordinates:
+
+\VS
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.15 \hs Rank Theorem (Rephrased)}]
   Let $F: N \rightarrow M$ be a differentiable mapping of $C^\infty$ manifolds
   and suppose $\dim{N} = n$, $\dim{M} = m$ and $\rank{F}=k$ at every point of $N$.
   If $p \in N$, then there exist coordinate neighborhoods $(U,\varphi)$ and $(V,\psi)$
@@ -660,17 +719,13 @@ And believe next theorem.
   $$\tilde{F}(x^1,~\ldots,~x^n) = (x^1,~\ldots,~x^k,~0,\ldots,~0)$$
 \end{tcolorbox}
 
-Then we can get magical theorem.
+\VS
 
-\vs
+Then let's prove *Thm 1.8.14*.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.11 \hs Constant Rank \& Regular Submanifold}]
-  Let $N$ be a $C^\infty$ manifold of dimension $n$, $~M$ be a $C^\infty$ manifold of dimension $M$, and
-  $F:N \rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constant rank $k$ on $N$
-  and that $q \in F(N)$. Then $F^{-1}(q)$ is a closed, regular submanifold of $N$ of dimension $n-k$.
-\end{tcolorbox}
+\newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.11}]
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14}]
   
 \end{tcolorbox}
 
