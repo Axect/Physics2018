@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-08
+date: 2018-10-10
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -671,7 +671,7 @@ And denote one of the famous theorem in Analysis - \textit{Inverse Function Theo
 \vs
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.12 \hs Inverse Function Theorem}]
-  Let $W$ be an open subset of $\R^n$ and $F: W \rightarrow \R^n$ a $C^r$ mapping, $r=1,2,\ldots,$ or $\infty$.
+  Let $W$ be an open subset of $\R^n$ and $F: W \rightarrow \R^n$ a $C^r$ mapping, $r=1,2,\cdots,$ or $\infty$.
   If $a \in W$ and $DF(a)$ is nonsingular, then there exists an open neighborhood $U$ of $a$ in $W$ such that
   $V = F(U)$ is open and $F:~U \,\rightarrow\,V$ is a $C^r$ diffeomorphism. If $x \in U$ and $y=F(x)$,
   then we have the following formula for the derivatives of $F^{-1}$ at $y$:
@@ -698,7 +698,7 @@ Now, denote very important theorem - \textit{Rank Theorem}.
   and there exist $C^r$ diffeomorphisms $G: A \rightarrow U\text{(open)}\,\subset \R^n$,
   $~H: B \rightarrow V\text{(open)}\,\subset \R^m$ such that $H \circ F \circ G^{-1}(U) \subset V$
   and such that this map has the simple form
-  $$H\circ F\circ G^{-1}(x^1,\ldots,x^n) = (x^1,\ldots,x^k,0,\ldots,0)$$
+  $$H\circ F\circ G^{-1}(x^1,\cdots,x^n) = (x^1,\cdots,x^k,0,\cdots,0)$$
 \end{tcolorbox}
 
 \vs
@@ -714,9 +714,9 @@ This is an important tool and we shall use it frequently; we rephrase this to lo
   Let $F: N \rightarrow M$ be a differentiable mapping of $C^\infty$ manifolds
   and suppose $\dim{N} = n$, $\dim{M} = m$ and $\rank{F}=k$ at every point of $N$.
   If $p \in N$, then there exist coordinate neighborhoods $(U,\varphi)$ and $(V,\psi)$
-  of $p$ and $F(p)$ such that $\varphi(p) = (0,\ldots,0)$, $~\psi(F(p))=(0,\ldots,0)$
+  of $p$ and $F(p)$ such that $\varphi(p) = (0,\cdots,0)$, $~\psi(F(p))=(0,\cdots,0)$
   and $\tilde{F} = \psi \circ F \circ \varphi^{-1}$ is given by
-  $$\tilde{F}(x^1,~\ldots,~x^n) = (x^1,~\ldots,~x^k,~0,\ldots,~0)$$
+  $$\tilde{F}(x^1,\cdots,~x^n) = (x^1,\cdots,~x^k,~0,\cdots,~0)$$
 \end{tcolorbox}
 
 \VS
@@ -726,12 +726,77 @@ Then let's prove *Thm 1.8.14*.
 \newpage
 
 \begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14}]
-  Without loss of generality, let $a=0\in\R^n,~b=0\in\R^m$.
+  Without loss of generality, let $a=0\in\R^n,~b=0\in\R^m$. Since $F$ has constant rank $k$ on $A_0$,
+  there exists $k\times k$ minor of nonzero determinant in $DF(a)$.
+  $$\PD{(f^1,\cdots,f^k)}{(u^1,\cdots,u^k)} ={
+  \begin{pmatrix}
+    \PD{f^1}{u^1} & \cdots & \PD{f^1}{u^k} \\
+    \vdots & & \vdots \\
+    \PD{f^k}{u^1} & \cdots & \PD{f^k}{u^k}
+  \end{pmatrix}}_{u=a}
+  $$
+  Now define $C^r$ map $G:~A_0\,\rightarrow\,\R^n$ by
+  $$G(u^1,\cdots,u^n) = (f^1(u^1,\cdots,u^n),\cdots,f^k(u^1,\cdots,u^n),u^{k+1},\cdots,u^n)$$
+  for $u\in A_0,~f(u)\in B_0$ where $F(u) = (f^1(u),\cdots,f^n(u))$. Then
+  $$DG =
+  \Sbk{
+    \begin{array}{@{}c|c@{}}
+      \begin{matrix}
+        \PD{f^1}{u^1} & \cdots & \PD{f^1}{u^k} \\
+        \vdots & & \vdots \\
+        \PD{f^k}{u^1} & \cdots & \PD{f^k}{u^k}
+      \end{matrix}
+      & \bigstar\footnote[1]{Star symbol means we need not consider this part.} \\[3em]
+      \hline
+      \bigzero & I_{n-k}
+    \end{array}
+  }$$
+  Since left upper part is non-singular at $u=a$, $~DG$ is non-singular at $u=a$.
+  Thus, there is an open subset $A_1$ of $A_0$ which contains $a$ such that
+  $G$ is diffeomorphism onto an open subset $U_1 = G(A_1)$.
+  Since $G(u) = (f^1(u),\cdots,f^k(u), u^{k+1},\cdots,u^n)$, if we let $G^{-1}(x) = u$ then
+  $$ x^i=
+  \begin{cases}
+    f^i(u) & i = 1,\cdots,k \\
+    u^i & i=k+1,\cdots,n
+  \end{cases}
+  $$
+  Thus,
+  \begin{align*}
+    F\circ G^{-1}(x) = F(u) &= (f^1(u),\cdots,f^m(u)) \\
+    &= (x^1,\cdots,x^k,f^{k+1}(u),\cdots,f^k(u))
+  \end{align*}
+  $$\therefore ~ F\circ G^{-1}(x) = (x^1,\cdots,x^k,\tilde{f}^{k+1}(x),\cdots,\tilde{f}^{m}(x))$$
+  where $\tilde{f}^{k+j}(x) = f^{k+j}\circ G^{-1}(x)$.
+  Since $G$ is diffeomorphism on $A_1$, $~G^{-1}$ is one-to-one on $U_1$.
+  Therefore it's trivial that $F\circ G^{-1}(0) = 0$.
+  \newline
+  \hspace*{\fill} (Continued next page)
+\end{tcolorbox}
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14 (Continued)}]
+  $$
+  D(F\circ G^{-1})(x) =
+  \Sbk{
+    \begin{array}{@{}c|c@{}}
+      I_k & \bigzero \\
+      \hline \\[-2.0ex]
+      \bigstar &
+      \begin{matrix}
+        \PD{\tilde{f}^{k+1}}{x^{k+1}} & \cdots & \PD{\tilde{f}^{k+1}}{x^n} \\
+        \vdots & & \vdots \\
+        \PD{\tilde{f}^m}{x^{k+1}} & \cdots & \PD{\tilde{f}^m}{x^n}
+      \end{matrix}
+    \end{array}
+  }
+  $$
 \end{tcolorbox}
 
 [comment]: <> (
   ==============================================================
-    Appendix
+    Appendix //ANCHOR Appendix
   ==============================================================
 )
 
