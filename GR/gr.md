@@ -792,6 +792,12 @@ Then let's prove *Thm 1.8.14*.
     \end{array}
   }
   $$
+  for $x\in U_1$. We know $DG^{-1}$ is non-singular on $U_1$ and $G^{-1}(U_1) = A_1 \subset A_0$.
+  Thus, by properties of rank,
+  $$\rank{D(F\circ G^{-1})} = \rank{DF \circ DG^{-1}} = \rank{DF} = k$$
+  Since upper left part of $D(F\circ G^{-1})$ is identity - already have rank $k$,
+  all components in lower right part should be zero on $U_1$. 
+  It means $\tilde{f}^{k+1},\cdots,\tilde{f}^m$ depend on $x^1, \cdots, x^k$ only. 
 \end{tcolorbox}
 
 [comment]: <> (
