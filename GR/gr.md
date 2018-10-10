@@ -726,7 +726,7 @@ Then let's prove *Thm 1.8.14*.
 \newpage
 
 \begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14}]
-  
+  Without loss of generality, let $a=0\in\R^n,~b=0\in\R^m$.
 \end{tcolorbox}
 
 [comment]: <> (
