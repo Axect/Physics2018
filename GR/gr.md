@@ -265,6 +265,7 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.6.4}]
   $$D 1 = D (1 \cdot 1) = D 1 \cdot 1 + 1 \cdot D 1 = 2 D 1 \Rightarrow D 1 = 0 \Rightarrow D c = c\cdot D 1 = 0$$
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 \newpage
@@ -290,6 +291,7 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
   So, choose 
   $$g^i(x) = \int_0^1\Bbk{\PD{f}{x^i}}_{p+t(x-p)}dt$$
   Then it satisfies \textit{Lem 1.6.5}.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 And review directional derivative.
@@ -323,6 +325,7 @@ Thus, they are isomorphic.
     &= \sum_{i=1}^n D(x^i)\Sbk{\PD{f}{x^i}}_p
   \end{align*}
   Since $D(x^i) \in \R$, let $\alpha^i \equiv D(x^i)$ then proof is complete.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 By \textit{Thm 1.6.7}, we can identify $T_p(\R^n)~ \& ~\mathcal{D}_p(\R^n)$.
@@ -591,6 +594,7 @@ To prove above theorem, we require following lemma.
   Thus, we can consider $F$ as a mapping into $N$, is given in local coordinates by
   $$(x^1,\cdots,x^l) ~\rightarrow ~(f^1(x), \cdots,f^n(x))$$
   Since $\pi$ is also differentiable, $F$ is $C^\infty$ map into $N$.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 \newpage
@@ -605,6 +609,7 @@ To prove above theorem, we require following lemma.
   as $C^\infty$ mapping from $H\times H$ into $H$. Similarly, let take a map from $H$ to $G$ such that
   $F'(h) = h^{-1}$ then its image is onto $H$. Thus, by \textit{Lem 1.8.8}, it is also $C^\infty$ mapping.
   Therefore the regular submanifold $H$ of $G$ is also Lie group.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 Now, using \textit{Thm 1.8.7}, we can find natural defined maps of a Lie group $G$ onto itself.
@@ -798,6 +803,29 @@ Then let's prove *Thm 1.8.14*.
   Since upper left part of $D(F\circ G^{-1})$ is identity - already have rank $k$,
   all components in lower right part should be zero on $U_1$. 
   It means $\tilde{f}^{k+1},\cdots,\tilde{f}^m$ depend on $x^1, \cdots, x^k$ only. 
+  Now, let define function $T:~V_1 \subset \R^m\,\rightarrow \, B_0$ such that $0 \in V_1$ as follows
+  $$T(y_1,\cdots,y^m) = (y^1,\cdots,y^k,y^{k+1}+\tilde{f}^{k+1}(y^1,\cdots,y^k), \cdots, y^m+\tilde{f}^m(y^1,\cdots,y^k))$$
+  Then the Jacobian of $T$ is given by
+  $$DT(y) =
+  \Sbk{
+    \begin{array}{@{}c|c@{}}
+      I_k & \bigzero \\
+      \hline
+      \bigstar & I_{m-k}
+    \end{array}
+  }
+  $$
+  Since $DT$ is nonsingular at every point of any neighborhood $V$ of $0$ in $V_1$,
+  $~T$ is a $C^r$ diffeomorphism of $V$ onto an open set $B\subset B_0$.\newline
+  Finally, let $H=T^{-1},~A = G^{-1}(U)$ then
+  $$U~\overset{G^{-1}}{\longrightarrow}~A~\overset{F}{\longrightarrow}~B~\overset{H}{\longrightarrow}~V$$
+  are $C^r$ maps and $G^{-1},~H$ are $C^r$ diffeomorphisms onto $A~\&~V$. And finally we can see,
+  \begin{align*}
+    H\circ F \circ G^{-1}(x^1,\cdots,x^n) &= H(x^1,\cdots,x^k,\tilde{f}^{k+1}(x^1,\cdots,x^k),\cdots,\tilde{f}^m(x^1,\cdots,x^k))\\
+    &= (x^1,\cdots,x^k,0,\cdots,0) \in \R^m
+  \end{align*}
+  \newline
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 [comment]: <> (
@@ -1084,6 +1112,7 @@ Proof will be given later.
   \newline
 
   Therefore $\Mbk{W_i \subset X}_{i \in I}$ is locally finite.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 \vs
@@ -1135,6 +1164,7 @@ Now, suggest some fundamental topological concepts to prove prop A.4.7.
   And it also implies $X\backslash Cl(V)$ is open neighborhood of $C_2$ where $V \cap X\backslash Cl(V) = \emptyset$.
 
   Therefore $X$ is $T_4$.
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 \newpage
@@ -1244,6 +1274,7 @@ Therefore, $f$ is continuous.
 \newline
 
 Proof is complete.
+\hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 To prove *prop A.4.7*, we should know relation between *Hausdorff* and *Normal*.
@@ -1317,6 +1348,7 @@ To prove *prop A.4.7*, we should know relation between *Hausdorff* and *Normal*.
   $$ \mathcal{V}(D) \equiv \bigcup_{d \in D}\mathcal{V}(d)$$
   then
   $$ \mathcal{V}(C) \cap \mathcal{V}(D) = \emptyset$$
+  \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 # Reference
