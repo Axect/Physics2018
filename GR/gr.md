@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-11
+date: 2018-10-12
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -841,7 +841,28 @@ Now, we ready for understanding following theorem \& corollary - the most useful
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.16}]
-  
+  Let $A = F^{-1}(q)$. Since $F$ is $C^\infty$ map \& $\Mbk{q}$ is closed subset of $M$, $~A$ is closed subset in $N$ via continuity of $F$.
+  Let $p\in A$ then since $F$ has constant rank $k$ on a neighborhood of $p$, by rank theorem,
+  we can find coordinate neighborhoods $(U,\varphi),~(V,\psi)$ of $p,q$ such that
+  \begin{gather*}
+    \varphi(p) =0, ~\psi(q) = 0\\
+    \varphi(U) = C^n_\epsilon(0),~\psi(V)=C^m_\epsilon(0) \\
+    \psi \circ F \circ \varphi^{-1}(x^1,\cdots,x^n) = (x^1,\cdots,x^k,0,\cdots,0)\in\R^m
+  \end{gather*}
+  Since we supposed $A = F^{-1}(q)$, $A\cap U \subset A = F^{-1}(q)$.
+  Thus, $F(A\cap U) = q$ and then $\psi \circ (F(A\cap U)) = 0 \in \R^m$.
+  Since for $x \in C^n_\epsilon(0)$, $\psi \circ F \circ \varphi^{-1}(x) = (x^1,\cdots,x^k,0,\cdots,0)$ and
+  $A\cap U \subset \varphi^{-1}(C^n_\epsilon(0))$,
+  $$\forall x \in \varphi(A\cap U),~x^1=\cdots=x^k = 0$$
+  Thus, we can see that next properties are satisfied.
+  \begin{align*}
+    1.~&A \subset N\\
+    2.~&\varphi(p) = 0\\
+    3.~&\varphi(U) = C^n_\epsilon(0)\\
+    4.~&\varphi(U\cap A) = \{x\in C^n_\epsilon(0)\,|\, x^1=\cdots =x^k = 0 \}
+  \end{align*}
+  Therefore $A = F^{-1}(q)$ is regular submanifold of $N$ with dimension $n-k$.
+  \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
 [comment]: <> (
