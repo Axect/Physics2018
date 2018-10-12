@@ -865,6 +865,14 @@ Now, we ready for understanding following theorem \& corollary - the most useful
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
+Now, let's get back to Lie group.
+
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.17 \hs Special Linear Group}]
+  
+\end{tcolorbox}
+
 [comment]: <> (
   ==============================================================
     Appendix //SECTION Appendix
