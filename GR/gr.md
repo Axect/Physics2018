@@ -129,7 +129,7 @@ We usually use next notation:
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.3 \hs Coordinate Transform}]
   Let $(\mcu_\alpha, \varphi_\alpha),~(\mcu_\beta, \varphi_\beta)$ be two charts on $M$
-  with $\mcu_\alpha \cap \mcu_\beta = \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
+  with $\mcu_\alpha \cap \mcu_\beta \neq \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
   a map (trivial homeomorphism) 
   $$\varphi_\beta \circ \varphi_\alpha^{-1}:~\varphi_\alpha(\mcu_\alpha \cap \mcu_\beta) \rightarrow \varphi_\beta (\mcu_\alpha \cap \mcu_\beta)$$
   is called \textit{Coordinate Transform}.
@@ -487,7 +487,7 @@ Finally, let's see the dual tangent map.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.2 \hs Global Linear Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.2 \hs General Linear Group}]
   $Gl(n,\R)$, the set of nonsingular $n\times n$ matrices, is a group with respect to matrix multiplication.
   Since $AB$ is polynomial in the entries of $A,B$, the map $(A,B)\rightarrow AB$ is $C^\infty$. 
 
@@ -828,9 +828,25 @@ Then let's prove *Thm 1.8.14*.
   \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
+\newpage
+
+Now, we ready for understanding following theorem \& corollary - the most useful method of finding examples of regular submanifolds.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.16 \hs Constant Rank \& Regular Submanifold}]
+  Let $N$ be a $C^\infty$ manifold of dimension $n$, $~M$ be a $C^\infty$ manifold of dimension $m$,
+  and $F:~N\rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constanr rank $k$ on $N$
+  and that $q\in F(N)$. Then $F^{-1}(q)$ is colosed, regular submanifold of $N$ of dimension $n-k$. 
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.16}]
+  
+\end{tcolorbox}
+
 [comment]: <> (
   ==============================================================
-    Appendix //ANCHOR Appendix
+    Appendix //SECTION Appendix
   ==============================================================
 )
 
