@@ -872,7 +872,13 @@ Now, let's get back our focus to the Lie group.
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.17 \hs Special Linear Group}]
   Special linear group is denoted by
   $$Sl(n,\R) = \Mbk{X \in Gl(n,\R)\,|\,\det{X} = +1}$$
-  Trivially, this is subgroup of $Gl(n,\R)$. Claim it is submanifold of $G$.
+  Trivially, this is subgroup of $Gl(n,\R)$. Claim it is submanifold of $G$. Let $F:~Gl(n,\R)\,\rightarrow\,\R^*$
+  is given as $F(X) = \det{X}$. Since $F(XY) = \det{XY} = (\det{X})(\det{Y})$, $~F$ is algebraic homomorphism onto $\R^*=Gl(1,\R)$.
+  And $F$ is also $C^\infty$ since $\det{X}$ is given by polynomials in the entries of $X$.
+  Finally, its rank is constant. Let $A\in Gl(n,\R)~\&~a = \det{A}$. Then since $a \det{A^{-1}X} = \det{X}$,
+  $$F(X) = L_a \circ F \circ L_{A^{-1}}(X)$$
+  We already know $L_a$ is diffeomorphism, $DL_a$ is non-singular at every points. Thus,
+  $$\rank{DF(X)} = \rank{\Bbk{a DF(A^{-1}X)DL_{A^{-1}}(X)}} = \rank{DF(A^{-1}X)}$$
 \end{tcolorbox}
 
 [comment]: <> (
