@@ -48,7 +48,7 @@ If you are not familiar with topology, first read *Appendix A*.
 ## 1. Basic Concepts
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.1 \hs Connected}]
-  If it is not possible to write $M = A \cup B$ with, $A,B \in \mathcal{T}$ and $A \cup B = \emptyset$
+  If it is not possible to write $M = A \cup B$ with, $A,B \in \mathcal{T}$ and $A \cap B = \emptyset$
   then $M$ is \textit{connected}.
 \end{tcolorbox}
 
@@ -836,7 +836,7 @@ Now, we ready for understanding following theorem \& corollary - the most useful
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.16 \hs Constant Rank \& Regular Submanifold}]
   Let $N$ be a $C^\infty$ manifold of dimension $n$, $~M$ be a $C^\infty$ manifold of dimension $m$,
-  and $F:~N\rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constanr rank $k$ on $N$
+  and $F:~N\rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constant rank $k$ on $N$
   and that $q\in F(N)$. Then $F^{-1}(q)$ is colosed, regular submanifold of $N$ of dimension $n-k$. 
 \end{tcolorbox}
 
@@ -865,12 +865,14 @@ Now, we ready for understanding following theorem \& corollary - the most useful
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
-Now, let's get back to Lie group.
+Now, let's get back our focus to the Lie group.
 
 \newpage
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.17 \hs Special Linear Group}]
-  
+  Special linear group is denoted by
+  $$Sl(n,\R) = \Mbk{X \in Gl(n,\R)\,|\,\det{X} = +1}$$
+  Trivially, this is subgroup of $Gl(n,\R)$. Claim it is submanifold of $G$.
 \end{tcolorbox}
 
 [comment]: <> (
