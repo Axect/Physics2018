@@ -862,6 +862,7 @@ Now, we ready for understanding following theorem \& corollary - the most useful
     4.~&\varphi(U\cap A) = \{x\in C^n_\epsilon(0)\,|\, x^1=\cdots =x^k = 0 \}
   \end{align*}
   Therefore $A = F^{-1}(q)$ is regular submanifold of $N$ with dimension $n-k$.
+  
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
@@ -885,6 +886,7 @@ Now, let's get back our focus to the Lie group.
   By \textit{Thm 1.8.16}, $Sl(n,\R)$ is regular submanifold of $Gl(n,\R)$.
   Since $Sl(n,\R)$ is subgroup \& submanifold of $Gl(n,\R)$, by \textit{Thm 1.8.7},
   $Sl(n,\R)$ is also Lie group.
+
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
