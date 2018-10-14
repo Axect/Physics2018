@@ -476,7 +476,13 @@ Finally, let's see the dual tangent map.
 
 \newpage
 
-## 8. Supplements
+[comment]: <> (
+  ==============================================================
+    Submanifolds //SECTION Submanifolds
+  ==============================================================
+)
+
+## 8. Submanifolds
 
 ### 1) Lie Group
 
@@ -862,7 +868,7 @@ Now, we ready for understanding following theorem \& corollary - the most useful
     4.~&\varphi(U\cap A) = \{x\in C^n_\epsilon(0)\,|\, x^1=\cdots =x^k = 0 \}
   \end{align*}
   Therefore $A = F^{-1}(q)$ is regular submanifold of $N$ with dimension $n-k$.
-  
+
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
@@ -886,8 +892,15 @@ Now, let's get back our focus to the Lie group.
   By \textit{Thm 1.8.16}, $Sl(n,\R)$ is regular submanifold of $Gl(n,\R)$.
   Since $Sl(n,\R)$ is subgroup \& submanifold of $Gl(n,\R)$, by \textit{Thm 1.8.7},
   $Sl(n,\R)$ is also Lie group.
+\end{tcolorbox}
 
-  \hspace*{\fill}$\blacksquare$
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.18 \hs Orthogonal Group}]
+  Orthgonal group is denoted by
+  $$O(n) = \Mbk{X \in Gl(n,\R)\,|\,X^TX = I}$$
+  Let $F:Gl(n,\R)\rightarrow Gl(n,\R)$ such that $F(X) = X^T X$. For $A\in Gl(n,\R)$,
+  $$F(XA^{-1}) = L_{(A^{-1})^T}\circ R_{A^{-1}}\circ F(X)$$
+  Since $L,R$ are diffeomorphisms, $\rank{DF(XA^{-1})} = \rank{DF(X)}$. Thus, $\rank{DF(X)}$ is constant.
+  And we can find $O(n)=F^{-1}(I)$, by \textit{thm 1.8.7}, $O(n)$ is Lie group.
 \end{tcolorbox}
 
 [comment]: <> (
