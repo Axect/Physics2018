@@ -879,6 +879,13 @@ Now, let's get back our focus to the Lie group.
   $$F(X) = L_a \circ F \circ L_{A^{-1}}(X)$$
   We already know $L_a$ is diffeomorphism, $DL_a$ is non-singular at every points. Thus,
   $$\rank{DF(X)} = \rank{\Bbk{a DF(A^{-1}X)DL_{A^{-1}}(X)}} = \rank{DF(A^{-1}X)}$$
+  for all $A\in Gl(n,\R)$. Thus, let $A=X$, then $\rank{DF(X)}=\rank{DF(I)}$ so, constant.
+  And we know
+  $$Sl(n,\R) = F^{-1}(+1)$$
+  By \textit{Thm 1.8.16}, $Sl(n,\R)$ is regular submanifold of $Gl(n,\R)$.
+  Since $Sl(n,\R)$ is subgroup \& submanifold of $Gl(n,\R)$, by \textit{Thm 1.8.7},
+  $Sl(n,\R)$ is also Lie group.
+  \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
 [comment]: <> (
