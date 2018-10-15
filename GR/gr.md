@@ -478,13 +478,11 @@ Finally, let's see the dual tangent map.
 
 [comment]: <> (
   ==============================================================
-    Submanifolds //SECTION Submanifolds
+    Submanifolds //SECTION Lie Group
   ==============================================================
 )
 
-## 8. Submanifolds
-
-### 1) Lie Group
+## 8. Lie Group
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.1 \hs Lie Group}]
   $G$ is a \textit{Lie group} provided that the mapping of $G\times G \rightarrow G$ defined by $(x,y) \rightarrow xy$
@@ -637,7 +635,7 @@ To answer this, we need fundamental concept - \textit{rank}.
 
 \newpage
 
-### 2) The Rank of a Mapping
+\subsubsection*{$-$ Rank of Map}
 
 \begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Rank in Linear Algebra}]
   Let $A$ be an $m \times n$ matrix, then the \textit{rank} is defined in four equivalent ways
@@ -903,7 +901,39 @@ Now, let's get back our focus to the Lie group.
   And we can find $O(n)=F^{-1}(I)$, by \textit{thm 1.8.7}, $O(n)$ is Lie group.
 \end{tcolorbox}
 
-[comment]: <> (
+\newpage
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.19 \hs Homomorphism}]
+  Let $F:~G_1\,\rightarrow\,G_2$ be an algebraic homomorphism of Lie group $G_1,G_2$.
+  We shall call $F$ a \textit{homomorphism} of Lie group if $F$ is also a $C^\infty$ mapping.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.20 \hs Det map}]
+  For $G_1 = Gl(n,\R), ~G_2 = Gl(1,\R)$, the map $F:G_1\rightarrow G_2$ given as $F(X)=\det{X}$ is homomorphism.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.21 \hs Fundamental Theorem of Linear Algebra}]
+  If $F:G_1\rightarrow G_2$ is a homomorphism of Lie groups, then the rank of $F$ is constant;
+  the kernel is a closed regular submanifold and thus a Lie group;
+  and
+  $$\dim{\text{ker }F} = \dim{G_1} - \text{rank }{F}$$
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.21}]
+  Let $a \in G_1\,\&\, b = F(a)$. Denote by $e_1,\,e_2$ the unit elements of $G_1,\,G_2$ then
+  $$F(x) = F(aa^{-1}(x))=b F(a^{-1}x) = L_b \circ F \circ L_{a^{-1}}(x)$$
+  Then $\rank{DF(x)} = \rank{DF(a^{-1}x)}$, so, $F$ has constant rank at anywhere in $G_1$.
+  Since $\text{ker }F = F^{-1}(e_2)$, by \textit{thm 1.8.16}, $\text{ker }{F}$ is closed regular submanifold of $G_1$
+  with $\dim{\text{ker }F} = \dim{G_1} - \text{rank }{F}$. By \textit{thm 1.8.7}, $\text{ker }F$ is Lie group.
+  
+  \hspace*{\fill}$\blacksquare$
+\end{tcolorbox}
+
+[comment2]: <> (
   ==============================================================
     Appendix //SECTION Appendix
   ==============================================================
