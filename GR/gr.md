@@ -933,6 +933,27 @@ Now, let's get back our focus to the Lie group.
   \hspace*{\fill}$\blacksquare$
 \end{tcolorbox}
 
+\newpage
+
+## 9. The Action of a Lie Group on a Manifold
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.9.1 \hs Group Action}]
+  Let $G$ be a group and $X$ set. Then $G$ is said to \textit{act} on $X$ (on the left)
+  if there is a mapping $\theta: G \times X \rightarrow X$ satisfying two conditions:
+  \newline
+  \begin{enumerate}
+    \item If $e$ is the identity element of $G$, then
+    $$\theta(e,x)=x ~~~ \text{for all }x \in X$$
+    \item If $g1,g2\in G$, then
+    $$\theta(g_1,\theta(g_2,x)) = \theta(g_1 g_2, x) ~~~ \text{for all }x \in X$$
+  \end{enumerate}
+\end{tcolorbox}
+
+When $G$ is topological group, $X$ is a topological space, and $\theta$ is continuous,
+the action is called \textit{continuous}. When $G$ is a Lie group, $X$ is a $C^\infty$ manifold,
+and $\theta$ is $C^\infty$, we speak of $C^\infty$ \textit{action}. $C^\infty$ action is a \textit{fortiori continuous}.
+
+
 [comment2]: <> (
   ==============================================================
     Appendix //SECTION Appendix
