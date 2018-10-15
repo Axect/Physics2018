@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-12
+date: 2018-10-15
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
