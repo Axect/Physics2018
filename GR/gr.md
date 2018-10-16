@@ -18,7 +18,7 @@ toc-own-page: true
 
 # The Background Manifold Structure
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.0 \hs Topological Manifolds}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.0 \hs Topological Manifolds}]
   A \textit{manifold} $M$ of dimension $n$ is a topological space with the following properties.
   \begin{enumerate}
     \item $M$ is Hausdorff
@@ -47,40 +47,40 @@ If you are not familiar with topology, first read *Appendix A*.
 
 ## 1. Basic Concepts
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.1 \hs Connected}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.1 \hs Connected}]
   If it is not possible to write $M = A \cup B$ with, $A,B \in \mathcal{T}$ and $A \cap B = \emptyset$
   then $M$ is \textit{connected}.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.2 \hs Hausdorff}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.2 \hs Hausdorff}]
   If $M$ is connected \& $\forall \, p, q \in M$, there are open neighborhoods $\mcu(p) \ni p$, $\mcu(q) \ni q$
   such that $\mcu(p) \cap \mcu(q) = \emptyset$ then $M$ is \textit{Hausdorff}.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.3 \hs Cover}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.3 \hs Cover}]
   A family $\Mbk{\mcu_\alpha}_{\alpha \in A}$ of open sets of $M$ is called \textit{open cover of $M$} if 
   $$\bigcup_{\alpha \in A}\mcu_\alpha = M$$
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.4 \hs Compact}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.4 \hs Compact}]
   $M$ is \textit{compact} if $M$ is Hausdorff and all open cover of $M$ has finite refinement of $M$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.1.5 \hs Paracompact}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.1.5 \hs Paracompact}]
   $M$ is \textit{paracompact} if all open cover of $M$ has locally finite refinement.
 \end{tcolorbox}
 
 ## 2. Maps
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.1 \hs Important Maps}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.2.1 \hs Important Maps}]
   Given two sets $U, U'$ a map $\Phi: U \rightarrow U'$ is called
   \begin{itemize}
     \item \textit{Injective} : $\forall p' \in \Phi(U)$, $~ \exists! p \in U$ such that $\Phi(p) = p'$.
@@ -89,7 +89,7 @@ If you are not familiar with topology, first read *Appendix A*.
   \end{itemize}
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.2 \hs Continuous}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.2.2 \hs Continuous}]
   Consider $(U, \mathcal{T}),~(U', \mathcal{T}')$ are topological spaces.
   $\Phi: U \rightarrow U'$ is said to be \textit{continuous} at a point $p \in U$
   if $\Phi^{-1}(W')$ is a neighborhood of $p$ for any neighborhood $W'$ of
@@ -98,14 +98,14 @@ If you are not familiar with topology, first read *Appendix A*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.2.3 \hs Homeomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.2.3 \hs Homeomorphism}]
   If $\Phi : U \rightarrow U'$ is bijective and $\Phi, \Phi^{-1}$ are continuous
   then $\Phi$ is called homeomorphism and $U,U'$ are homeomorphic.
 \end{tcolorbox}
 
 ## 3. Coordinate Neighborhoods (Chart)
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.1 \hs Coordinate Neighborhood (Chart)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.3.1 \hs Coordinate Neighborhood (Chart)}]
   Given a topological space $(M, \mathcal{T})$, define \textit{chart} of $M$ to be a pair $(\mcu_\alpha, \varphi_\alpha)$,
   with $\mcu_\alpha$ an element of $\mathcal{T}$ and $\varphi_\alpha$ a homeomorphism of $\mcu_\alpha$
   onto an open set of $\R^n$.
@@ -120,14 +120,14 @@ We usually use next notation:
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.2 \hs Atlas}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.3.2 \hs Atlas}]
   A familiy of charts $\mathcal{A} = \Mbk{(\mcu_\alpha, \varphi_\alpha)}_{\alpha \in A}$ on $M$
   is said to form an \textit{atlas} on $M$ if $\displaystyle\bigcup_{\alpha \in A}\mcu_\alpha = M$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.3 \hs Coordinate Transform}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.3.3 \hs Coordinate Transform}]
   Let $(\mcu_\alpha, \varphi_\alpha),~(\mcu_\beta, \varphi_\beta)$ be two charts on $M$
   with $\mcu_\alpha \cap \mcu_\beta \neq \emptyset$. For a point $p \in \mcu_\alpha \cap \mcu_\beta$,
   a map (trivial homeomorphism) 
@@ -137,7 +137,7 @@ We usually use next notation:
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.3.4 \hs $\mathbf{C^r}$-atlas}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.3.4 \hs $\mathbf{C^r}$-atlas}]
   An atlas on $M$ is $C^r\textit{-atlas}$ if $\varphi_\beta \circ \varphi_\alpha^{-1}$ and its inverse for any pair $(\alpha, \beta)$
   are $\R^n$ valued $C^r$-functions.
 \end{tcolorbox}
@@ -146,7 +146,7 @@ We usually use next notation:
 
 ## 4. Differentiable Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.1 \hs Differentiable Manifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.4.1 \hs Differentiable Manifold}]
   \textit{Differentiable Manifold} of class $C^r$ and dimension $n$ is a Hausdorff topological space
   with a $C^r$-atlas.
 \end{tcolorbox}
@@ -155,7 +155,7 @@ We denote differentiable manifold as $(M, \mathcal{A})$ where $\mathcal{A}$ is $
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.2 \hs Function of Manifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.4.2 \hs Function of Manifold}]
   A map $f: M \rightarrow \R$ is said to be $C^k$-function at $p\in M$,
   if for any chart $(\mcu_\alpha, \varphi_\alpha)$ containing $p$, there exists open neighborhood $\mcu(p) \subset \mcu_\alpha$ of $p$
   such that the composite map
@@ -171,7 +171,7 @@ So, by using it, we can consider differentiability of $f$.
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.4.3 \hs Function Space}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.4.3 \hs Function Space}]
   Denote by $\mathcal{F}$ the set of all differentiable functions on $M$ with the internal operations.
   \begin{enumerate}
     \item \textit{Multiplication} : $fg(p) = f(p)g(p)$
@@ -185,11 +185,11 @@ It's easy to find $\mathcal{F}$ is an \textit{Abelian Ring}.
 
 ## 5. Maps of Manifolds
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Remark \hs Manifold with $\R^n$}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Remark \hs Manifold with $\R^n$}]
   A manifold $M$ is locally homeomorphic to an open set of $\R^n$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.1 \hs Maps between Manifolds}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.5.1 \hs Maps between Manifolds}]
   Let $M,N$ be two differentiable manifolds with same dimension $n$ and $\psi: M \rightarrow N$
   a map of $M$ into $N$. Suppose two points $p \in M$, $~p' \in N$ such that $\psi(p) = p'$.
   Let $(\mcu_\alpha, \varphi_\alpha)_p$, $~(\mcu'_\beta, \varphi'_\beta)_{p'}$ be two charts such that
@@ -203,7 +203,7 @@ Similar to $f$, we also determine differentiability of $\psi$ using by $\tilde{\
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.2 \hs Diffeomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.5.2 \hs Diffeomorphism}]
   If the map $\psi: M \rightarrow N$ is homeomorphism with both $\psi,~\psi^{-1}$ are differentiable,
   then $\psi$ is called \textit{Diffeomorphism}.
 \end{tcolorbox}
@@ -212,7 +212,7 @@ There are some kinds of Maps.
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.4 \hs Immersion}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.5.4 \hs Immersion}]
   If $\text{dim}(M) > \text{dim}(N)$, a $C^r$-map $\Phi: N \rightarrow M$ is said to be an \textit{immersion}
   if it is locally injective and the image of $\Phi(N)$ is said to be a $m$-dimensional \textit{immersed submanifold} of $M$
   
@@ -220,7 +220,7 @@ There are some kinds of Maps.
   into its image in $M$, with the induced topology of $M$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.5.5 \hs Hypersurface}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.5.5 \hs Hypersurface}]
   An imbedded submanifold of $M$ with $m = \text{dim}(M) - 1$ is termed a \textit{hypersurface}.
 \end{tcolorbox}
 
@@ -230,14 +230,14 @@ There are some kinds of Maps.
 
 To define tangent vector, we should define curve first.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.1 \hs Curve}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.1 \hs Curve}]
   Given manifold $M$, a \textit{curve} $\gamma$ in $M$ is a map with single parameter:
   $$ \gamma : \R \rightarrow M $$
 \end{tcolorbox}
 
 Now we can define tangent vector.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.2 \hs Tangent Vector}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.2 \hs Tangent Vector}]
   The \textit{tangent vector} to a curve $\gamma$ at a point $p=\gamma(t)$ is a map $\dot{\gamma}_p : \mathcal{F}(M) \rightarrow \R$
   is given as
   $$\dot{\gamma}_p(f) = \frac{d}{dt}\Bbk{f\circ \gamma(t)}_{\gamma^{-1}(p)}, \HS f \in \mathcal{F}(M)$$
@@ -247,7 +247,7 @@ We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.3 \hs Derivation Operator}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.3 \hs Derivation Operator}]
   Let $M$ be a differentiable manifold, $p \in M$. We say that a linear function $D \in \mathcal{F}^*(M)$
   defined on $\mathcal{F}(M)$ is a \textit{derivation} of $\mathcal{F}(M)$ at $p$
   if the equality
@@ -258,19 +258,19 @@ We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^
 We denote space of derivation operators as $\mathcal{D}_p(M)$. For $\R^n$, denote $D_p(\R^n)$
 as set of all derivations of $C^{\infty}(p)$ to $\R$.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.6.4 \hs Constant Derivation}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem 1.6.4 \hs Constant Derivation}]
   Let $D \in \mathcal{D}_p(M)$. Then $D=0$ for all $f \in \mathcal{F}(M)$ such that
   $f$ is constant in a neighborhood of $p$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.6.4}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Lem 1.6.4}]
   $$D 1 = D (1 \cdot 1) = D 1 \cdot 1 + 1 \cdot D 1 = 2 D 1 \Rightarrow D 1 = 0 \Rightarrow D c = c\cdot D 1 = 0$$
   \hspace*{\fill} $\blacksquare$
 \end{tcolorbox}
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.6.5 \hs First Order Approximation}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem 1.6.5 \hs First Order Approximation}]
   Let $f(x^1, \cdots x^n)$ be defined and $C^\infty$ on some open set $U$.
   If $p \in U$, then $\exists$ spherical neighborhood $\mathcal{B}(p)$ of $p$ such that
   $\mathcal{B}(p) \subset U$ and $C^\infty$ function $g^1, \cdots , g^n$ on $\mathcal{B}(p)$ such that
@@ -283,7 +283,7 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
   \end{enumerate}
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.6.5}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Lem 1.6.5}]
   Consider next integration.
   $$\int_0^1 \PD{}{t} f(p + t(x-p)) dt = f(x) - f(p)$$
   Thus,toc-own-page: true
@@ -296,7 +296,7 @@ as set of all derivations of $C^{\infty}(p)$ to $\R$.
 
 And review directional derivative.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.6 \hs Directional Derivative}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.6 \hs Directional Derivative}]
   Let $X_p \in T_p(\R^n)$ such that
   $$X_p = \sum_{i=1}^n \alpha^i E_{ip}$$
   Then we can define a linear map $X_p^*: \, C^\infty(p) \rightarrow \R$ as
@@ -310,11 +310,11 @@ Thus, they are isomorphic.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.6.7 \hs Tangent Vector \& Derivative}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.6.7 \hs Tangent Vector \& Derivative}]
   $T_p(\R^n)$ is isomorphic to $\mathcal{D}_p(\R^n)$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof of Thm 1.6.7}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof of Thm 1.6.7}]
   We already know relation between $X_p,~X_p^*$. Thus, our claim is as follow:
   $$\forall D \in \mathcal{D}_p(\R^n),~\exists X_p \in T_p(\R^n)~\text{such that}~X_p^*f = Df$$
   By \textit{Lem 1.6.5}, $\exists g$ such that
@@ -350,7 +350,7 @@ So, we need some awesome tool - \textit{push forward}.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.8 \hs Tangent Map (Push forward)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.8 \hs Tangent Map (Push forward)}]
   Let $M,N$ be two manifolds and $\Phi: M \rightarrow N$ be a map of $M$ into $N$.
   The induced vectors in $N$ are given by maps:
   $$\Phi_*(u): \mathcal{F}(N) \rightarrow \R, ~~~ u \in T_p(M)$$
@@ -375,7 +375,7 @@ Now, let's see transformation properties of vector components.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.9 \hs Change Basis}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.9 \hs Change Basis}]
   Let $\Mbk{e_i}, \{e_j'\}$ are two bases of $T_p(M)$. From the properties of a basis, we can describe change basis as follows:
   $$ e_i' = \tensor{A}{_i^j}e_j$$
   where $\tensor{A}{_i^j}$ form an $n\times n$ matrix of real numbers such that
@@ -394,7 +394,7 @@ $${u'}^i = u^j \tensor{{A^{\text{-}1}}}{_j^i}$$
 Transpose both side, we finally see
 $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.6.10 \hs Contravariant Vector}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.6.10 \hs Contravariant Vector}]
   Suppose change of basis is given as
   $$e'_i = \tensor{A}{_i^j}e_j$$
   If change of basis of vector $u$ is given as
@@ -410,7 +410,7 @@ $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
 
 ## 7. The Cotangent Space
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.1 \hs Differential}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.7.1 \hs Differential}]
   Let $f \in \mathcal{F}(M)$. The \textit{differential} of $f$ at $p$ is the map
   $$ df_p : T_p(M) ~ \rightarrow ~ \R$$
   such that
@@ -423,7 +423,7 @@ $${u'}^i = \tensor{\Sbk{A^{\text{-}1}}}{^i_j}u^j$$
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.2 \hs Cotangent Space}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.7.2 \hs Cotangent Space}]
   The set of all linear maps from $T_p(M)$ into $\R$ is called the \textit{cotangent space} at $p$.
   It is denoted by $T_p^*(M)$ and its general elements are \textit{covectors}.
   In fact, this space is the dual of $T_p(M)$.
@@ -436,7 +436,7 @@ Although one can choose an arbitrary basis in $T_p^*(M)$, it's convenient to lin
 to that of a basis in the tangent space. - \textit{Dual basis}
 $$ e^i(e_j) = \delta^i_j$$
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.7.3 \hs Properties of Covector}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop 1.7.3 \hs Properties of Covector}]
   \begin{itemize}
     \item Component: $e^i(u) = u^k e^i(e_k) = u^i ~~~ \forall u \in T_p(M)$
     \item Re-Analyze: $\omega(u) = u^k \omega(e_k) = \omega(e_k)e^k(u)~\Rightarrow~\omega = \omega(e_k)e^k = \omega_k e^k$
@@ -465,7 +465,7 @@ This change of component is same as change of coordinate basis. We call this kin
 
 Finally, let's see the dual tangent map.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.7.4 \hs Dual Tangent Map (Pull Back)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.7.4 \hs Dual Tangent Map (Pull Back)}]
   Let $\Phi: M \rightarrow N$. Now we define \textit{the dual tangent map} $\Phi^*: \, T_{\Phi(p)}^*(N) \rightarrow T_p^*(M)$ as
   $$\Sbk{\Phi^*(\omega)}(u) = \omega\Sbk{\Phi_*(u)} ~~~ \forall u \in T_p(M)$$
 \end{tcolorbox}
@@ -484,14 +484,14 @@ Finally, let's see the dual tangent map.
 
 ## 8. Lie Group
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.1 \hs Lie Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.1 \hs Lie Group}]
   $G$ is a \textit{Lie group} provided that the mapping of $G\times G \rightarrow G$ defined by $(x,y) \rightarrow xy$
   and the mapping of $G \rightarrow G$ defined by $x \rightarrow x^{-1}$ are both $C^\infty$ mappings.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.2 \hs General Linear Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.2 \hs General Linear Group}]
   $Gl(n,\R)$, the set of nonsingular $n\times n$ matrices, is a group with respect to matrix multiplication.
   Since $AB$ is polynomial in the entries of $A,B$, the map $(A,B)\rightarrow AB$ is $C^\infty$. 
 
@@ -503,7 +503,7 @@ Finally, let's see the dual tangent map.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.3 \hs Nonzero Complex Number}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.3 \hs Nonzero Complex Number}]
   Let $C^*$ be the nonzero complex numbers. Then $C^*$ is a group with respect to multiplication of complex numbers, the inverse being
   $z^{-1}=\frac{1}{z}$. 
 
@@ -525,7 +525,7 @@ this groups with the $C^\infty$ structure of the Cartesian product of manifolds 
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.4 \hs Toral Groups}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.4 \hs Toral Groups}]
   The circle $S^1$ may be identified with the complex numbers of absolute value $+1$.
   Since $|z_1\, z_2| = |z_1|\,|z_2|$, it is a group with respect to multiplication of complex numbers $-$ a subgroup of $C^*$.
 
@@ -535,7 +535,7 @@ this groups with the $C^\infty$ structure of the Cartesian product of manifolds 
 
 As might be expected, the subgroups of a Lie group which are also submanifolds play a special role.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.5 \hs Submanifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.5 \hs Submanifold}]
   A subset $N$ of a $C^\infty$ manifold $M$ is said to have the $n$-\textit{submanifold property}
   if each $p \in N$ has a coordinate neighborhood $U,\varphi$ on $M$ with local coordinates $x^1,\cdots,x^m$ such that
 
@@ -554,7 +554,7 @@ Our interest is not general submanifold - *Regular submanifold*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.6 \hs Regular Submanifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.6 \hs Regular Submanifold}]
   A \textit{regular submanifold} of a $C^\infty$ manifold $M$ is any subspace $N$ with the $C^\infty$ structure
   that the corresponding preferred coordinate neighborhoods determine on it.
 \end{tcolorbox}
@@ -563,7 +563,7 @@ In Lie group, there is an important theorem for regular submanifold.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.7 \hs Lie group \& Regular submanifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.7 \hs Lie group \& Regular submanifold}]
   Let $G$ be a Lie group and $H$ a subgroup which is also a regular submanifold. 
   Then with its differentiable structure as a submanifold $H$ is a Lie group.
 \end{tcolorbox}
@@ -572,12 +572,12 @@ To prove above theorem, we require following lemma.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem 1.8.8 \hs Regular submanifold \& Differentiable Map}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem 1.8.8 \hs Regular submanifold \& Differentiable Map}]
   Let $F:A\rightarrow M$ be a $C^\infty$ mapping of $C^\infty$ manifolds and suppose $F(A)\subset N$,
   $N$ being a regular submanifold of $M$. Then $F$ is $C^\infty$ as a mapping into $N$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Lem 1.8.8}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Lem 1.8.8}]
   Since $N$ is regular submanifold of $M$, each point of $N$ in preferred coordinate neighborhood.
   Let $p \in A$, $~q = F(p) \in N$ and $(U,\varphi)$ be a coordinate neighborhood of $p$,
   $~(V, \psi)$ be a coordinate of $q$. Then we can find next properties from definition of submanifold.
@@ -603,7 +603,7 @@ To prove above theorem, we require following lemma.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.7}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Thm 1.8.7}]
   Since $H$ is regular submanifold of $G$,
   it's easy to see $H\times H$ is a regular submanifold of $G\times G$.
   Thus, inclusion map\footnote[1]{$\iota(x) = x$} $F_1: H\times H \rightarrow G \times G$
@@ -637,7 +637,7 @@ To answer this, we need fundamental concept - \textit{rank}.
 
 \subsubsection*{$-$ Rank of Map}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.9 \hs Rank in Linear Algebra}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.9 \hs Rank in Linear Algebra}]
   Let $A$ be an $m \times n$ matrix, then the \textit{rank} is defined in four equivalent ways
   \begin{enumerate}
     \item the dimension of the subspace of $V^n$ spanned by the rows
@@ -653,7 +653,7 @@ To answer this, we need fundamental concept - \textit{rank}.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.8.10 \hs Rank with invertible matrix}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop 1.8.10 \hs Rank with invertible matrix}]
   Let $A$ be a $m \times n$ matrix and $B$ be a $n \times n$ non-singular matrix. Then
   $$\rank{AB} = \rank{A}$$
 \end{tcolorbox}
@@ -664,7 +664,7 @@ To answer this, we need fundamental concept - \textit{rank}.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.11 \hs Rank of $\mathbf{C^r}$ map}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.11 \hs Rank of $\mathbf{C^r}$ map}]
   Let $F: U \rightarrow \R^m$ be a $C^r$ mapping of an open set $U \in \R^n$, then \textit{rank of $F$ at $x$} is defined as
   the rank of $DF(x)$\footnote[1]{$DF(x)$ is \textit{Jacobian} matrix of $F$ at $x$}.
 \end{tcolorbox}
@@ -679,7 +679,7 @@ And denote one of the famous theorem in Analysis - \textit{Inverse Function Theo
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.12 \hs Inverse Function Theorem}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.12 \hs Inverse Function Theorem}]
   Let $W$ be an open subset of $\R^n$ and $F: W \rightarrow \R^n$ a $C^r$ mapping, $r=1,2,\cdots,$ or $\infty$.
   If $a \in W$ and $DF(a)$ is nonsingular, then there exists an open neighborhood $U$ of $a$ in $W$ such that
   $V = F(U)$ is open and $F:~U \,\rightarrow\,V$ is a $C^r$ diffeomorphism. If $x \in U$ and $y=F(x)$,
@@ -691,7 +691,7 @@ Its proof require Analytical skills, so we skip this proof. Instead of proof, we
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Cor 1.8.13 \hs Diffeomorphism (Revisited)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Cor 1.8.13 \hs Diffeomorphism (Revisited)}]
   A necessary and sufficient condition for the $C^\infty$ map $F$ to be a diffeomorphism from $W$ to $F(W)$
   is that it be one-to-one and $DF$ be nonsingular at every point of $W$.
 \end{tcolorbox}
@@ -700,7 +700,7 @@ Now, denote very important theorem - \textit{Rank Theorem}.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.14 \hs Rank Theorem}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.14 \hs Rank Theorem}]
   Let $A_0 \subset \R^n,~B_0 \subset \R^m$ be open sets. $F:~A_0\,\rightarrow\,B_0$ be a $C^r$ mapping,
   and suppose the rank of $F$ on $A_0$ to be equal to $k$. If $a\in A_0$ and $b = F(a)$,
   then there exist open sets $A\subset A_0$ and $B \subset B_0$ with $a \in A$ and $b \in B$,
@@ -719,7 +719,7 @@ This is an important tool and we shall use it frequently; we rephrase this to lo
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.15 \hs Rank Theorem (Rephrased)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.15 \hs Rank Theorem (Rephrased)}]
   Let $F: N \rightarrow M$ be a differentiable mapping of $C^\infty$ manifolds
   and suppose $\dim{N} = n$, $\dim{M} = m$ and $\rank{F}=k$ at every point of $N$.
   If $p \in N$, then there exist coordinate neighborhoods $(U,\varphi)$ and $(V,\psi)$
@@ -734,7 +734,7 @@ Then let's prove *Thm 1.8.14*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Thm 1.8.14}]
   Without loss of generality, let $a=0\in\R^n,~b=0\in\R^m$. Since $F$ has constant rank $k$ on $A_0$,
   there exists $k\times k$ minor of nonzero determinant in $DF(a)$.
   $$\PD{(f^1,\cdots,f^k)}{(u^1,\cdots,u^k)} ={
@@ -785,7 +785,7 @@ Then let's prove *Thm 1.8.14*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.14 (Continued)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Thm 1.8.14 (Continued)}]
   $$
   D(F\circ G^{-1})(x) =
   \Sbk{
@@ -838,13 +838,13 @@ Now, we ready for understanding following theorem \& corollary - the most useful
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.16 \hs Constant Rank \& Regular Submanifold}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.16 \hs Constant Rank \& Regular Submanifold}]
   Let $N$ be a $C^\infty$ manifold of dimension $n$, $~M$ be a $C^\infty$ manifold of dimension $m$,
   and $F:~N\rightarrow M$ be a $C^\infty$ mapping. Suppose that $F$ has constant rank $k$ on $N$
   and that $q\in F(N)$. Then $F^{-1}(q)$ is colosed, regular submanifold of $N$ of dimension $n-k$. 
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.16}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Thm 1.8.16}]
   Let $A = F^{-1}(q)$. Since $F$ is $C^\infty$ map \& $\Mbk{q}$ is closed subset of $M$, $~A$ is closed subset in $N$ via continuity of $F$.
   Let $p\in A$ then since $F$ has constant rank $k$ on a neighborhood of $p$, by rank theorem,
   we can find coordinate neighborhoods $(U,\varphi),~(V,\psi)$ of $p,q$ such that
@@ -874,7 +874,7 @@ Now, let's get back our focus to the Lie group.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.17 \hs Special Linear Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.17 \hs Special Linear Group}]
   Special linear group is denoted by
   $$Sl(n,\R) = \Mbk{X \in Gl(n,\R)\,|\,\det{X} = +1}$$
   Trivially, this is subgroup of $Gl(n,\R)$. Claim it is submanifold of $G$. Let $F:~Gl(n,\R)\,\rightarrow\,\R^*$
@@ -892,7 +892,7 @@ Now, let's get back our focus to the Lie group.
   $Sl(n,\R)$ is also Lie group.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.18 \hs Orthogonal Group}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.18 \hs Orthogonal Group}]
   Orthgonal group is denoted by
   $$O(n) = \Mbk{X \in Gl(n,\R)\,|\,X^TX = I}$$
   Let $F:Gl(n,\R)\rightarrow Gl(n,\R)$ such that $F(X) = X^T X$. For $A\in Gl(n,\R)$,
@@ -903,27 +903,27 @@ Now, let's get back our focus to the Lie group.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.8.19 \hs Homomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.8.19 \hs Homomorphism}]
   Let $F:~G_1\,\rightarrow\,G_2$ be an algebraic homomorphism of Lie group $G_1,G_2$.
   We shall call $F$ a \textit{homomorphism} of Lie group if $F$ is also a $C^\infty$ mapping.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example 1.8.20 \hs Det map}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.8.20 \hs Det map}]
   For $G_1 = Gl(n,\R), ~G_2 = Gl(1,\R)$, the map $F:G_1\rightarrow G_2$ given as $F(X)=\det{X}$ is homomorphism.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm 1.8.21 \hs Fundamental Theorem of Linear Algebra}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 1.8.21 \hs Fundamental Theorem of Linear Algebra}]
   If $F:G_1\rightarrow G_2$ is a homomorphism of Lie groups, then the rank of $F$ is constant;
   the kernel is a closed regular submanifold and thus a Lie group;
   and
   $$\dim{\text{ker }F} = \dim{G_1} - \text{rank }{F}$$
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Thm 1.8.21}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Thm 1.8.21}]
   Let $a \in G_1\,\&\, b = F(a)$. Denote by $e_1,\,e_2$ the unit elements of $G_1,\,G_2$ then
   $$F(x) = F(aa^{-1}(x))=b F(a^{-1}x) = L_b \circ F \circ L_{a^{-1}}(x)$$
   Then $\rank{DF(x)} = \rank{DF(a^{-1}x)}$, so, $F$ has constant rank at anywhere in $G_1$.
@@ -937,7 +937,7 @@ Now, let's get back our focus to the Lie group.
 
 ## 9. The Action of a Lie Group on a Manifold
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def 1.9.1 \hs Group Action}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.9.1 \hs Group Action}]
   Let $G$ be a group and $X$ set. Then $G$ is said to \textit{act} on $X$ (on the left)
   if there is a mapping $\theta: G \times X \rightarrow X$ satisfying two conditions:
   \newline
@@ -955,7 +955,7 @@ and $\theta$ is $C^\infty$, we speak of $C^\infty$ \textit{action}. $C^\infty$ a
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.9.2 \hs Group Action \& Homomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop 1.9.2 \hs Group Action \& Homomorphism}]
   If $G$ acts on a set $X$, then the map $g\rightarrow \theta_g$ is a homomorphism of $G$ into $S(X)$ where $\theta_g(x) = \theta(g,x)$.
   Conversly, any such homomorphism determines an action with $\theta(g,x) = \theta_g(x)$.
 \end{tcolorbox}
@@ -974,9 +974,27 @@ $X$ | $G$ | $\theta$ | $\theta_g$
 Topological Space | Topological Group | Continuous | Homeomorphism
 $C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
 
-\newpage
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example 1.9.3 \hs Natural Action}]
+  Very famous group action is $Gl(n,\R)$ on $\R^n$. Let $G=Gl(n,\R)$ and $X=\R^n$ and we define
+  $\theta:G\times \R^n \rightarrow \R^n$ by $\theta(A,x) = Ax$, this satisfies conditions of group actions.
+  And also trivially this action is $C^\infty$.
+\end{tcolorbox}
 
+\vs
 
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 1.9.4 \hs Orbit, Fixed point, Transitive}]
+  Let a group $G$ act on a set $M$ and suppose that $A\subset M$. Then $GA$ denotes the set $\Mbk{ga\,|\,g \in G\text{ and } a \in A}$. 
+  The \textit{orbit} of $x\in M$ is the set $Gx$. If $Gx = x$, then $x$ is a \textit{fixed point} of $G$;
+  and if $Gx = M$ for some $x$, then $G$ said to be \textit{transitive} on $M$. In this case $Gx = M$ for all $x$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=black!50!green, title=\textbf{Note 1.9.5 \hs Equivalence Relation}]
+  As a matter of notation we let $G$ denote a Lie group, $M$ a $C^\infty$ manifold, and we assume a $C^\infty$ action
+  $\theta: G \times M \rightarrow M$. We define a relation $\sim$ on $M$ by $p\sim q$ if for some $g\in G$
+  we have $q = \theta_g(p) = gp$.
+\end{tcolorbox}
 
 [comment2]: <> (
   ==============================================================
@@ -990,7 +1008,7 @@ $C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
 
 ### 1. Topological Spaces
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.1 \hs Topological Space}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.1 \hs Topological Space}]
 
 A \textit{topology} on a set $X$ is a subset $\mathcal{T}$ of the power set $\mathcal{P}(X)$ with the following properties:
 
@@ -1009,7 +1027,7 @@ we call the elements of $\mathcal{T}$ \textit{open subsets} and their complement
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Example A.1.2}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Example A.1.2}]
   \begin{enumerate}[1)]
     \item Let $X$ be a set. Then $\mathcal{T} = \Mbk{\emptyset, X}$, is a topology on $X$,
     called the \textit{trivial topology}. This is a smallest topology.
@@ -1024,14 +1042,14 @@ we call the elements of $\mathcal{T}$ \textit{open subsets} and their complement
 
 \newpage 
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.3 \hs Basis}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.3 \hs Basis}]
   Let $\mathcal{T}$ be a topology on a set $X$. A subset $\mathcal{B} \subseteq \mathcal{T}$
   is called a \textit{basis} for $\mathcal{T}$ if every element of $\mathcal{T}$ is a union of elements of $\mathcal{B}$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.1.4 \hs Basis (Comfortable Definition)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.1.4 \hs Basis (Comfortable Definition)}]
   A subset $\mathcal{B}$ of a topology $\mathcal{T}$ on a set $X$ is a basis of $\mathcal{T}$
   iff, for every $U \in \mathcal{T}$ and $x \in U$, there is a $V \in \mathcal{B}$ with $x \in V \subseteq U$.
 \end{tcolorbox}
@@ -1040,7 +1058,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.5 \hs Neighborhood}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.5 \hs Neighborhood}]
   Let $X$ be a topological space, $x \in X$. Then $U \subseteq X$ is called a
   \textit{neighborhood} of $x$ when there is an open set $x \in V \subseteq U$.
   We denote by $\mathcal{U}(x)$ the set of all neighborhoods of $x$.
@@ -1048,7 +1066,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.6 \hs Neighborhood Basis}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.6 \hs Neighborhood Basis}]
   Let $X$ be a topological space and $x \in X$. Then we call a subset $\mathcal{B}(x) \subseteq \mathcal{U}(x)$
   a \textit{neighborhood basis} of $x$
   if for every neighborhood $U$ of $x$, there is a $V \in \mathcal{B}(x)$ with $V \subseteq U$.
@@ -1056,7 +1074,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.7 \hs Countability}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.7 \hs Countability}]
   Let $X$ be a topological space.
   \begin{itemize}
     \item $X$ satisfies the \textit{first countability axiom} and is called \textit{countable} if every point
@@ -1068,7 +1086,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.1.8 \hs Adherent, Interior and Boundary}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.1.8 \hs Adherent, Interior and Boundary}]
   Let X be a topological space and $Y \subseteq X$. Then $x \in X$ is called
   \begin{enumerate}[1.]
     \item \textit{an adherent point} (also sometimes called a \textit{point of closure}) of $Y$, 
@@ -1088,14 +1106,14 @@ Proof is trivial.
 
 ### 2. Continous Maps
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.1 \hs Continuous}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.2.1 \hs Continuous}]
   Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces and $f: X \rightarrow Y$ be a function. We call $f$
   \textit{continuous} if $f^{-1}(V) \in \tau$ for all $V \in \tau'$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.2 \hs Continuous at a point}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.2.2 \hs Continuous at a point}]
   Let $(X,\tau)$ and $(Y, \tau')$ be topological spaces and $f: X \rightarrow Y$ be a function. We call $f$
   \textit{continuous at a point} $x \in X$ if, for every neighborhood $V$ of $f(x) \in Y$, there is a neighborhood
   $U$ of $x$ with $f(U) \subseteq V$.
@@ -1103,14 +1121,14 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.2.3 \hs Homeomorphism}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.2.3 \hs Homeomorphism}]
   A map $f: X \rightarrow Y$ between topological spaces $X$ and $Y$ is called a \textit{homeomorphism}
   if $f$ is bijective and $f$ and $f^{-1}$ are continuous.
 \end{tcolorbox}
 
 ### 3. Convergence And Hausdorff Spaces
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.1 \hs Convergence}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.3.1 \hs Convergence}]
   Let $X$ be a topological space and $(x_n)$ a sequence in $X$. Then a point $x\in X$ is called
   a \textit{limit} of the sequence $(x_n)$ if, for every neighborhood $\mathcal{U}(x)$ of $x$, 
   $~\exists n \in \mathbb{N}$ such that $x_m \in \mathcal{U}(x), ~ \forall m \geq n$.
@@ -1119,7 +1137,7 @@ Proof is trivial.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.2 \hs Hausdorff}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.3.2 \hs Hausdorff}]
   Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
   that are disjoint: such that $U \cap V = \emptyset$.
 \end{tcolorbox}
@@ -1128,7 +1146,7 @@ Proof is trivial.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.3.3 \hs Hausdorff and Convergence}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.3.3 \hs Hausdorff and Convergence}]
   Let $X$ be a Hausdorff space. Then limit of sequences in $X$ are unique if they exist.
 \end{tcolorbox}
 
@@ -1136,7 +1154,7 @@ Proof is trivial.
 
 **Exercise A.3**: Prove *prop A.3.3*.
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.3.4 \hs Regular Hausdorff ($\mathbf{T_3}$)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.3.4 \hs Regular Hausdorff ($\mathbf{T_3}$)}]
   Let $X$ be a topological space. $X$ is called \textit{regular} if given any point $x$ and closed set
   $C$, if $x \notin C$, then there exist a neighborhood $\mathcal{U}(x)$ of $x$ and a neighborhood $\mcu(C)$ of $C$
   such that $\mathcal{U}(x) \cap \mcu(C) = \emptyset$. 
@@ -1146,7 +1164,7 @@ Proof is trivial.
 
 ### 4. Understand Necessarity of Second Countability in Manifold
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Thm A.4.1 \hs Paracompact $\simeq$ Partition of unity}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm A.4.1 \hs Paracompact $\simeq$ Partition of unity}]
   Let $(X, \tau)$ be a topological space that is $T_1$ (all points are closed). Then the following are equivalent:
   \begin{itemize}
     \item $(X,\tau)$ is paracompact and Hausdorff
@@ -1164,12 +1182,12 @@ To prove this, we need a wide background knowledge.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.2 \hs Hausdorff}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.2 \hs Hausdorff}]
   Given points $x$ and $y$ of $S$, if $x\neq y$, then there exist open neighborhoods $U$ of $x$ and $V$ of $y$ in $S$
   that are disjoint: such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.3 \hs Locally finite cover}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.3 \hs Locally finite cover}]
   Let $(X, \tau)$ be a topological space.
 
   An open cover $\Mbk{U_i \subset X}_{i\in I}$ of $X$ is called \textit{locally finite} if $\forall x \in X$,
@@ -1177,18 +1195,18 @@ To prove this, we need a wide background knowledge.
   hence such that $U_x \cap U_i \neq \emptyset$ for only a finite number of $i\in I$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.4 \hs Refinement of open covers}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.4 \hs Refinement of open covers}]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i \in I}$ be a open cover.
   Then a \textit{refinement} of this open cover is a set of open subsets $\Mbk{V_j \subset X}_{j\in J}$
   which is still an open cover in itself and such that for each $j\in J$ there exists an $i \in I$ with $V_j \subset U_i$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.5 \hs Paracompact topological space}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.5 \hs Paracompact topological space}]
   A topological space $(X, \tau)$ is called \textit{paracompact} if every open cover of $X$
   has a refinement by a locally finite open cover.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.6 \hs Partition of unity}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.6 \hs Partition of unity}]
   Let $(X, \tau)$ be a topological space, and let $\Mbk{U_i \subset X}_{i\in I}$ be an open cover.
   Then a \textit{partition of unity} subordinate to the cover is
 
@@ -1216,7 +1234,7 @@ To prove this, we need a wide background knowledge.
 
 ![Gaussian Partition of Unity](gaussian_pou.png)
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4.7 \hs Paracompact - Partition of unity}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.4.7 \hs Paracompact - Partition of unity}]
   If $(X, \tau)$ is a paracompact topological space, then for every open cover $\Mbk{U_i \subset X}_{i\in I}$
   there is a subordinate partition of unity.
 \end{tcolorbox}
@@ -1225,7 +1243,7 @@ Proof will be given later.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem A.4.8 \hs Natural Refinement}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem A.4.8 \hs Natural Refinement}]
   Let $(X, \tau)$ be a topological space, $\Mbk{U_i \subset X}_{i \in I}$ be an open cover
   and $\Sbk{\phi : J \rightarrow I, ~ \Mbk{V_j \subset X}_{j\in J}}$ be a refinement to a locally finite cover.
   Then, for $\Mbk{W_i \subset X}_{i \in I}$ with
@@ -1235,7 +1253,7 @@ Proof will be given later.
   is still a refinement of $\Mbk{U_i \subset X}_{i \in I}$ to a locally finite cover.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=red!5!white,colframe=red!50!white, title=\textbf{Proof for A.4.8 }]
+\begin{tcolorbox}[colback=red!5!white,colframe=black!30!red, title=\textbf{Proof for A.4.8 }]
   First we know, for $V$, $V_j \subset U_{\phi(j)=i}$.
   Conversely, $\forall j \in \phi^{-1}(\Mbk{i}), \; V_j \subset U_i$.
   Thus, $W_i \in \bigcup_{j\in\phi^{-1}(\Mbk{i})} V_j \subset U_i$.
@@ -1267,7 +1285,7 @@ Proof will be given later.
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Lem A.4.9 \hs Shrinking Lemma}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem A.4.9 \hs Shrinking Lemma}]
   Let $X$ be a topological space which is normal and let $\Mbk{U_i \subset X}_{i\in I}$ be a locally finite open cover.
   Assuming the axiom of choice then:
   \newline
@@ -1286,18 +1304,18 @@ Now, suggest some fundamental topological concepts to prove prop A.4.7.
 
 \VS
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.10 \hs Normal Spaces ($\mathbf{T_4}$)}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.10 \hs Normal Spaces ($\mathbf{T_4}$)}]
   A topological space $X$ is \textit{normal} if for every two closed disjoint subsets $A,B \subset X$, there are neighborhoods $U \supset A$, $~ V \supset B$ such that $U \cap V = \emptyset$.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4.11 \hs $\mathbf{T_4}$ in terms of topological closure}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.4.11 \hs $\mathbf{T_4}$ in terms of topological closure}]
   $X$ is normal iff for all closed subsets $C \subset X$ with open neighborhood $U \supset C$ there exists a smaller open neighborhood $V\supset C$ whose topological closure $Cl(V)$ is still contained in $U$:
   $$ C \subset V \subset Cl(V) \subset U$$
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Prop A.4.11 }]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Prop A.4.11 }]
   Suppose that $(X, \tau)$ is $T_4$.
   Consider closed subset $C \subset U$ where $U$ is open neighborhood of $C$. It implies
   $$ C \cap X\backslash U = \emptyset $$
@@ -1319,14 +1337,14 @@ Now, suggest some fundamental topological concepts to prove prop A.4.7.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Def A.4.12 \hs Urysohn function}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def A.4.12 \hs Urysohn function}]
   Let $X$ be a topological space, and let $A,B \subset$ X be disjoint closed subsets. Then an \textit{Urysohn function} for this situation is a continuous function $$f: X\rightarrow [0,1]$$ to the closed interval equipped with its Euclidean metric topology, such that
   $$ f(A) = \Mbk{0} ~ \text{and} ~ f(B) = \Mbk{1} $$
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4.13 \hs Urysohn's Lemma}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.4.13 \hs Urysohn's Lemma}]
   Let $X$ be a normal topological space, and let $A, B \subset X$ be two disjoint closed subsets of $X$. Then there exists an \textit{Urysohn function}.
 \end{tcolorbox}
 
@@ -1346,7 +1364,7 @@ Then let's start to prove *Urysohn's lemma*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Urysohn's lemma}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Urysohn's lemma}]
 
 $(\Leftarrow)$ Suppose $f(A) = \Mbk{0}, ~ f(B) = \Mbk{1}$ for all closed subset $A,B \subset X$.
 Then $A \subset f^{-1}\Sbk{[0,\frac{1}{2})}$ and $D \subset f^{-1}\Sbk{(\frac{1}{2}, 1]}$.
@@ -1386,7 +1404,7 @@ If we show $f$ satisfies ( \textit{\textcircled{1} $0\leq f(x) \leq 1$, \textcir
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Urysohn's lemma} (Continued)]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Urysohn's lemma} (Continued)]
 
 \textcircled{1} $0 \leq f(x) \leq 1$
 
@@ -1431,13 +1449,13 @@ To prove *prop A.4.7*, we should know relation between *Hausdorff* and *Normal*.
 
 \newpage
 
-\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop A.4.14 \hs Dieudonn\'e's Theorem}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Prop A.4.14 \hs Dieudonn\'e's Theorem}]
   Every paracompact Hausdorff space is normal.
 \end{tcolorbox}
 
 \vs
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Dieudonn\'e's Theorem}]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Dieudonn\'e's Theorem}]
   Consider $(X, \tau)$ be a paracompact Hausdorff space. 
 
   \vs
@@ -1477,7 +1495,7 @@ To prove *prop A.4.7*, we should know relation between *Hausdorff* and *Normal*.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=white!5!white,colframe=red!50!white, title=\textbf{Proof for Dieudonn\'e's Theorem} (Continued)]
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!red, title=\textbf{Proof for Dieudonn\'e's Theorem} (Continued)]
   \textcircled{2} Claim $(X, \mathcal{T})$ is normal. Then we should prove below proposition:
   $$ \forall \text{disjoint closed subsets} ~ C,D \subset X, ~ \exists \text{disjoint neighborhoods} ~ \mcu(C),~\mcu(D) \in \mathcal{T}$$
   By regularity of $(X, \mathcal{T})$, we have next proposition:
