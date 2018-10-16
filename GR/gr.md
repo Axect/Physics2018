@@ -944,7 +944,7 @@ Now, let's get back our focus to the Lie group.
   \begin{enumerate}
     \item If $e$ is the identity element of $G$, then
     $$\theta(e,x)=x ~~~ \text{for all }x \in X$$
-    \item If $g1,g2\in G$, then
+    \item If $g_1,g_2\in G$, then
     $$\theta(g_1,\theta(g_2,x)) = \theta(g_1 g_2, x) ~~~ \text{for all }x \in X$$
   \end{enumerate}
 \end{tcolorbox}
@@ -952,6 +952,30 @@ Now, let's get back our focus to the Lie group.
 When $G$ is topological group, $X$ is a topological space, and $\theta$ is continuous,
 the action is called \textit{continuous}. When $G$ is a Lie group, $X$ is a $C^\infty$ manifold,
 and $\theta$ is $C^\infty$, we speak of $C^\infty$ \textit{action}. $C^\infty$ action is a \textit{fortiori continuous}.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=white!60!blue, title=\textbf{Prop 1.9.2 \hs Group Action \& Homomorphism}]
+  If $G$ acts on a set $X$, then the map $g\rightarrow \theta_g$ is a homomorphism of $G$ into $S(X)$ where $\theta_g(x) = \theta(g,x)$.
+  Conversly, any such homomorphism determines an action with $\theta(g,x) = \theta_g(x)$.
+\end{tcolorbox}
+
+We note that the homomorphism is injective if and only if $\theta_g$ being the identity implies that $g=e$.
+If this is so, we shall call the action \textit{effective}.
+
+\vs
+
+By using \textit{prop 1.9.2}, then we can find below things:
+
+\vs
+
+$X$ | $G$ | $\theta$ | $\theta_g$
+:--: | :--: | :--: | :--:
+Topological Space | Topological Group | Continuous | Homeomorphism
+$C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
+
+\newpage
+
 
 
 [comment2]: <> (
