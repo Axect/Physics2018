@@ -3,7 +3,7 @@ fontfamily: "libertine"
 mainfont: "GFS Artemisa"
 title: "General Relativity"
 author: [Tae Geun Kim]
-date: 2018-10-15
+date: 2018-10-17
 subject: "Markdown"
 keywords: [Markdown, Example]
 subtitle: "By precise approach"
@@ -999,7 +999,7 @@ $C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
   Conversely, if $q\in Gp$, then $p\sim q$ so $Gp \subset \Bbk{p}$.
   Therefore, $\Bbk{p} = Gp$.
 
-  We denote by $M/G$ the set of equivalence classes ($\Mbk{\Bbk{p}\,|\,p \in M}$);
+  We denote by $M/G$ the set of equivalence classes $\Mbk{\Bbk{p}\,|\,p \in M}$;
   it will often be called the \textit{orbit space} of the action.
 \end{tcolorbox}
 
