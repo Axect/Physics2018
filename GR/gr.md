@@ -255,11 +255,11 @@ We define tangent vector as a map. It's so weird. Let's rationalize this on $\R^
   holds for $\forall f,g \in \mathcal{F}(M)$.
 \end{tcolorbox}
 
-We denote space of derivation operators as $\mathcal{D}_p(M)$. For $\R^n$, denote $D_p(\R^n)$
+We denote space of derivation operators as $\mathcal{D}_p(M)$. For $\R^n$, denote $\mathcal{D}_p(\R^n)$
 as set of all derivations of $C^{\infty}(p)$ to $\R$.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Lem 1.6.4 \hs Constant Derivation}]
-  Let $D \in \mathcal{D}_p(M)$. Then $D=0$ for all $f \in \mathcal{F}(M)$ such that
+  Let $D \in \mathcal{D}_p(M)$. Then $Df=0$ for all $f \in \mathcal{F}(M)$ such that
   $f$ is constant in a neighborhood of $p$.
 \end{tcolorbox}
 
