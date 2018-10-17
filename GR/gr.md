@@ -1011,14 +1011,32 @@ $C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
 ## 1. Vector Fields
 
 We already defined tangent vector at a point $p\in M$, that is, an element of $T_p(M)$.
-Now, we extend $T_p(M)$ to $T(M)$ consisting of all tangent vectors at all points of $M$,
-$$T(M) = \bigcup_{p \in M}T_p(M)$$
-Then vector field $X$ is a function $X : M \rightarrow T(M)$ given as $X(p) = X_p$.
+Now, we extend $T_p(M)$ to $TM$ consisting of all tangent vectors at all points of $M$,
+$$TM = \bigcup_{p \in M}T_p(M)$$
+We call this as \textit{tangent bundle} of $M$.
+Then vector field $X$ is a function $X : M \rightarrow TM$ given as $X(p) = X_p$.
 
 \begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 2.1.1 \hs Vector Field}]
-  A \textit{vector field} $X$ of class $C^r$ on $M$ is a function assigning to each point $p$ of $M$
-  a vector $X_p \in T_p(M)$ whose components in the frames of any local coordinates $(U,\varphi)$
-  are functions of class $C^r$ on the domain $U$ of the coordinates.
+  Given a differentiable manifold $M$, a \textit{vector field} on $M$ is an assignment of a tangent vector 
+  to each point in $M$. More precisely, a vector field $X$ is a mapping from $M$ into the tangent bundle $TM$
+  so that $\pi\circ X = i_M$  is the identity mapping where $\pi$ denotes the projection from $TM$ to $M$. 
+\end{tcolorbox}
+
+Now, we can define push forward of vector field.
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 2.1.2 \hs $\mathbf{F}$-related}]
+  If we have a vector field $Y$ on $M$ such that for each $q\in M$ and $p\in F^{-1}(q)\subset N$ we have $F_*(X_p) = Y_q$,
+  then we say that the vector fields $X$ and $Y$ are \textit{$F$-related} and we write, briefly,
+  $Y=F_*(X)$.
+\end{tcolorbox}
+
+\vs
+
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Thm 2.1.3 \hs $\mathbf{F}$-related for Diffeomorphism}]
+  If $F:N\rightarrow M$ is a diffeomorphism, then each vector field $X$ on $N$ is $F$-related to
+  a uniquely determined vector field $Y$ on $M$.
 \end{tcolorbox}
 
 [comment2]: <> (
