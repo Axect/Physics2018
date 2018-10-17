@@ -1005,7 +1005,21 @@ $C^\infty$ manifold | Lie Group | $C^\infty$ | Diffeomorphism
 
 **Exercise 1.9.1** : Show that $\sim$ is equivalence relation.
 
+\newpage
 
+# Fields
+## 1. Vector Fields
+
+We already defined tangent vector at a point $p\in M$, that is, an element of $T_p(M)$.
+Now, we extend $T_p(M)$ to $T(M)$ consisting of all tangent vectors at all points of $M$,
+$$T(M) = \bigcup_{p \in M}T_p(M)$$
+Then vector field $X$ is a function $X : M \rightarrow T(M)$ given as $X(p) = X_p$.
+
+\begin{tcolorbox}[colback=white!5!white,colframe=black!30!blue, title=\textbf{Def 2.1.1 \hs Vector Field}]
+  A \textit{vector field} $X$ of class $C^r$ on $M$ is a function assigning to each point $p$ of $M$
+  a vector $X_p \in T_p(M)$ whose components in the frames of any local coordinates $(U,\varphi)$
+  are functions of class $C^r$ on the domain $U$ of the coordinates.
+\end{tcolorbox}
 
 [comment2]: <> (
   ==============================================================
