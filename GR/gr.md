@@ -6,7 +6,7 @@ author: [Tae Geun Kim]
 date: 2018-10-17
 subject: "Markdown"
 keywords: [Markdown, Example]
-subtitle: "By precise approach"
+subtitle: "With a rigorous approach"
 titlepage: true
 toc-own-page: true
 ...
